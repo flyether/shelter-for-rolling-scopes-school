@@ -90,7 +90,6 @@ img {
 }
 
 .text.footer-cont {
-  margin-top: 35px;
   color: #f1cdb3;
   font-size: 20px;
   line-height: 115%;
@@ -127,7 +126,7 @@ img {
 }
 
 .text.donation-title {
-  margin: 20px 0 0 3px;
+  margin: 20px 0 0 8px;
   letter-spacing: 2px;
   color: #545454;
   font-size: 35px;
@@ -520,6 +519,7 @@ a {
   position: absolute;
   width: 349px;
   height: 43px;
+  margin-left: 10px;
   background: #f1cdb3;
   border-radius: 9px;
 }
@@ -528,7 +528,7 @@ a {
   width: 30px;
   height: 23px;
   background: url(../../assets/icons/credit-card.svg) no-repeat center center;
-  margin: 2px 0px 0px 8px;
+  margin: 2px 0px 0px px;
 }
 
 .credit-number {
@@ -569,19 +569,54 @@ a {
   height: 350px;
   background: url(../../assets/images/footer-puppy.png) no-repeat 96% 100%, url(../../assets/images/noise.png), url(../../assets/images/start-screen-background.jpg);
   background-size: auto, auto, cover;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .email-gl {
+  height: 36px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 36px;
+}
+
+.footer-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 55px 0  0 40px;
+}
+
+.footer-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 55px 0  0 150px;
+}
+
+.mar-l {
+  margin-left: 10px;
+}
+
+.mar-r {
+  margin-left: -10px;
 }
 
 .footer-svg {
   width: 40px;
   height: 32px;
-  margin-top: 40px;
+  margin-right: 20px;
 }
 
 .footer-svg.email-svg {
@@ -594,18 +629,6 @@ a {
 
 .footer-svg.map-svg {
   background: url(../../assets/icons/icon-marker.svg) no-repeat center center;
-}
-
-.footer-left {
-  margin: 55px 20px 0px 35px;
-}
-
-.footer-right {
-  margin: 55px 0px 0px 140px;
-}
-
-.margin-tel {
-  margin: 0px 0px 0px 23px;
 }
 
 html, body, div, span, applet, object, iframe,
