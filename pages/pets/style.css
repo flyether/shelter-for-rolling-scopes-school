@@ -1,0 +1,426 @@
+@font-face {
+  font-family: Georgia;
+  src: url("../../assets/fonts/georgia.ttf");
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.card {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  max-width: 1280px;
+  padding: 60px 40px;
+  margin: 0 auto;
+}
+
+.heder-container {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  max-width: 1280px;
+  padding: 12px 40px 20px;
+  margin: 20px auto 8px;
+  background-color: white;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.text {
+  font-family: Georgia;
+}
+
+.text.logo-text {
+  color: #545454;
+  font-size: 32px;
+  line-height: 35px;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.text.pet-name {
+  margin-top: 28px;
+  margin-bottom: 27px;
+  color: #545454;
+  font-size: 20px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+
+.text.footer-cont {
+  margin-top: 35px;
+  color: #f1cdb3;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+}
+
+.text.footer-title {
+  margin-bottom: 3px;
+  color: white;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+
+.text.title-text {
+  margin-left: 6px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+  color: #545454;
+  font-size: 35px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  line-height: 130%;
+}
+
+.text.text-button {
+  color: #292929;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.032em;
+}
+
+.text.te {
+  margin: 20px 3px;
+  color: #545454;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+}
+
+.logo_subtitle {
+  font-family: Arial;
+  color: #545454;
+  font-size: 13px;
+  line-height: 14.95px;
+  letter-spacing: 1.5px;
+}
+
+.text-small-title {
+  margin-top: 43px;
+  font-family: 'Arial';
+  font-size: 15px;
+  line-height: 160%;
+  color: #cdcdcd;
+}
+
+.nav {
+  margin-top: 13px;
+}
+
+.nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-family: Arial;
+  color: white;
+  font-size: 15px;
+  line-height: 160%;
+  color: #CDCDCD;
+  margin: 0px  17px 0 12px;
+  outline: none;
+}
+
+.nav-link:active {
+  border-bottom: #f1cdb3 solid 4px;
+}
+
+.nav-link:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.line {
+  border-bottom: #f1cdb3 solid 4px;
+}
+
+.card-space {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 60px -20px 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 20px 32px;
+  background: #FAFAFA;
+  border-radius: 9px;
+  width: 270px;
+  height: 435px;
+}
+
+.card:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn {
+  width: 187px;
+  height: 52px;
+  border-radius: 100px;
+  background: #FAFAFA;
+  border: #f1cdb3 2px solid;
+  padding: 8px 45px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #fddcc4;
+}
+
+.pets {
+  width: 1280px;
+  height: 1342px;
+  background-color: #F6F6F6;
+  margin: 0 auto;
+}
+
+.arrow {
+  width: 52px;
+  height: 52px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 23px 19px;
+  border: 2px solid #f1cdb3;
+  border-radius: 100px;
+  margin: 0 10px 0 10px;
+  cursor: pointer;
+}
+
+.arrow.right1 {
+  background: url(../../assets/icons/button_paginatorR1.svg) no-repeat center center;
+}
+
+.arrow.right1:hover {
+  background: url(../../assets/icons/button_paginatorR1.svg) no-repeat center center;
+  background-color: #fddcc4;
+}
+
+.arrow.right1:active {
+  background: url(../../assets/icons/button_paginatorR1.svg) no-repeat center center;
+}
+
+.arrow.right2 {
+  background: url(../../assets/icons/button_paginatorR2.svg) no-repeat center center;
+}
+
+.arrow.right2:hover {
+  background: url(../../assets/icons/button_paginatorR2.svg) no-repeat center center;
+  background-color: #fddcc4;
+}
+
+.arrow.right2:active {
+  background: url(../../assets/icons/button_paginatorR2.svg) no-repeat center center;
+  background-color: #f1cdb3;
+}
+
+.arrow.center {
+  background: url(../../assets/icons/button_paginatorC.svg) no-repeat center center;
+}
+
+.arrow.center:hover {
+  background: url(../../assets/icons/button_paginatorC.svg) no-repeat center center;
+  background-color: #fddcc4;
+}
+
+.arrow.center:active {
+  background: url(../../assets/icons/button_paginatorC.svg) no-repeat center center;
+  background-color: #f1cdb3;
+}
+
+.arrow-grey {
+  width: 52px;
+  height: 52px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 23px 19px;
+  border: 2px solid #cdcdcd;
+  border-radius: 100px;
+  margin: 0 10px 0 10px;
+  cursor: default;
+}
+
+.arrow-grey.left1 {
+  background: url(../../assets/icons/button_paginatorl1.svg) no-repeat center center;
+}
+
+.arrow-grey.left2 {
+  background: url(../../assets/icons/button_paginatorl2.svg) no-repeat center center;
+}
+
+.slider {
+  text-align: center;
+}
+
+.end-screen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1280px;
+  border: #5B483A 2px solid;
+  height: 350px;
+  background: url(../../assets/images/footer-puppy.png) no-repeat 96% 100%, url(../../assets/images/noise.png), url(../../assets/images/start-screen-background.jpg);
+  background-size: auto, auto, cover;
+  margin: 0 auto;
+}
+
+.email-gl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 55px 0  0 40px;
+}
+
+.footer-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 55px 0  0 150px;
+}
+
+.footer-svg {
+  width: 40px;
+  height: 32px;
+}
+
+.footer-svg.email-svg {
+  background: url(../../assets/icons/icon-email.svg) no-repeat center center;
+}
+
+.footer-svg.tel-svg {
+  background: url(../../assets/icons/icon-phone.svg) no-repeat center center;
+}
+
+.footer-svg.map-svg {
+  background: url(../../assets/icons/icon-marker.svg) no-repeat center center;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*# sourceMappingURL=style.css.map */
