@@ -257,7 +257,7 @@ img {
 }
 
 .cat-dog-img {
-  margin-left: 173px;
+  margin-left: 14.3%;
 }
 
 .text-about {
@@ -529,10 +529,11 @@ a {
   width: 100%;
   max-width: 1280px;
   margin: 15px  auto 0;
-  padding: 19px 0;
+  padding: 18px 0;
 }
 
 .donation {
+  margin-left: 11.52%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -544,6 +545,7 @@ a {
 }
 
 .dog-donat {
+  margin-top: 10px;
   width: 50%;
 }
 
