@@ -280,7 +280,11 @@ img {
   width: 100%;
   max-width: 1280px;
   margin: 40px auto;
-  padding-bottom: 43px;
+  padding-bottom: 28px;
+}
+
+.our-friends-general {
+  margin-top: 20px;
 }
 
 .card-space {
@@ -353,7 +357,7 @@ a {
 }
 
 .button_primary_friends {
-  margin: 55px auto 0;
+  margin: 60px auto 0;
   border: none;
   background: #f1cdb3;
   display: -webkit-box;
