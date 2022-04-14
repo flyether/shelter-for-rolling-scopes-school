@@ -209,6 +209,7 @@ $color-primary-light:rgba(253, 220, 196, 1);
   }
  
  .button_primary{
+    
     border: none;
     background: $color-primary;
     display: flex;
@@ -330,7 +331,7 @@ a{
 }
 
 .button_primary_friends{
-   margin: 0 auto;
+   margin: 55px auto 0;
    border: none;
    background: $color-primary;
    display: flex;
@@ -392,21 +393,11 @@ a{
        width: 100%;
       justify-content: center;
     }
-    .help-card{
-      display: flex;
-      flex-direction: column;
-      justify-content:space-between;
-       white-space: nowrap;
-       flex-wrap: wrap;
-       width: 20%;
-       text-align: center;
-       height: 113px;
-       align-items: center;
-    }
+   
     .help-card-2{
       @include flexColumn();
-      margin-top: 53px;
-      margin:53px  60px 0 ;
+      width: 20%;
+      padding: 30px 45px 0 ;
       justify-content:space-between;
        white-space: nowrap;
        flex-wrap: wrap;
@@ -463,7 +454,7 @@ a{
 }
 
 .dog-donat{
-   margin: 33px 0px 0 140px;
+  
   width: 50%;
 }
 .content-donation{
@@ -473,8 +464,7 @@ a{
 
 .credit{
    display: flex;
-   
-   align-items: flex-start;
+      align-items: flex-start;
    padding: 10px 15px;
    flex-wrap: wrap;
    position: absolute;
@@ -498,17 +488,14 @@ margin: 2px 0px 0px px;
    font-size: 20px;
    line-height: 115%;
    margin: 0px 0px 0px 8px;  
-  
    letter-spacing: 0.054em;
-   
    
    color: $color-dark-l;
 }
 
 .info-donation{
 margin-top: 85px;
-width: 380px;
-height: 72px;
+max-width: 380px;
 font-family: 'Arial';
 font-style: italic;
 font-weight: 400;
@@ -576,6 +563,19 @@ color: #B2B2B2;
 
 
 @media  (max-width: 768px) {
+   .container {
+      width: 100%;
+      max-width:768px;
+      padding: 60px 30px;
+     
+   }
+   
+   .header{
+      display: flex;
+      height: 60px;
+      justify-content: space-between;
+   }
+
    
 }
 

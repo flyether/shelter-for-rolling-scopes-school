@@ -353,7 +353,7 @@ a {
 }
 
 .button_primary_friends {
-  margin: 0 auto;
+  margin: 55px auto 0;
   border: none;
   background: #f1cdb3;
   display: -webkit-box;
@@ -433,28 +433,6 @@ a {
           justify-content: center;
 }
 
-.help-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  white-space: nowrap;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 20%;
-  text-align: center;
-  height: 113px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .help-card-2 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -463,8 +441,8 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 53px;
-  margin: 53px  60px 0;
+  width: 20%;
+  padding: 30px 45px 0;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -535,7 +513,6 @@ a {
 }
 
 .dog-donat {
-  margin: 33px 0px 0 140px;
   width: 50%;
 }
 
@@ -581,8 +558,7 @@ a {
 
 .info-donation {
   margin-top: 85px;
-  width: 380px;
-  height: 72px;
+  max-width: 380px;
   font-family: 'Arial';
   font-style: italic;
   font-weight: 400;
@@ -669,6 +645,23 @@ a {
 
 .footer-svg.map-svg {
   background: url(../../assets/icons/icon-marker.svg) no-repeat center center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    max-width: 768px;
+    padding: 60px 30px;
+  }
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 60px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 html, body, div, span, applet, object, iframe,
