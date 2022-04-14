@@ -113,7 +113,7 @@ $color-primary-light:rgba(253, 220, 196, 1);
    }
    &.our-friends-title{
     margin-left: 6px;
-      margin-top: 20px;
+ 
       letter-spacing: 2px;
        color:$color-dark-l;
        font-size: 35px;
@@ -268,8 +268,8 @@ letter-spacing: 0.05em;
    width: 100%;
    max-width: 1280px;
 
-   margin: 41px  auto 0;
-
+   margin: 40px auto ;
+padding-bottom: 43px;
 }
   
 .card-space{
