@@ -249,6 +249,8 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .section-about {
@@ -278,7 +280,6 @@ img {
   background-color: #F6F6F6;
   width: 100%;
   max-width: 1280px;
-  height: 877px;
   margin: 41px  auto 0;
 }
 
@@ -286,6 +287,8 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin-top: 60px;
@@ -350,12 +353,14 @@ a {
 }
 
 .button_primary_friends {
-  margin: 58px 0px 0px 470px;
+  margin: 0 auto;
   border: none;
   background: #f1cdb3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -419,6 +424,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0 auto;
   width: 100%;
   -webkit-box-pack: center;
@@ -513,7 +520,6 @@ a {
   background-color: #F6F6F6;
   width: 100%;
   max-width: 1280px;
-  height: 462px;
   margin: 41px  auto 0;
 }
 
@@ -524,6 +530,8 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .dog-donat {
@@ -543,6 +551,8 @@ a {
       -ms-flex-align: start;
           align-items: flex-start;
   padding: 10px 15px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   position: absolute;
   width: 349px;
   height: 43px;
@@ -601,6 +611,8 @@ a {
 }
 
 .email-gl {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   height: 36px;
   display: -webkit-box;
   display: -ms-flexbox;

@@ -169,6 +169,7 @@ $color-primary-light:rgba(253, 220, 196, 1);
  
    display: flex;
    transition: .3s;  
+
  }
 
  .nav-link {
@@ -237,6 +238,7 @@ letter-spacing: 0.05em;
 
 .about{
    display: flex;
+   flex-wrap: wrap;
 }
 .section-about{
    margin-top: 15px;
@@ -264,13 +266,14 @@ letter-spacing: 0.05em;
    background-color: $color-light-l;
    width: 100%;
    max-width: 1280px;
-   height: 877px;
+
    margin: 41px  auto 0;
 
 }
   
 .card-space{
 display: flex;
+flex-wrap: wrap;
 justify-content: space-around;
 margin-top: 60px;
 align-items: center;
@@ -327,10 +330,11 @@ a{
 }
 
 .button_primary_friends{
-   margin: 58px 0px 0px 470px;
+   margin: 0 auto;
    border: none;
    background: $color-primary;
    display: flex;
+   flex-wrap: wrap;
    align-items: center;
    padding: 15px 45px ;
    width: 261px;
@@ -383,6 +387,7 @@ a{
     }
     .floor-help{
        display: flex;
+       flex-wrap: wrap;
        margin: 0 auto;
        width: 100%;
       justify-content: center;
@@ -405,7 +410,6 @@ a{
       justify-content:space-between;
        white-space: nowrap;
        flex-wrap: wrap;
-       
        text-align: center;
        height: 113px;
        align-items: center;
@@ -449,13 +453,13 @@ a{
       background-color: $color-light-l;
       width: 100%;
       max-width: 1280px;
-      height: 462px;
       margin: 41px  auto 0;
    
    }
 .donation{
    display: flex;
    justify-content:center;
+   flex-wrap: wrap;
 }
 
 .dog-donat{
@@ -472,7 +476,7 @@ a{
    
    align-items: flex-start;
    padding: 10px 15px;
- 
+   flex-wrap: wrap;
    position: absolute;
    width: 349px;
    height: 43px;
@@ -517,6 +521,7 @@ color: #B2B2B2;
 
 .end-screen{
    display: flex;
+ 
    width: 100%;
    max-width: 1280px;
    border: #5B483A 2px solid;
@@ -529,6 +534,7 @@ color: #B2B2B2;
    margin: 0 auto;
 }
 .email-gl{
+   flex-wrap: wrap;
    height: 36px;
    display: flex;
    align-items: center;
@@ -569,7 +575,9 @@ color: #B2B2B2;
 
 
 
-
+@media  (max-width: 768px) {
+   
+}
 
 
 
