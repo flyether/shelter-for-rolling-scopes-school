@@ -112,7 +112,7 @@ $color-primary-light:rgba(253, 220, 196, 1);
       letter-spacing: 0.06em;
    }
    &.our-friends-title{
-    margin-left: 6px;
+    margin:0 0 0px 6px;
  
       letter-spacing: 2px;
        color:$color-dark-l;
@@ -268,11 +268,26 @@ letter-spacing: 0.05em;
    width: 100%;
    max-width: 1280px;
 
-   margin: 40px auto ;
-padding-bottom: 28px;
+   margin: 40px auto 0 ;
+padding-bottom: 40px;
 }
 .our-friends-general{
-margin-top: 20px;
+margin-top: 22px;
+}
+.button_primary_friends{
+   margin: 60px auto 0;
+   border: none;
+   background: $color-primary;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   padding: 15px 45px ;
+   width: 261px;
+   height: 52px;
+   border-radius: 100px;
+&:hover{
+   background: $color-primary-light;
+}
 }
 
 .card-space{
@@ -381,7 +396,9 @@ a{
       
 }
 
-
+.section-help{
+   margin-top: 20px;
+}
 
 .help{
    @include flexColumn();

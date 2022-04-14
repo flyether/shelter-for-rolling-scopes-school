@@ -107,7 +107,7 @@ img {
 }
 
 .text.our-friends-title {
-  margin-left: 6px;
+  margin: 0 0 0px 6px;
   letter-spacing: 2px;
   color: #545454;
   font-size: 35px;
@@ -279,12 +279,34 @@ img {
   background-color: #F6F6F6;
   width: 100%;
   max-width: 1280px;
-  margin: 40px auto;
-  padding-bottom: 28px;
+  margin: 40px auto 0;
+  padding-bottom: 40px;
 }
 
 .our-friends-general {
-  margin-top: 20px;
+  margin-top: 22px;
+}
+
+.button_primary_friends {
+  margin: 60px auto 0;
+  border: none;
+  background: #f1cdb3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 45px;
+  width: 261px;
+  height: 52px;
+  border-radius: 100px;
+}
+
+.button_primary_friends:hover {
+  background: #fddcc4;
 }
 
 .card-space {
@@ -408,6 +430,10 @@ a {
 .arrow.right:hover {
   background: url(../../assets/images/ArrowR.svg) no-repeat center center;
   background-color: #fddcc4;
+}
+
+.section-help {
+  margin-top: 20px;
 }
 
 .help {
