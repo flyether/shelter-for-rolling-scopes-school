@@ -42,7 +42,8 @@ $color-primary-light:rgba(253, 220, 196, 1);
 }
 
 .start-screen{
-  width: 1280px;
+   width: 100%;
+  max-width: 1280px;
    border: #5B483A 2px solid;
    height: 908px;
    background: 
@@ -54,6 +55,7 @@ $color-primary-light:rgba(253, 220, 196, 1);
 }
 
 .container {
+   width: 100%;
    max-width:1280px;
    padding: 60px 40px;
    margin: 0 auto;
@@ -176,23 +178,35 @@ $color-primary-light:rgba(253, 220, 196, 1);
   line-height: 160%;
   color: #CDCDCD;
   margin: 0px  17px 0 12px ;
-   
+  
    &:active
     {border-bottom: $color-primary solid 4px;
-      
+      color: white;
    }
 
    &:hover {
-      font-weight: bold;
+     
       cursor: pointer;
+      color: white;
    }
    outline: none;
  }
-
- .line{
+ .nav-link-active {
+   text-decoration: none;
+   @include Arial-white();
+   font-size: 15px;
+   line-height: 160%;
+   color: white;
+   margin: 0px  17px 0 12px ;
    border-bottom: $color-primary solid 4px;
- }
-
+        
+    &:hover {
+       cursor: pointer;
+       color: white;
+    }
+    outline: none;
+  }
+ 
  .button_primary{
     border: none;
     background: $color-primary;
@@ -202,7 +216,7 @@ $color-primary-light:rgba(253, 220, 196, 1);
     width: 207px;
     height: 52px;
     border-radius: 100px;
-
+    cursor: pointer;
  }
  .margin-button{
    margin-top: 40px;
@@ -248,7 +262,8 @@ letter-spacing: 0.05em;
 .our-friends{
   
    background-color: $color-light-l;
-   width: 1280px;
+   width: 100%;
+   max-width: 1280px;
    height: 877px;
    margin: 41px  auto 0;
 
@@ -262,7 +277,10 @@ align-items: center;
 justify-content: center;
 }
 
-
+.card:hover .btn {
+   background: $color-primary-light;
+   border: $color-primary-light 2px solid;
+ }
 
 
 
@@ -278,9 +296,10 @@ height: 435px;
 &:hover {
    background-color: white;
    cursor: pointer;
+   box-shadow: 0px 2px 35px 14px rgba(13,13,13 ,0.05);
 }
    
- 
+
 }  
 .btn{
    width: 187px;
@@ -293,7 +312,7 @@ height: 435px;
  }
  .btn:hover{
    background: $color-primary-light;
- 
+   border: $color-primary-light 2px solid;
  }
 
   
@@ -428,7 +447,8 @@ a{
 
    .In-addition{
       background-color: $color-light-l;
-      width: 1280px;
+      width: 100%;
+      max-width: 1280px;
       height: 462px;
       margin: 41px  auto 0;
    
@@ -497,7 +517,8 @@ color: #B2B2B2;
 
 .end-screen{
    display: flex;
-   width: 1280px;
+   width: 100%;
+   max-width: 1280px;
    border: #5B483A 2px solid;
    height: 350px;
    background: 

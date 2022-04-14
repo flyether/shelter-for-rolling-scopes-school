@@ -23,7 +23,8 @@ img {
 }
 
 .start-screen {
-  width: 1280px;
+  width: 100%;
+  max-width: 1280px;
   border: #5B483A 2px solid;
   height: 908px;
   background: url(../../assets/images/start-screen-puppy.png) no-repeat 93% 101%, url(../../assets/images/noise.png), url(../../assets/images/start-screen-background.jpg);
@@ -32,6 +33,7 @@ img {
 }
 
 .container {
+  width: 100%;
   max-width: 1280px;
   padding: 60px 40px;
   margin: 0 auto;
@@ -183,15 +185,29 @@ img {
 
 .nav-link:active {
   border-bottom: #f1cdb3 solid 4px;
+  color: white;
 }
 
 .nav-link:hover {
-  font-weight: bold;
   cursor: pointer;
+  color: white;
 }
 
-.line {
+.nav-link-active {
+  text-decoration: none;
+  font-family: Arial;
+  color: white;
+  font-size: 15px;
+  line-height: 160%;
+  color: white;
+  margin: 0px  17px 0 12px;
   border-bottom: #f1cdb3 solid 4px;
+  outline: none;
+}
+
+.nav-link-active:hover {
+  cursor: pointer;
+  color: white;
 }
 
 .button_primary {
@@ -207,6 +223,7 @@ img {
   width: 207px;
   height: 52px;
   border-radius: 100px;
+  cursor: pointer;
 }
 
 .margin-button {
@@ -259,7 +276,8 @@ img {
 
 .our-friends {
   background-color: #F6F6F6;
-  width: 1280px;
+  width: 100%;
+  max-width: 1280px;
   height: 877px;
   margin: 41px  auto 0;
 }
@@ -277,6 +295,11 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.card:hover .btn {
+  background: #fddcc4;
+  border: #fddcc4 2px solid;
 }
 
 .card {
@@ -297,6 +320,8 @@ img {
 .card:hover {
   background-color: white;
   cursor: pointer;
+  -webkit-box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.05);
+          box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.05);
 }
 
 .btn {
@@ -311,6 +336,7 @@ img {
 
 .btn:hover {
   background: #fddcc4;
+  border: #fddcc4 2px solid;
 }
 
 .pets {
@@ -485,7 +511,8 @@ a {
 
 .In-addition {
   background-color: #F6F6F6;
-  width: 1280px;
+  width: 100%;
+  max-width: 1280px;
   height: 462px;
   margin: 41px  auto 0;
 }
@@ -564,7 +591,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 1280px;
+  width: 100%;
+  max-width: 1280px;
   border: #5B483A 2px solid;
   height: 350px;
   background: url(../../assets/images/footer-puppy.png) no-repeat 96% 100%, url(../../assets/images/noise.png), url(../../assets/images/start-screen-background.jpg);

@@ -49,6 +49,7 @@ $color-primary-light:rgba(253, 220, 196, 1);
 
 .container {
    max-width:1280px;
+   width: 100%;
    padding: 60px 40px;
    margin: 0 auto;
 }
@@ -56,6 +57,7 @@ $color-primary-light:rgba(253, 220, 196, 1);
 .heder-container {
    position: sticky; 
    top: 0;
+   width: 100%;
    max-width:1280px;
    padding: 12px 40px 20px;
    margin: 20px auto 8px;
@@ -164,7 +166,7 @@ $color-primary-light:rgba(253, 220, 196, 1);
   @include Arial-white();
   font-size: 15px;
   line-height: 160%;
-  color: #CDCDCD;
+  color: $color-dark-3xl;
   margin: 0px  17px 0 12px ;
    
    &:active
@@ -173,15 +175,30 @@ $color-primary-light:rgba(253, 220, 196, 1);
    }
 
    &:hover {
-      font-weight: bold;
+      
       cursor: pointer;
+      color:$color-dark-3xl;
    }
    outline: none;
  }
 
- .line{
+ .nav-link-active {
+   text-decoration: none;
+   @include Arial-white();
+   font-size: 15px;
+   line-height: 160%;
+   color: $color-dark-l;
+   margin: 0px  17px 0 12px ;
    border-bottom: $color-primary solid 4px;
- }
+        
+    &:hover {
+       
+       cursor: pointer;
+      
+    }
+    outline: none;
+  }
+ 
 
  .card-space{
    display: flex;
@@ -192,6 +209,11 @@ $color-primary-light:rgba(253, 220, 196, 1);
    justify-content: space-between;
    }
      
+   .card:hover .btn {
+      background: $color-primary-light;
+      border: $color-primary-light 2px solid;
+    }
+   
         
    .card{
    @include flexColumn();
@@ -205,6 +227,7 @@ $color-primary-light:rgba(253, 220, 196, 1);
    &:hover {
       background-color: white;
       cursor: pointer;
+      box-shadow: 0px 2px 35px 14px rgba(13,13,13 ,0.05);
    }
       
    }  
@@ -220,14 +243,14 @@ $color-primary-light:rgba(253, 220, 196, 1);
     }
     .btn:hover{
       background: $color-primary-light;
-    
+      border: $color-primary-light 2px solid;
     }
 
   
 
 
  .pets{
-    width: 1280px;
+    max-width: 1280px;
     height: 1342px;
     background-color: $color-light-l;
     margin: 0 auto;
@@ -329,9 +352,10 @@ $color-primary-light:rgba(253, 220, 196, 1);
 
 .end-screen{
    display: flex;
-   width: 1280px;
+   width: 100%;
+   max-width: 1280px;
    border: #5B483A 2px solid;
-   height: 350px;
+   
    background: 
    url(../../assets/images/footer-puppy.png) no-repeat 96% 100% , 
    url(../../assets/images/noise.png) ,
