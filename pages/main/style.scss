@@ -316,7 +316,7 @@ justify-content: center;
 .owl-carousel .owl-dots.disabled,.owl-carousel .owl-nav.disabled{display:none}
 .no-js .owl-carousel,.owl-carousel.owl-loaded{display:block}
 .owl-carousel .owl-dot,.owl-carousel .owl-nav ,.owl-carousel .owl-nav {cursor:pointer;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
-.owl-carousel .owl-nav button,.owl-carousel .owl-nav button,.owl-carousel button.owl-dot{
+.owl-carousel .owl-nav button,.owl-nav button, button{
    width: 52px;
   
    height: 52px;
@@ -330,7 +330,7 @@ justify-content: center;
    
       display: flex; 
       justify-content: space-around;
-      align-items: stretch;
+      text-align: center;
        
       }
 

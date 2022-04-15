@@ -401,7 +401,7 @@ img {
   user-select: none;
 }
 
-.owl-carousel .owl-nav button, .owl-carousel .owl-nav button, .owl-carousel button.owl-dot {
+.owl-carousel .owl-nav button, .owl-nav button, button {
   width: 52px;
   height: 52px;
   -webkit-box-align: center;
@@ -413,15 +413,13 @@ img {
   cursor: pointer;
 }
 
-.owl-carousel .owl-nav button .owl-nav, .owl-carousel .owl-nav button .owl-nav, .owl-carousel button.owl-dot .owl-nav {
+.owl-carousel .owl-nav button .owl-nav, .owl-nav button .owl-nav, button .owl-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  text-align: center;
 }
 
 .owl-prev {
