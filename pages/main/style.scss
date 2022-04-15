@@ -307,8 +307,9 @@ justify-content: center;
  }
 
  .owl-carousel,.owl-carousel .owl-item{-webkit-tap-highlight-color:transparent;position:relative}
-.owl-carousel{display:none;width:100%;z-index:1}
-.owl-carousel .owl-stage{position:relative;-ms-touch-action:pan-Y;touch-action:manipulation;-moz-backface-visibility:hidden}
+.owl-carousel{display:none;width:calc(100% - 130px);z-index:1}
+.owl-carousel .owl-stage{position:relative; 
+   -ms-touch-action:pan-Y;touch-action:manipulation;-moz-backface-visibility:hidden}
 .owl-carousel .owl-stage:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}
 .owl-carousel .owl-stage-outer{position:relative;overflow:hidden;-webkit-transform:translate3d(0,0,0)}
 .owl-carousel .owl-item,.owl-carousel .owl-wrapper{-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0)}
@@ -340,7 +341,7 @@ justify-content: center;
    .owl-prev{
       position: absolute;
       top:190px;
-      
+     left: -60px;
       background:url(../../assets/images/ArrowL.svg) no-repeat center center; 
       &:hover{
 background-color: $color-primary-light;
@@ -350,7 +351,7 @@ background-color: $color-primary-light;
       position: absolute;
       top:190px;
       z-index: 5;
-      left: 1150px;
+      left: 1085px;
       background:url(../../assets/images/ArrowR.svg) no-repeat center center; 
       &:hover{
          background-color: $color-primary-light;
@@ -524,7 +525,7 @@ a{
       background-color: $color-light-l;
       width: 100%;
       max-width: 1280px;
-      margin: 15px  auto 0;
+      margin: 12px  auto 0;
    padding: 18px 0 38px;
    }
 .donation{
