@@ -310,6 +310,7 @@ img {
 }
 
 .card-space {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -423,6 +424,8 @@ img {
 }
 
 .owl-prev {
+  position: absolute;
+  top: 190px;
   background: url(../../assets/images/ArrowL.svg) no-repeat center center;
 }
 
@@ -431,6 +434,10 @@ img {
 }
 
 .owl-next {
+  position: absolute;
+  top: 190px;
+  z-index: 5;
+  left: 1150px;
   background: url(../../assets/images/ArrowR.svg) no-repeat center center;
 }
 
