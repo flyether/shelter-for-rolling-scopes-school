@@ -4,7 +4,8 @@
 
  $('.owl-carousel').owlCarousel({
    loop:true,
-  
+   navText:['',''],
+   dots:false,
    margin:10,
    nav:true,
    responsive:{
@@ -18,4 +19,6 @@
            items:3
        }
    }
+
+
 })

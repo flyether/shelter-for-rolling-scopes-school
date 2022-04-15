@@ -413,16 +413,31 @@ img {
   cursor: pointer;
 }
 
+.owl-carousel .owl-nav button .owl-nav, .owl-carousel .owl-nav button .owl-nav, .owl-carousel button.owl-dot .owl-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
 .owl-prev {
   background: url(../../assets/images/ArrowL.svg) no-repeat center center;
 }
 
 .owl-prev:hover {
-  background-color: #f1cdb3;
+  background-color: #fddcc4;
 }
 
 .owl-next {
   background: url(../../assets/images/ArrowR.svg) no-repeat center center;
+}
+
+.owl-next:hover {
+  background-color: #fddcc4;
 }
 
 .owl-carousel.owl-loading {
@@ -569,26 +584,7 @@ img {
   width: 100%;
 }
 
-.owl-theme .owl-nav {
-  margin-top: 10px;
-  text-align: center;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.owl-theme .owl-nav [class*='owl-'] {
-  color: #FFF;
-  font-size: 14px;
-  margin: 5px;
-  padding: 4px 7px;
-  background: #D6D6D6;
-  display: inline-block;
-  cursor: pointer;
-  border-radius: 3px;
-}
-
 .owl-theme .owl-nav [class*='owl-']:hover {
-  background: #869791;
-  color: #FFF;
   text-decoration: none;
 }
 
@@ -695,38 +691,6 @@ a {
 
 .button_primary_friends:hover {
   background: #fddcc4;
-}
-
-.arrow {
-  width: 52px;
-  height: 52px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 23px 19px;
-  border: 2px solid #f1cdb3;
-  border-radius: 100px;
-  cursor: pointer;
-}
-
-.arrow.left {
-  margin-right: auto;
-  background: url(../../assets/images/ArrowL.svg) no-repeat center center;
-}
-
-.arrow.left:hover {
-  background: url(../../assets/images/ArrowL.svg) no-repeat center center;
-  background-color: #fddcc4;
-}
-
-.arrow.right {
-  margin-left: auto;
-  background: url(../../assets/images/ArrowR.svg) no-repeat center center;
-}
-
-.arrow.right:hover {
-  background: url(../../assets/images/ArrowR.svg) no-repeat center center;
-  background-color: #fddcc4;
 }
 
 .section-help {
