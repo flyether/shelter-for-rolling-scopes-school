@@ -426,7 +426,7 @@ img {
 .owl-prev {
   position: absolute;
   top: 190px;
-  left: -60px;
+  left: -6%;
   background: url(../../assets/images/ArrowL.svg) no-repeat center center;
 }
 
@@ -438,7 +438,7 @@ img {
   position: absolute;
   top: 190px;
   z-index: 5;
-  left: 1085px;
+  left: 101.5%;
   background: url(../../assets/images/ArrowR.svg) no-repeat center center;
 }
 

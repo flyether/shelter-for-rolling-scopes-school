@@ -8,6 +8,7 @@
    dots:false,
    margin:10,
    nav:true,
+   items:0,
    responsive:{
        0:{
            items:1
