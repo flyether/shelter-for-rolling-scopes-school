@@ -104,7 +104,7 @@ $color-primary-light:rgba(253, 220, 196, 1);
       color: white;
       font-size: 35px;
       line-height: 130%;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.03em;
    }
    &.title-text{
     margin-left: 6px;
@@ -346,16 +346,13 @@ $color-primary-light:rgba(253, 220, 196, 1);
 
 
 
-
-
-
-
 .end-screen{
    display: flex;
+ 
    width: 100%;
    max-width: 1280px;
    border: #5B483A 2px solid;
-   
+   height: 350px;
    background: 
    url(../../assets/images/footer-puppy.png) no-repeat 96% 100% , 
    url(../../assets/images/noise.png) ,
@@ -364,6 +361,7 @@ $color-primary-light:rgba(253, 220, 196, 1);
    margin: 0 auto;
 }
 .email-gl{
+   flex-wrap: wrap;
    height: 36px;
    display: flex;
    align-items: center;
@@ -376,13 +374,13 @@ $color-primary-light:rgba(253, 220, 196, 1);
 }
 .footer-right{
    @include flexColumn();
-   margin:55px 0  0 150px;
+   margin:55px 0  0 172px;
 }
 .mar-l{
    margin-left: 10px;
 }
 .mar-r{
-   margin-left: -10px;
+   margin-left: 0px;
 }
 .footer-svg{
    width: 40px;
