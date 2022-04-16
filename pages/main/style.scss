@@ -134,7 +134,7 @@ $color-primary-light:rgba(253, 220, 196, 1);
         letter-spacing: 2px;
          color:$color-dark-l;
          font-size: 35px;
-        
+       
          line-height: 130%;
      }
   &.te{
@@ -223,6 +223,10 @@ $color-primary-light:rgba(253, 220, 196, 1);
  .margin-button{
    margin-top: 40px;
  }
+ .margin-button-friends {
+   margin-top: 120px;
+ }
+
  .button-text{
    font-family: Georgia;
    font-style: normal;
@@ -246,6 +250,7 @@ letter-spacing: 0.05em;
 }
 .cat-dog-img{
    margin-left: 14.3%;
+
   
 }
 .text-about{
@@ -527,8 +532,10 @@ a{
       max-width: 1280px;
       margin: 12px  auto 0;
    padding: 18px 0 38px;
+   
    }
 .donation{
+   
    margin-left: 11.52%;
    display: flex;
    justify-content:center;
@@ -540,7 +547,7 @@ a{
   width: 50%;
 }
 .content-donation{
-  
+   
    width: 50%;
 }
 
@@ -550,7 +557,7 @@ a{
    padding: 10px 15px;
    flex-wrap: wrap;
    position: absolute;
-   width: 349px;
+   max-width: 349px;
    height: 43px;
    margin-left: 10px;
    background: $color-primary;
@@ -561,13 +568,15 @@ a{
 width: 30px;
 height: 23px;
 background: url(../../assets/icons/credit-card.svg) no-repeat center center;
-margin: 2px 0px 0px px;  
+margin: 2px 0px 0px 0;  
 }
 .credit-number{
    font-family: 'Georgia';
    font-style: normal;
    font-weight: 400;
-   font-size: 20px;
+    
+
+ font-size: 1.2rem;
    line-height: 115%;
    margin: 0px 0px 0px 8px;  
    letter-spacing: 0.054em;
@@ -644,11 +653,32 @@ color: #B2B2B2;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media  (max-width: 768px) {
    .container {
       width: 100%;
       max-width:768px;
-      padding: 60px 30px;
+      padding: 30px 30px;
      
    }
    
@@ -657,6 +687,65 @@ color: #B2B2B2;
       height: 60px;
       justify-content: space-between;
    }
+
+   .nav-link{
+      margin: auto 11px 0 18px;
+   }
+
+   .start-screen{
+      height: 1165px;
+      background: 
+      url(../../assets/images/start-screen-puppy768.png) no-repeat 86% 100% , 
+      url(../../assets/images/noise.png) ,
+      url(../../assets/images/start-screen-background768.jpg);
+   }
+
+   .title{
+      margin: 58px  120px 0;
+   }
+   .margin-button{
+      margin: 40px 0 0 27.5%;
+    }
+
+    .help-card-2{
+      @include flexColumn();
+      width: 224px;
+       margin: 27px auto;
+      justify-content:space-between;
+       white-space: nowrap;
+       flex-wrap: wrap;
+       text-align: center;
+       height: 113px;
+       align-items: center;
+    }
+
+
+    .about{
+    
+   }
+   .section-about{
+    
+   }
+   .cat-dog-img{
+    
+   order:1;
+     
+   }
+   .text-about{
+      order: 2;
+     
+   }
+   .card{
+      margin: auto;
+   }
+
+   .margin-button-friends {
+      margin-top: 120px 0 0 0 ;
+    }
+
+
+
+
 
    
 }
