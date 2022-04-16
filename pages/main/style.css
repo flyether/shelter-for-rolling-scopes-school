@@ -121,7 +121,7 @@ img {
 }
 
 .text.pet-name {
-  margin-top: 27px;
+  margin-top: 37px;
   margin-bottom: 30px;
   color: #545454;
   font-size: 20px;
@@ -843,7 +843,7 @@ a {
   position: absolute;
   max-width: 349px;
   height: 43px;
-  margin-left: 10px;
+  margin-left: 3px;
   background: #f1cdb3;
   border-radius: 9px;
 }
