@@ -952,44 +952,27 @@ a {
   background: url(../../assets/icons/icon-marker.svg) no-repeat center center;
 }
 
-@media (max-width: 1200) {
-  .donation {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin: 32px 0 0 -30px;
-  }
-  .dog-donat {
-    margin: 55px 0 0 32px;
-    width: 70%;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-  }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 1279px) {
   .container {
     width: 100%;
     max-width: 768px;
     padding: 30px 30px;
   }
+  .nav {
+    margin: 0px 0 0 0px;
+  }
+  .nav-list {
+    margin: 15px 0px 0 9.2vh;
+  }
   .nav-link {
-    margin: auto 11px 0 18px;
+    margin: 0 2vh 0 3vh;
   }
   .start-screen {
     height: 1165px;
     background: url(../../assets/images/start-screen-puppy768.png) no-repeat 86% 100%, url(../../assets/images/noise.png), url(../../assets/images/start-screen-background768.jpg);
   }
   .title {
-    margin: 58px  120px 0;
+    margin: 58px  17.5% 0;
   }
   .margin-button {
     margin: 40px 0 0 27.5%;
@@ -1105,18 +1088,72 @@ a {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 767.98px) {
   .container {
     width: 100%;
     max-width: 320px;
     padding: 10px 10px;
   }
+  .text.help-text {
+    font-size: 20px;
+    letter-spacing: 0.06em;
+  }
+  .text.title-text {
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 0.06em;
+  }
+  .text.about-text {
+    letter-spacing: 0.06em;
+    text-align: center;
+    font-size: 25px;
+  }
+  .text.footer-cont {
+    font-size: 20px;
+    letter-spacing: 0.06em;
+  }
+  .text.footer-title {
+    margin-bottom: 3px;
+    font-size: 35px;
+    letter-spacing: 0.06em;
+  }
+  .text.our-friends-title {
+    margin: auto;
+    letter-spacing: 1.6px;
+    font-size: 25px;
+  }
+  .text.pet-name {
+    margin-top: 27px;
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+  .text.donation-title {
+    margin: 0px 0 0 8px;
+    letter-spacing: 2px;
+    color: #545454;
+    font-size: 35px;
+    line-height: 130%;
+  }
+  .text.te {
+    margin: 20px 3px;
+    color: #545454;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+  }
+  .text-small-title {
+    text-align: center;
+  }
   .start-screen {
+    max-width: 320px;
     height: 823px;
     background: url(../../assets/images/start-screen-puppy320.png) no-repeat 86% 100%, url(../../assets/images/noise.png), url(../../assets/images/start-screen-background768.jpg);
   }
   .margin-button {
-    margin: 40px 0 0;
+    margin: 40px 0 0 15%;
+  }
+  .title {
+    margin: 26.5% 0%;
   }
   .hamburger {
     display: block;
@@ -1127,8 +1164,8 @@ a {
     cursor: pointer;
   }
   .hamburger .line {
-    width: 50px;
-    height: 3px;
+    width: 30px;
+    height: 2px;
     background-color: #f1cdb3;
     display: block;
     margin: 10px auto 0;
@@ -1138,21 +1175,24 @@ a {
   .hamburger:hover {
     cursor: pointer;
   }
-  #hamburger-1.is-active .line:nth-child(2) {
-    opacity: 0;
-  }
   #hamburger-1.is-active .line:nth-child(1) {
-    -webkit-transform: translateY(13px) rotate(45deg);
-    transform: translateY(13px) rotate(45deg);
+    -webkit-transform: translateY(13px) rotate(90deg);
+    transform: translateY(13px) rotate(90deg);
+  }
+  #hamburger-1.is-active .line:nth-child(2) {
+    left: 5px;
+    -webkit-transform: translateY(13px) rotate(90deg);
+    transform: translateY(13px) rotate(90deg);
   }
   #hamburger-1.is-active .line:nth-child(3) {
-    -webkit-transform: translateY(-13px) rotate(-45deg);
-    transform: translateY(-13px) rotate(-45deg);
+    left: 5px;
+    -webkit-transform: translateY(13px) rotate(90deg);
+    transform: translateY(13px) rotate(90deg);
   }
   .col {
     display: block;
     float: left;
-    margin: 1% 0 1% 1.6%;
+    margin: 8.5% 7% 0% 0%;
   }
   .three {
     width: 23.8%;
@@ -1189,11 +1229,8 @@ a {
             flex-direction: column;
     padding: 20px 0 20px;
   }
-  .title {
-    margin: 58px  120px 0;
-  }
-  .margin-button {
-    margin: 40px 0 0 27.5%;
+  .logo {
+    margin: 19px  -2px 0 0;
   }
   .help-card-2 {
     display: -webkit-box;
@@ -1218,24 +1255,33 @@ a {
             align-items: center;
   }
   .about {
-    margin: 16px 0 0 12px;
+    margin: 16.5px auto 0;
+  }
+  .about-content-text {
+    margin: 24px 14px 0 17px;
+    font-size: 15px;
+    line-height: 160%;
   }
   .cat-dog-img {
-    margin: 78px 0 28px 27.5%;
+    margin: 140px 0 auto 16px;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
   }
   .text-about {
+    margin: auto;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+  }
+  .card-space {
+    margin-top: 44px;
   }
   .card {
     margin: auto;
   }
   .margin-button-friends {
-    margin-top: 120px 0 0 0;
+    margin-top: 100px 0 0 0;
   }
   .owl-prev {
     left: -11%;
@@ -1271,7 +1317,7 @@ a {
     letter-spacing: 0.06em;
   }
   .our-friends-general {
-    margin: 50px 0 30px;
+    margin: 5px 0 0px 0px;
   }
   .section-help {
     margin: 50px 0 46px;

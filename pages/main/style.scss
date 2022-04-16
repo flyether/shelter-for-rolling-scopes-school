@@ -668,26 +668,12 @@ color: #B2B2B2;
 
 
 
-@media (max-width: 1200) {
-   .donation{
-      @include flexColumn();
-     align-items: center;
-     margin: 32px 0 0 -30px;
-     }
-     
-     .dog-donat{
-       margin: 55px 0 0 32px;
-       width: 70%;
-       order: 2;
-     }
-     
-   
-}
 
 
 
 
-@media  (max-width: 768px) {
+
+@media  (max-width: 1279px) {
    .container {
       width: 100%;
       max-width:768px;
@@ -695,10 +681,14 @@ color: #B2B2B2;
      
    }
    
-  
-
+  .nav{
+     margin: 0px 0 0 0px;
+  }
+.nav-list{
+   margin: 15px 0px 0 9.2vh;
+}
    .nav-link{
-      margin: auto 11px 0 18px;
+      margin: 0 2vh 0 3vh;
    }
 
    .start-screen{
@@ -710,7 +700,7 @@ color: #B2B2B2;
    }
 
    .title{
-      margin: 58px  120px 0;
+      margin: 58px  17.5% 0;
    }
    .margin-button{
       margin: 40px 0 0 27.5%;
@@ -819,6 +809,8 @@ margin: 32px 0 28px -30px;
 
 
 
+  
+    
 
 
 
@@ -836,19 +828,84 @@ margin: 32px 0 28px -30px;
 
 
 
-
-
-@media  (max-width: 320px) {
+@media  ( max-width: 767.98px) {
    .container {
       width: 100%;
       max-width:320px;
       padding: 10px 10px;
      
    }
- 
+   .text {
+      
+      &.help-text{
+       
+         font-size: 20px;
+  
+         letter-spacing: 0.06em;
+      }
+      &.title-text{
+  text-align: center;
+         font-size: 25px;
+         letter-spacing: 0.06em;
+      }
+      &.about-text{
+         letter-spacing: 0.06em;
+     text-align: center;
+         font-size: 25px;
+      
+      }
+      &.footer-cont{
+         font-size: 20px;
+         letter-spacing: 0.06em;
+      }
+      &.footer-title{
+         margin-bottom:3px ;
+         font-size: 35px;
+      
+         letter-spacing: 0.06em;
+      }
+      &.our-friends-title{
+       margin:auto;
+    
+         letter-spacing: 1.6px;
+         
+          font-size: 25px;
+        
+      }
+      &.pet-name{
+         margin-top: 27px;
+         margin-bottom: 30px;
+        
+         font-size: 20px;
+        
+      }
+      &.donation-title{
+         
+           margin: 0px 0 0 8px;
+           letter-spacing: 2px;
+            color:$color-dark-l;
+            font-size: 35px;
+          
+            line-height: 130%;
+        }
+     &.te{
+        margin: 20px 3px;
+         color:$color-dark-l;
+        font-size: 15px;
+         line-height: 110%;
+         letter-spacing: 0.06em;
+      }
+      
+    }
 
+    .text-small-title{
+      text-align: center;
+      
+   }
 
    .start-screen{
+      
+      max-width:320px;
       height: 823px;
       background: 
       url(../../assets/images/start-screen-puppy320.png) no-repeat 86% 100% , 
@@ -857,9 +914,14 @@ margin: 32px 0 28px -30px;
    }
 
    .margin-button{
-      margin: 40px 0 0 ;
+      margin: 40px 0 0 15% ;
     }
+    .title{
+     
+      margin: 26.5% 0%;
+   }
 
+     
    .hamburger{
       display: block;
       position: relative; /* нов */
@@ -868,8 +930,8 @@ margin: 32px 0 28px -30px;
       cursor: pointer;
     }
     .hamburger .line{
-      width: 50px;
-      height: 3px;
+      width: 30px;
+      height: 2px;
       background-color: $color-primary;
       display: block;
       margin: 10px auto 0;
@@ -880,26 +942,33 @@ margin: 32px 0 28px -30px;
       .hamburger:hover{
       cursor: pointer;
     }
-        #hamburger-1.is-active .line:nth-child(2){
-      opacity: 0;
-    }
+     
     
     #hamburger-1.is-active .line:nth-child(1){
-      -webkit-transform: translateY(13px) rotate(45deg);
-      -ms-transform: translateY(13px) rotate(45deg);
-      -o-transform: translateY(13px) rotate(45deg);
-      transform: translateY(13px) rotate(45deg);
+      
+      -webkit-transform: translateY(13px) rotate(90deg);
+      -ms-transform: translateY(13px) rotate(90deg);
+      -o-transform: translateY(13px) rotate(90deg);
+      transform: translateY(13px) rotate(90deg);
     }
-    #hamburger-1.is-active .line:nth-child(3){
-      -webkit-transform: translateY(-13px) rotate(-45deg);
-      -ms-transform: translateY(-13px) rotate(-45deg);
-      -o-transform: translateY(-13px) rotate(-45deg);
-      transform: translateY(-13px) rotate(-45deg);
-    }
+    #hamburger-1.is-active .line:nth-child(2){
+      left: 5px;
+     -webkit-transform: translateY(13px) rotate(90deg);
+     -ms-transform: translateY(13px) rotate(90deg);
+     -o-transform: translateY(13px) rotate(90deg);
+     transform: translateY(13px) rotate(90deg);
+   }
+   #hamburger-1.is-active .line:nth-child(3){
+      left: 5px;
+     -webkit-transform: translateY(13px) rotate(90deg);
+     -ms-transform: translateY(13px) rotate(90deg);
+     -o-transform: translateY(13px) rotate(90deg);
+     transform: translateY(13px) rotate(90deg);
+   }
     .col {
       display: block;
       float:left;
-      margin: 1% 0 1% 1.6%;
+      margin: 8.5% 7% 0% 0%;
   
     }
     .three { width: 23.8%; }
@@ -910,15 +979,12 @@ margin: 32px 0 28px -30px;
 
     .nav{
       position: absolute;
-   
-      overflow-x: hidden;
+       overflow-x: hidden;
       display: none;
       top: 0px;
       background: rgb(61, 161, 77);
-     
       width: 300px;
       height: 823px;
-
       z-index: 8;
       transition: all 0.3s ease 0s;
       }
@@ -938,16 +1004,13 @@ margin: 32px 0 28px -30px;
         
        }
       
-      
+     .logo{
+      margin: 19px  -2px 0 0;
+     } 
 
 
 
-   .title{
-      margin: 58px  120px 0;
-   }
-   .margin-button{
-      margin: 40px 0 0 27.5%;
-    }
+
 
     .help-card-2{
       @include flexColumn();
@@ -962,24 +1025,37 @@ margin: 32px 0 28px -30px;
     }
 
    .about{
-    margin: 16px 0 0 12px;
+    margin: 16.5px auto 0;
    }
    
+   .about-content-text{
+      margin: 24px 14px 0 17px;
+      
+      font-size: 15px;
+      line-height: 160%;
+     }
    .cat-dog-img{
-    margin:78px 0 28px 27.5%;
-   order:2;
+    margin: 140px 0 auto 16px;
+   order: 2;
      
    }
+
    .text-about{
+      margin: auto;
       order: 1;
      
    }
+   .card-space{
+ margin-top: 44px;
+
+      }
+
    .card{
       margin: auto;
    }
 
    .margin-button-friends {
-      margin-top: 120px 0 0 0 ;
+      margin-top: 100px 0 0 0 ;
     }
 
     .owl-prev{
@@ -1010,7 +1086,7 @@ margin: 32px 0 28px -30px;
 }
 
 .our-friends-general{
-   margin: 50px 0 30px;
+   margin: 5px 0 0px 0px;
    }
 
    .section-help{
