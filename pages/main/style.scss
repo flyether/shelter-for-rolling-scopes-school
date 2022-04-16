@@ -105,11 +105,12 @@ $color-primary-light:rgba(253, 220, 196, 1);
    }
   
    &.footer-title{
+      max-width: 278px;
       margin-bottom:3px ;
       color: white;
       font-size: 35px;
       line-height: 130%;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.03em;
    }
    &.our-friends-title{
     margin:0 0 0px 6px;
@@ -129,8 +130,7 @@ $color-primary-light:rgba(253, 220, 196, 1);
       line-height: 23px;
    }
    &.donation-title{
-      
-        margin: 0px 0 0 8px;
+    
         letter-spacing: 2px;
          color:$color-dark-l;
          font-size: 35px;
@@ -547,7 +547,7 @@ a{
   width: 50%;
 }
 .content-donation{
-   
+   max-width: 380px;
    width: 50%;
 }
 
@@ -858,9 +858,9 @@ margin: 32px 0 28px -30px;
          letter-spacing: 0.06em;
       }
       &.footer-title{
-         margin-bottom:3px ;
-         font-size: 35px;
-      
+         margin-bottom:0px ;
+         font-size: 25px;
+      text-align: center;
          letter-spacing: 0.06em;
       }
       &.our-friends-title{
@@ -879,20 +879,18 @@ margin: 32px 0 28px -30px;
         
       }
       &.donation-title{
-         
-           margin: 0px 0 0 8px;
-           letter-spacing: 2px;
-            color:$color-dark-l;
-            font-size: 35px;
-          
-            line-height: 130%;
+           margin: 15px 0px 0 45px;
+           max-width: 70%;
+           font-size: 25px;
+           text-align: center;
+           letter-spacing: 0.06em;
         }
+
      &.te{
-        margin: 20px 3px;
-         color:$color-dark-l;
-        font-size: 15px;
+         margin: 22px 0px 0 13px;
+         font-size: 15px;
          line-height: 110%;
-         letter-spacing: 0.06em;
+         letter-spacing: 0.0em;
       }
       
     }
@@ -1102,17 +1100,25 @@ top: 466px;
 .donation{
  @include flexColumn();
 align-items: center;
-margin: 32px 0 28px -30px;
+margin: auto;
 }
-
+.content-donation{
+   margin-left: -20px;
+   max-width: 380px;
+   width: 100%;
+}
+.credit{
+   margin: 23px 0 7px 9px;
+}
 .dog-donat{
-  margin: 55px 0 0 32px;
-  width: 70%;
+  margin: 44px 0 -10px 20px;
+  width: 100%;
   order: 2;
 }
 .credit-number{
-    font-size: 1.25rem;   
-   letter-spacing: 0.06em;
+   margin-top: 4px;
+    font-size: 1rem;   
+   letter-spacing: 0.04em;
 }
 .our-friends{
 
@@ -1124,37 +1130,47 @@ margin: 32px 0 28px -30px;
    }
 
    .section-help{
-      margin: 33px 0 46px;
+      margin: 33px 0 22px;
    }
 
    .end-screen{
     @include flexColumn();
-    height: 639px;
+    height: 809px;
     background: 
-    url(../../assets/images/footer-puppy.png) no-repeat 50% 100% , 
+    url(../../assets/images/footer-puppy320.png) no-repeat 50% 100% , 
     url(../../assets/images/noise.png) ,
     url(../../assets/images/start-screen-background.jpg);
    
    }
 
    .adres-general-div{
-      display: flex;
-      flex-direction: row;
-      
+      margin-top: 30px;
+   flex-direction: column;
+   
    }
       
    .footer-left{
-     
-      margin:27px 0  0 8%;
-      width: 50%;
+      align-items: center;
+      margin:0 0 0 0;
+      width: 100%;
    }
 
    .footer-right{
-      width: 49%;
-      margin:27px 0  0 -6%;
+      align-items: center;
+      margin:38px 0 0 0;
+      width: 100%;
    }
-  
-
+   .mar-l{
+      margin:-21px 0 0px 0;
+   }
+   .email-gl{
+      flex-wrap: wrap;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      margin:37px 0 10px -11px;
+     
+   }
    
 }
 

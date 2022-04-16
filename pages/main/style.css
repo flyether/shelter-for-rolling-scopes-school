@@ -100,11 +100,12 @@ img {
 }
 
 .text.footer-title {
+  max-width: 278px;
   margin-bottom: 3px;
   color: white;
   font-size: 35px;
   line-height: 130%;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.03em;
 }
 
 .text.our-friends-title {
@@ -128,7 +129,6 @@ img {
 }
 
 .text.donation-title {
-  margin: 0px 0 0 8px;
   letter-spacing: 2px;
   color: #545454;
   font-size: 35px;
@@ -823,6 +823,7 @@ a {
 }
 
 .content-donation {
+  max-width: 380px;
   width: 50%;
 }
 
@@ -1112,8 +1113,9 @@ a {
     letter-spacing: 0.06em;
   }
   .text.footer-title {
-    margin-bottom: 3px;
-    font-size: 35px;
+    margin-bottom: 0px;
+    font-size: 25px;
+    text-align: center;
     letter-spacing: 0.06em;
   }
   .text.our-friends-title {
@@ -1127,18 +1129,17 @@ a {
     font-size: 20px;
   }
   .text.donation-title {
-    margin: 0px 0 0 8px;
-    letter-spacing: 2px;
-    color: #545454;
-    font-size: 35px;
-    line-height: 130%;
+    margin: 15px 0px 0 45px;
+    max-width: 70%;
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 0.06em;
   }
   .text.te {
-    margin: 20px 3px;
-    color: #545454;
+    margin: 22px 0px 0 13px;
     font-size: 15px;
     line-height: 110%;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.0em;
   }
   .text-small-title {
     text-align: center;
@@ -1317,18 +1318,27 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 32px 0 28px -30px;
+    margin: auto;
+  }
+  .content-donation {
+    margin-left: -20px;
+    max-width: 380px;
+    width: 100%;
+  }
+  .credit {
+    margin: 23px 0 7px 9px;
   }
   .dog-donat {
-    margin: 55px 0 0 32px;
-    width: 70%;
+    margin: 44px 0 -10px 20px;
+    width: 100%;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
   }
   .credit-number {
-    font-size: 1.25rem;
-    letter-spacing: 0.06em;
+    margin-top: 4px;
+    font-size: 1rem;
+    letter-spacing: 0.04em;
   }
   .our-friends {
     padding-bottom: 32px;
@@ -1337,7 +1347,7 @@ a {
     margin: 5px 0 0px 0px;
   }
   .section-help {
-    margin: 33px 0 46px;
+    margin: 33px 0 22px;
   }
   .end-screen {
     display: -webkit-box;
@@ -1347,25 +1357,44 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 639px;
-    background: url(../../assets/images/footer-puppy.png) no-repeat 50% 100%, url(../../assets/images/noise.png), url(../../assets/images/start-screen-background.jpg);
+    height: 809px;
+    background: url(../../assets/images/footer-puppy320.png) no-repeat 50% 100%, url(../../assets/images/noise.png), url(../../assets/images/start-screen-background.jpg);
   }
   .adres-general-div {
+    margin-top: 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer-left {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 0 0 0;
+    width: 100%;
+  }
+  .footer-right {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 38px 0 0 0;
+    width: 100%;
+  }
+  .mar-l {
+    margin: -21px 0 0px 0;
+  }
+  .email-gl {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: 36px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .footer-left {
-    margin: 27px 0  0 8%;
-    width: 50%;
-  }
-  .footer-right {
-    width: 49%;
-    margin: 27px 0  0 -6%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 37px 0 10px -11px;
   }
 }
 
