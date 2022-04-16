@@ -531,11 +531,10 @@ a{
       width: 100%;
       max-width: 1280px;
       margin: 12px  auto 0;
-   padding: 18px 0 38px;
+      padding: 18px 0 38px;
    
    }
 .donation{
-   
    margin-left: 11.52%;
    display: flex;
    justify-content:center;
@@ -558,7 +557,7 @@ a{
    padding: 10px 15px;
    flex-wrap: wrap;
    position: absolute;
-   width: 349px;
+   max-width: 349px;
    height: 43px;
    margin-left: 10px;
    background: $color-primary;
@@ -577,13 +576,10 @@ margin: 2px 0px 0px 0;
    font-family: 'Georgia';
    font-style: normal;
    font-weight: 400;
-    
-
- font-size: 1.2rem;
+  font-size: 1.2rem;
    line-height: 115%;
    margin: 0px 0px 0px 8px;  
    letter-spacing: 0.054em;
-   
    color: $color-dark-l;
 }
 
@@ -699,11 +695,7 @@ color: #B2B2B2;
      
    }
    
-   .header{
-      display: flex;
-      height: 60px;
-      justify-content: space-between;
-   }
+  
 
    .nav-link{
       margin: auto 11px 0 18px;
@@ -736,8 +728,7 @@ color: #B2B2B2;
        align-items: center;
     }
 
-
-    .about{
+   .about{
     margin: 16px 0 0 12px;
    }
    
@@ -820,12 +811,6 @@ margin: 32px 0 28px -30px;
       margin:27px 0  0 -6%;
    }
   
-  
-   
-   
-
-
-
 
    
 }
@@ -840,6 +825,228 @@ margin: 32px 0 28px -30px;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media  (max-width: 320px) {
+   .container {
+      width: 100%;
+      max-width:320px;
+      padding: 10px 10px;
+     
+   }
+ 
+
+
+   .start-screen{
+      height: 823px;
+      background: 
+      url(../../assets/images/start-screen-puppy320.png) no-repeat 86% 100% , 
+      url(../../assets/images/noise.png) ,
+      url(../../assets/images/start-screen-background768.jpg);
+   }
+
+   .margin-button{
+      margin: 40px 0 0 ;
+    }
+
+   .hamburger{
+      display: block;
+      position: relative; /* нов */
+      margin:  0px auto;
+      z-index: 10;
+      cursor: pointer;
+    }
+    .hamburger .line{
+      width: 50px;
+      height: 3px;
+      background-color: #ecf0f1;
+      display: block;
+      margin: 10px auto 0;
+      -webkit-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+    }
+      .hamburger:hover{
+      cursor: pointer;
+    }
+        #hamburger-1.is-active .line:nth-child(2){
+      opacity: 0;
+    }
+    
+    #hamburger-1.is-active .line:nth-child(1){
+      -webkit-transform: translateY(13px) rotate(45deg);
+      -ms-transform: translateY(13px) rotate(45deg);
+      -o-transform: translateY(13px) rotate(45deg);
+      transform: translateY(13px) rotate(45deg);
+    }
+    #hamburger-1.is-active .line:nth-child(3){
+      -webkit-transform: translateY(-13px) rotate(-45deg);
+      -ms-transform: translateY(-13px) rotate(-45deg);
+      -o-transform: translateY(-13px) rotate(-45deg);
+      transform: translateY(-13px) rotate(-45deg);
+    }
+    .col {
+      display: block;
+      float:left;
+      margin: 1% 0 1% 1.6%;
+  
+    }
+    .three { width: 23.8%; }
+    .col:first-of-type {
+      margin-left: 0;
+    }
+
+
+    .nav{
+      position: absolute;
+   
+      overflow-x: hidden;
+      display: none;
+      top: 0px;
+      background: rgb(61, 161, 77);
+     
+      width: 300px;
+      height: 823px;
+
+      z-index: 10;
+      transition: all 0.3s ease 0s;
+      }
+  
+      .nav._active{
+        left: 10%;
+        display: block;
+      }
+  
+       .body_lock{
+        overflow: hidden;
+      }
+  
+      .nav-list{
+         @include flexColumn();
+         padding: 20px 0 20px;
+        
+       }
+      
+      
+
+
+
+   .title{
+      margin: 58px  120px 0;
+   }
+   .margin-button{
+      margin: 40px 0 0 27.5%;
+    }
+
+    .help-card-2{
+      @include flexColumn();
+      width: 224px;
+       margin: 27px auto;
+      justify-content:space-between;
+       white-space: nowrap;
+       flex-wrap: wrap;
+       text-align: center;
+       height: 113px;
+       align-items: center;
+    }
+
+   .about{
+    margin: 16px 0 0 12px;
+   }
+   
+   .cat-dog-img{
+    margin:78px 0 28px 27.5%;
+   order:2;
+     
+   }
+   .text-about{
+      order: 1;
+     
+   }
+   .card{
+      margin: auto;
+   }
+
+   .margin-button-friends {
+      margin-top: 120px 0 0 0 ;
+    }
+
+    .owl-prev{
+   left: -11%;
+
+   }
+   .owl-next{ 
+      left: 102%;
+   }
+.owl-item:active{
+   margin-right: 30px;
+}
+
+.donation{
+ @include flexColumn();
+align-items: center;
+margin: 32px 0 28px -30px;
+}
+
+.dog-donat{
+  margin: 55px 0 0 32px;
+  width: 70%;
+  order: 2;
+}
+.credit-number{
+    font-size: 1.25rem;   
+   letter-spacing: 0.06em;
+}
+
+.our-friends-general{
+   margin: 50px 0 30px;
+   }
+
+   .section-help{
+      margin: 50px 0 46px;
+   }
+
+   .end-screen{
+    @include flexColumn();
+    height: 639px;
+    background: 
+    url(../../assets/images/footer-puppy.png) no-repeat 50% 100% , 
+    url(../../assets/images/noise.png) ,
+    url(../../assets/images/start-screen-background.jpg);
+   
+   }
+
+   .adres-general-div{
+      display: flex;
+      flex-direction: row;
+      
+   }
+      
+   .footer-left{
+     
+      margin:27px 0  0 8%;
+      width: 50%;
+   }
+
+   .footer-right{
+      width: 49%;
+      margin:27px 0  0 -6%;
+   }
+  
+
+   
+}
 
 
 
