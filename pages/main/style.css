@@ -247,6 +247,7 @@ img {
 
 .title {
   margin-top: 220px;
+  max-width: 460px;
 }
 
 .about {
@@ -1017,16 +1018,13 @@ a {
     margin: auto;
   }
   .margin-button-friends {
-    margin-top: 120px 0 0 0;
+    margin-top: 120px;
   }
   .owl-prev {
     left: -11%;
   }
   .owl-next {
     left: 102%;
-  }
-  .owl-item:active {
-    margin-right: 30px;
   }
   .donation {
     display: -webkit-box;
@@ -1281,16 +1279,15 @@ a {
     margin: auto;
   }
   .margin-button-friends {
-    margin-top: 100px 0 0 0;
+    margin-top: 110px;
   }
   .owl-prev {
-    left: -11%;
+    left: -5%;
+    top: 452px;
   }
   .owl-next {
-    left: 102%;
-  }
-  .owl-item:active {
-    margin-right: 30px;
+    top: 452px;
+    left: 75%;
   }
   .donation {
     display: -webkit-box;
