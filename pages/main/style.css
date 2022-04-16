@@ -835,7 +835,7 @@ a {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   position: absolute;
-  max-width: 349px;
+  width: 349px;
   height: 43px;
   margin-left: 10px;
   background: #f1cdb3;
@@ -951,6 +951,29 @@ a {
   background: url(../../assets/icons/icon-marker.svg) no-repeat center center;
 }
 
+@media (max-width: 1200) {
+  .donation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 32px 0 0 -30px;
+  }
+  .dog-donat {
+    margin: 55px 0 0 32px;
+    width: 70%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
 @media (max-width: 768px) {
   .container {
     width: 100%;
@@ -1001,21 +1024,92 @@ a {
         -ms-flex-align: center;
             align-items: center;
   }
-  .cat-dog-img {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+  .about {
+    margin: 16px 0 0 12px;
   }
-  .text-about {
+  .cat-dog-img {
+    margin: 78px 0 28px 27.5%;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+  }
+  .text-about {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
   .card {
     margin: auto;
   }
   .margin-button-friends {
     margin-top: 120px 0 0 0;
+  }
+  .owl-prev {
+    left: -11%;
+  }
+  .owl-next {
+    left: 102%;
+  }
+  .owl-item:active {
+    margin-right: 30px;
+  }
+  .donation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 32px 0 28px -30px;
+  }
+  .dog-donat {
+    margin: 55px 0 0 32px;
+    width: 70%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .credit-number {
+    font-size: 1.25rem;
+    letter-spacing: 0.06em;
+  }
+  .our-friends-general {
+    margin: 50px 0 30px;
+  }
+  .section-help {
+    margin: 50px 0 46px;
+  }
+  .end-screen {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 639px;
+    background: url(../../assets/images/footer-puppy.png) no-repeat 50% 100%, url(../../assets/images/noise.png), url(../../assets/images/start-screen-background.jpg);
+  }
+  .adres-general-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .footer-left {
+    margin: 27px 0  0 8%;
+    width: 50%;
+  }
+  .footer-right {
+    width: 49%;
+    margin: 27px 0  0 -6%;
   }
 }
 

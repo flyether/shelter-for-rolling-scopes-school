@@ -551,18 +551,21 @@ a{
    width: 50%;
 }
 
+
 .credit{
    display: flex;
-      align-items: flex-start;
+   align-items: flex-start;
    padding: 10px 15px;
    flex-wrap: wrap;
    position: absolute;
-   max-width: 349px;
+   width: 349px;
    height: 43px;
    margin-left: 10px;
    background: $color-primary;
    border-radius: 9px;
 }
+
+
 .credit-svg{
   
 width: 30px;
@@ -669,7 +672,21 @@ color: #B2B2B2;
 
 
 
-
+@media (max-width: 1200) {
+   .donation{
+      @include flexColumn();
+     align-items: center;
+     margin: 32px 0 0 -30px;
+     }
+     
+     .dog-donat{
+       margin: 55px 0 0 32px;
+       width: 70%;
+       order: 2;
+     }
+     
+   
+}
 
 
 
@@ -721,18 +738,16 @@ color: #B2B2B2;
 
 
     .about{
-    
+    margin: 16px 0 0 12px;
    }
-   .section-about{
-    
-   }
+   
    .cat-dog-img{
-    
-   order:1;
+    margin:78px 0 28px 27.5%;
+   order:2;
      
    }
    .text-about{
-      order: 2;
+      order: 1;
      
    }
    .card{
@@ -743,12 +758,79 @@ color: #B2B2B2;
       margin-top: 120px 0 0 0 ;
     }
 
+    .owl-prev{
+   left: -11%;
+
+   }
+   .owl-next{ 
+      left: 102%;
+   }
+.owl-item:active{
+   margin-right: 30px;
+}
+
+.donation{
+ @include flexColumn();
+align-items: center;
+margin: 32px 0 28px -30px;
+}
+
+.dog-donat{
+  margin: 55px 0 0 32px;
+  width: 70%;
+  order: 2;
+}
+.credit-number{
+    font-size: 1.25rem;   
+   letter-spacing: 0.06em;
+}
+
+.our-friends-general{
+   margin: 50px 0 30px;
+   }
+
+   .section-help{
+      margin: 50px 0 46px;
+   }
+
+   .end-screen{
+    @include flexColumn();
+    height: 639px;
+    background: 
+    url(../../assets/images/footer-puppy.png) no-repeat 50% 100% , 
+    url(../../assets/images/noise.png) ,
+    url(../../assets/images/start-screen-background.jpg);
+   
+   }
+
+   .adres-general-div{
+      display: flex;
+      flex-direction: row;
+      
+   }
+      
+   .footer-left{
+     
+      margin:27px 0  0 8%;
+      width: 50%;
+   }
+
+   .footer-right{
+      width: 49%;
+      margin:27px 0  0 -6%;
+   }
+  
+  
+   
+   
 
 
 
 
    
 }
+
+
 
 
 
