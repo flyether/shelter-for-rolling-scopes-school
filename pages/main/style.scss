@@ -130,11 +130,11 @@ $color-primary-light:rgba(253, 220, 196, 1);
       line-height: 23px;
    }
    &.donation-title{
-    
+    max-width: 300px;
         letter-spacing: 2px;
          color:$color-dark-l;
          font-size: 35px;
-       
+         letter-spacing: 0.06em;
          line-height: 130%;
      }
   &.te{
@@ -169,7 +169,7 @@ $color-primary-light:rgba(253, 220, 196, 1);
  
    display: flex;
    transition: .3s;  
-
+   margin: 0px  0px 0 200px ;
  }
 
  .nav-link {
@@ -178,7 +178,7 @@ $color-primary-light:rgba(253, 220, 196, 1);
   font-size: 15px;
   line-height: 160%;
   color: #CDCDCD;
-  margin: 0px  17px 0 12px ;
+  margin: 0px  17px 0 20px ;
   
    &:active
     {border-bottom: $color-primary solid 4px;
@@ -536,7 +536,7 @@ a{
    
    }
 .donation{
-   margin-left: 11.52%;
+   margin-left:0.52%;
    display: flex;
    justify-content:center;
    flex-wrap: wrap;
@@ -544,7 +544,7 @@ a{
 
 .dog-donat{
   margin-top: 10px;
-  width: 50%;
+  width: 44%;
 }
 .content-donation{
    max-width: 380px;

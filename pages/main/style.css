@@ -129,9 +129,11 @@ img {
 }
 
 .text.donation-title {
+  max-width: 300px;
   letter-spacing: 2px;
   color: #545454;
   font-size: 35px;
+  letter-spacing: 0.06em;
   line-height: 130%;
 }
 
@@ -170,6 +172,7 @@ img {
   display: flex;
   -webkit-transition: .3s;
   transition: .3s;
+  margin: 0px  0px 0 200px;
 }
 
 .nav-link {
@@ -179,7 +182,7 @@ img {
   font-size: 15px;
   line-height: 160%;
   color: #CDCDCD;
-  margin: 0px  17px 0 12px;
+  margin: 0px  17px 0 20px;
   outline: none;
 }
 
@@ -806,7 +809,7 @@ a {
 }
 
 .donation {
-  margin-left: 11.52%;
+  margin-left: 0.52%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -819,7 +822,7 @@ a {
 
 .dog-donat {
   margin-top: 10px;
-  width: 50%;
+  width: 44%;
 }
 
 .content-donation {
