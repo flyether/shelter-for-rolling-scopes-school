@@ -214,11 +214,26 @@ $color-primary-light:rgba(253, 220, 196, 1);
       border: $color-primary-light 2px solid;
     }
    
-        
+    .card-Hide  {
+      @include flexColumn();
+      @extend %align-items-for-column;
+      margin: 0 20px 32px; 
+      background: #FAFAFA;
+      border-radius: 9px;
+      width: 270px;
+      height: 435px;
+      
+      &:hover {
+         background-color: white;
+         cursor: pointer;
+         box-shadow: 0px 2px 35px 14px rgba(13,13,13 ,0.05);
+      }
+
+    }
    .card{
    @include flexColumn();
    @extend %align-items-for-column;
-   margin: 0 20px 32px; ;
+   margin: 0 20px 32px; 
    background: #FAFAFA;
    border-radius: 9px;
    width: 270px;
@@ -251,7 +266,6 @@ $color-primary-light:rgba(253, 220, 196, 1);
 
  .pets{
     max-width: 1280px;
-    height: 1342px;
     background-color: $color-light-l;
     margin: 0 auto;
  }
@@ -405,17 +419,191 @@ $color-primary-light:rgba(253, 220, 196, 1);
 
 
 
-@media (max-width: 768px) {
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1279px) {
+
+   .container {
+      width: 100%;
+      max-width:768px;
+      padding: 30px 30px;
+     
+   }
+
+   .heder-container {
+      position: sticky;
+      height: 120px; 
+      top: 0;
+      width: 100%;
+      max-width:1280px;
+      padding: 32px 30px 20px;
+      margin: auto;
+      background-color: white;
+   }
+   
+.text {
+   &.pet-name{
+      margin-top: 28px;
+      margin-bottom: 27px;
+   }
+   &.title-text{
+    margin:50px 0 0 0;
+   }
+  &.te{
+     margin: 20px 3px;
+   }
+ }
+ .pets{
+  padding-bottom: 15px;
+ }
+
+ 
+ .card-space{
+   margin: 30px 0px 0px 0;
+   padding: 0 62px 0px 62px;
+   }
+     
+   .card{
+      margin: 0 0 30px 0;
+      }  
+   
+      .card-Hide{
+         display: none;
+      }
+.slider{
+   margin: 0 0 40px 0;
+}
 
 
    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 767.98px) {
+  
+   .hamburger{
+      display: block;
+      position: relative; /* нов */
+      margin:  0px auto;
+      z-index: 10;
+      cursor: pointer;
+    }
+    .hamburger .line{
+      width: 30px;
+      height: 2px;
+      background-color: $color-primary;
+      display: block;
+      margin: 10px auto 0;
+      -webkit-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+    }
+      .hamburger:hover{
+      cursor: pointer;
+    }
+     
+    
+    #hamburger-1.is-active .line:nth-child(1){
+      
+      -webkit-transform: translateY(13px) rotate(90deg);
+      -ms-transform: translateY(13px) rotate(90deg);
+      -o-transform: translateY(13px) rotate(90deg);
+      transform: translateY(13px) rotate(90deg);
+    }
+    #hamburger-1.is-active .line:nth-child(2){
+      left: 5px;
+     -webkit-transform: translateY(13px) rotate(90deg);
+     -ms-transform: translateY(13px) rotate(90deg);
+     -o-transform: translateY(13px) rotate(90deg);
+     transform: translateY(13px) rotate(90deg);
+   }
+   #hamburger-1.is-active .line:nth-child(3){
+      left: 5px;
+     -webkit-transform: translateY(13px) rotate(90deg);
+     -ms-transform: translateY(13px) rotate(90deg);
+     -o-transform: translateY(13px) rotate(90deg);
+     transform: translateY(13px) rotate(90deg);
+   }
+    .col {
+      display: block;
+      float:left;
+      margin: 8.5% 7% 0% 0%;
+  
+    }
+    .three { width: 23.8%; }
+    .col:first-of-type {
+      margin-left: 0;
+    }
+
+
+    .nav{
+      position: absolute;
+       overflow-x: hidden;
+      display: none;
+      top: 0px;
+      background: rgb(61, 161, 77);
+      width: 300px;
+      height: 823px;
+      z-index: 8;
+      transition: all 0.3s ease 0s;
+      }
+  
+      .nav._active{
+        left: 10%;
+        display: block;
+      }
+  
+       .body_lock{
+        overflow: hidden;
+      }
+  
+      .nav-list{
+         @include flexColumn();
+         padding: 20px 0 20px;
+        
+       }
+
+
+}
+
+
 
 
 
