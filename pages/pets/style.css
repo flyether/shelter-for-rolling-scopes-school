@@ -482,7 +482,7 @@ a {
     display: none;
   }
   .slider {
-    margin: 10px 0 32px 0;
+    margin: -22px 0 30px 0;
   }
   .end-screen {
     display: -webkit-box;
@@ -614,7 +614,7 @@ a {
     letter-spacing: 0.06em;
   }
   .text.pet-name {
-    margin-top: 10px;
+    margin-top: 32px;
     margin-bottom: 30px;
     font-size: 20px;
   }
@@ -627,6 +627,24 @@ a {
   .logo_subtitle {
     margin: 3px 0  0 2px;
     letter-spacing: 1.3px;
+  }
+  .card-space {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0;
+    margin: 48px 20px 30px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .pets {
+    padding: 0   0;
   }
   .end-screen {
     display: -webkit-box;
@@ -674,6 +692,12 @@ a {
         -ms-flex-align: center;
             align-items: center;
     margin: 37px 0 10px -11px;
+  }
+  .arrow {
+    margin: 0 2px 0 2px;
+  }
+  .arrow-grey {
+    margin: 0 2px 0 2px;
   }
 }
 

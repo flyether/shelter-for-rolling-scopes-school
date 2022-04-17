@@ -494,7 +494,7 @@ $color-primary-light:rgba(253, 220, 196, 1);
          display: none;
       }
 .slider{
-   margin: 10px 0 32px 0;
+   margin: -22px 0 30px 0;
 }
 
 .end-screen{
@@ -661,7 +661,7 @@ $color-primary-light:rgba(253, 220, 196, 1);
          }
          
          &.pet-name{
-            margin-top: 10px;
+            margin-top: 32px;
             margin-bottom: 30px;
             font-size: 20px;
          }
@@ -680,6 +680,20 @@ $color-primary-light:rgba(253, 220, 196, 1);
          margin:3px 0  0 2px ;
          letter-spacing: 1.3px;
       }
+
+      .card-space{
+         display: flex;
+         flex-wrap: wrap;
+        padding: 0;
+         margin: 48px 20px 30px;
+         align-items: center;
+         justify-content: space-between;
+         }
+
+.pets{
+   padding:0   0;
+}
+
        .end-screen{
          @include flexColumn();
          height: 809px;
@@ -717,6 +731,18 @@ $color-primary-light:rgba(253, 220, 196, 1);
            margin:37px 0 10px -11px;
           
         }
+
+   
+
+.arrow{
+   margin: 0 2px 0 2px;
+}
+
+.arrow-grey{
+margin: 0 2px 0 2px;
+}
+
+
 }
 
 
