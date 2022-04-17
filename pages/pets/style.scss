@@ -192,7 +192,7 @@ $color-primary-light:rgba(253, 220, 196, 1);
    line-height: 160%;
    color: $color-dark-l;
    margin: 0px  17px 0 12px ;
-   border-bottom: $color-primary solid 4px;
+   border-bottom: $color-primary solid 3px;
         
     &:hover {
        
@@ -546,6 +546,11 @@ $color-primary-light:rgba(253, 220, 196, 1);
 @media (max-width: 767.98px) {
   .Hide{
      display: none;}
+
+
+
+
+
    .hamburger{
       display: block;
       position: relative; /* нов */
@@ -568,30 +573,21 @@ $color-primary-light:rgba(253, 220, 196, 1);
     }
          
     #hamburger-1.is-active .line:nth-child(1){
-      
-      -webkit-transform: translateY(13px) rotate(90deg);
-      -ms-transform: translateY(13px) rotate(90deg);
-      -o-transform: translateY(13px) rotate(90deg);
-      transform: translateY(13px) rotate(90deg);
+      transform: translateX(8px) translateY(11px) rotate(90deg);
+      background-color: $color-primary;
     }
-    #hamburger-1.is-active .line:nth-child(2){
-      left: 5px;
-     -webkit-transform: translateY(13px) rotate(90deg);
-     -ms-transform: translateY(13px) rotate(90deg);
-     -o-transform: translateY(13px) rotate(90deg);
-     transform: translateY(13px) rotate(90deg);
+    #hamburger-1.is-active .line:nth-child(2){    
+     transform: translateX(-13px) translateY(0px) rotate(90deg);
+     background-color: $color-primary;
    }
    #hamburger-1.is-active .line:nth-child(3){
-      left: 5px;
-     -webkit-transform: translateY(13px) rotate(90deg);
-     -ms-transform: translateY(13px) rotate(90deg);
-     -o-transform: translateY(13px) rotate(90deg);
-     transform: translateY(13px) rotate(90deg);
+     transform: translateX(-2px) translateY(-11px) rotate(90deg);
+     background-color: $color-primary;
    }
     .col {
       display: block;
       float:left;
-      margin: 3% 7% 0% 0%;
+      margin: 3% 7.2% 0% 0%;
   
     }
     .three { width: 23.8%; }
@@ -599,36 +595,24 @@ $color-primary-light:rgba(253, 220, 196, 1);
       margin-left: 0;
     }
 
-    .container {
-      width: 100%;
-      max-width:320px;
-      padding: 10px 10px;
-     
-   }
-   .header-container {
-      position: sticky; 
-      top: 0;
-      width: 100%;
-      
-      padding: 0px 10px 30px;
-      margin: 30px auto 0px 0;
-      background-color: white;
-   }
+   
     .nav{
       position: absolute;
       overflow-x: hidden;
       display: none;
-      top: 0px;
-      background: rgb(61, 161, 77);
-      width: 300px;
-      height: 823px;
-      z-index: 8;
-      transition: all 0.3s ease 0s;
+    
       }
-  
+      
       .nav._active{
-        left: 10%;
+        margin: auto;
+        background: $color-dark-3xl;
+        top: -30px;
+        left: 0%;
         display: block;
+        width: 320px;
+        height: 823px;
+        z-index: 8;
+        transition: all 0.3s ease 0s;
       }
   
        .body_lock{
@@ -638,9 +622,45 @@ $color-primary-light:rgba(253, 220, 196, 1);
       .nav-list{
          @include flexColumn();
          padding: 20px 0 20px;
-        
+         margin: 229px 0 0 4px ;
+         text-align: center;
+       }
+       .nav-link{
+          color: $color-dark-s;
+          font-size: 32px;
+          line-height: 150.5%;
+       }
+       .nav-item{
+          margin: 0 0 43px 0;
+       }
+       .nav-link-active{
+         color: rgb(255, 255, 255);
+         font-size: 32px;
+         line-height: 160%;
        }
 
+
+
+
+
+
+
+
+       .container {
+         width: 100%;
+         max-width:320px;
+         padding: 10px 10px;
+        
+      }
+      .header-container {
+         position: sticky; 
+         top: 0;
+         width: 100%;
+         
+         padding: 0px 10px 30px;
+         margin: 30px auto 0px 0;
+         background-color: white;
+      }
        .text {
          &.title-text{
             text-align: center;
