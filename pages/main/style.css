@@ -1122,8 +1122,8 @@ a {
     font-size: 20px;
   }
   .text.donation-title {
-    margin: 15px 0px 0 45px;
-    max-width: 70%;
+    margin: 15px 0px 0 13%;
+    max-width: 75%;
     font-size: 25px;
     text-align: center;
     letter-spacing: 0.06em;
@@ -1160,7 +1160,7 @@ a {
     height: 2px;
     background-color: #f1cdb3;
     display: block;
-    margin: 10px auto 0;
+    margin: 9px auto 0;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
@@ -1299,6 +1299,9 @@ a {
   .owl-carousel {
     width: 100%;
   }
+  .In-addition {
+    padding: 0px 0 28px;
+  }
   .donation {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1311,21 +1314,22 @@ a {
         -ms-flex-align: center;
             align-items: center;
     margin: auto;
+    padding: 0 0 0px 0px;
   }
   .content-donation {
-    margin-left: -20px;
-    max-width: 380px;
+    margin: 18px 0 0 0px;
     width: 100%;
   }
   .credit {
-    margin: 23px 0 7px 9px;
+    margin: 23px 0 7px 8px;
   }
   .dog-donat {
-    margin: 44px 0 -10px 20px;
+    margin: 45px  0 0 0px;
     width: 100%;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+    padding-left: 10px;
   }
   .credit-number {
     margin-top: 4px;
