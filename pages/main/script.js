@@ -41,4 +41,25 @@ $(document).ready(function(){
      })
   
   });
-  
+   // попап модальное окно
+
+  //  const modalResultWrapper = document.getElementById('modal-result-wrapper')
+  //  const btnClose = document.getElementById('btn-close')
+  //  const overlay = document.getElementById('overlay')
+  //  const contentWrapper = document.getElementById('content')
+
+  //  modalResultWrapper.style.display = 'none'  // прячем модальное окно
+
+
+let divCard = document.createElement('div');
+
+// document.body.appendChild(divCard);
+document.getElementById("testCard").appendChild(divCard);
+divCard.className = 'className';
+divCard.id ='myDIV';
+
+divCard.setAttribute("style", "height: 130px;")
+
+divCard.style.background = 'hsl(0, 74%, 54%)';
+divCard.style.width = "87px";
+divCard.innerHTML = '<span>както всунуть данные из джейсона</span>';

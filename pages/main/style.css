@@ -166,7 +166,7 @@ img {
 }
 
 .nav {
-  margin: 0  0 0 20px;
+  margin: 0  0 0 0px;
   margin-top: 13px;
 }
 
@@ -176,7 +176,7 @@ img {
   display: flex;
   -webkit-transition: .3s;
   transition: .3s;
-  margin: 0px  0px 0 200px;
+  margin: 0px  0px 0 0px;
 }
 
 .nav-link {
@@ -975,7 +975,7 @@ a {
   }
   .start-screen {
     height: 1165px;
-    background: url(../../assets/images/start-screen-puppy768.png) no-repeat 86% 100%, url(../../assets/images/noise.png), url(../../assets/images/start-screen-background768.jpg);
+    background: url(../../assets/images/start-screen-puppy768.png) no-repeat 86% 100%, url(../../assets/images/noise.png), url(../../assets/images/start-screen-background.jpg);
   }
   .title {
     margin: 58px  17.5% 0;
