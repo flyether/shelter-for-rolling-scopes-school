@@ -38,7 +38,7 @@ a {
   display: none;
 }
 
-.heder-container {
+.header-container {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -151,7 +151,7 @@ a {
 }
 
 .nav {
-  margin-top: 13px;
+  margin-top: 14px;
 }
 
 .nav-list {
@@ -169,7 +169,7 @@ a {
   font-size: 15px;
   line-height: 160%;
   color: #292929;
-  margin: 0px  17px 0 12px;
+  margin: 0px  17px 0 14px;
   outline: none;
 }
 
@@ -459,9 +459,8 @@ a {
     margin: auto;
     background-color: white;
   }
-  .text.pet-name {
-    margin-top: 28px;
-    margin-bottom: 27px;
+  .nav-link {
+    margin: 0px  19px 0 11px;
   }
   .text.title-text {
     margin: 50px 0 0 0;
@@ -483,7 +482,7 @@ a {
     display: none;
   }
   .slider {
-    margin: 0 0 40px 0;
+    margin: 10px 0 32px 0;
   }
   .end-screen {
     display: -webkit-box;
@@ -518,7 +517,7 @@ a {
   .hamburger .line {
     width: 30px;
     height: 2px;
-    background-color: #f1cdb3;
+    background-color: #000000;
     display: block;
     margin: 10px auto 0;
     -webkit-transition: all 0.3s ease-in-out;
@@ -552,6 +551,20 @@ a {
   .col:first-of-type {
     margin-left: 0;
   }
+  .container {
+    width: 100%;
+    max-width: 320px;
+    padding: 10px 10px;
+  }
+  .header-container {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 20px 10px;
+    margin: 40px auto 0px 0;
+    background-color: white;
+  }
   .nav {
     position: absolute;
     overflow-x: hidden;
@@ -580,6 +593,32 @@ a {
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 20px 0 20px;
+  }
+  .text.title-text {
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 0.06em;
+  }
+  .text.footer-cont {
+    font-size: 20px;
+    letter-spacing: 0.06em;
+  }
+  .text.footer-title {
+    margin-bottom: 0px;
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 0.06em;
+  }
+  .text.pet-name {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+  .text.te {
+    margin: 22px 0px 0 13px;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.0em;
   }
   .end-screen {
     display: -webkit-box;

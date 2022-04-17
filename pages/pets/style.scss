@@ -57,7 +57,7 @@ $color-primary-light:rgba(253, 220, 196, 1);
 .three, .col{
    display: none;
 }
-.heder-container {
+.header-container {
    position: sticky; 
    top: 0;
    width: 100%;
@@ -156,7 +156,7 @@ $color-primary-light:rgba(253, 220, 196, 1);
 }
 .nav{
    
-   margin-top: 13px;
+   margin-top: 14px;
 }
 .nav-list {
  
@@ -170,7 +170,7 @@ $color-primary-light:rgba(253, 220, 196, 1);
   font-size: 15px;
   line-height: 160%;
   color: $color-dark-3xl;
-  margin: 0px  17px 0 12px ;
+  margin: 0px  17px 0 14px ;
    
    &:active
     {border-bottom: $color-primary solid 4px;
@@ -462,12 +462,13 @@ $color-primary-light:rgba(253, 220, 196, 1);
       margin: auto;
       background-color: white;
    }
-   
-.text {
-   &.pet-name{
-      margin-top: 28px;
-      margin-bottom: 27px;
+   .nav-link {
+     
+      margin: 0px  19px 0 11px ;
    }
+
+       
+.text {
    &.title-text{
     margin:50px 0 0 0;
    }
@@ -493,7 +494,7 @@ $color-primary-light:rgba(253, 220, 196, 1);
          display: none;
       }
 .slider{
-   margin: 0 0 40px 0;
+   margin: 10px 0 32px 0;
 }
 
 .end-screen{
@@ -554,7 +555,7 @@ $color-primary-light:rgba(253, 220, 196, 1);
     .hamburger .line{
       width: 30px;
       height: 2px;
-      background-color: $color-primary;
+      background-color: #000000;
       display: block;
       margin: 10px auto 0;
       -webkit-transition: all 0.3s ease-in-out;
@@ -564,8 +565,7 @@ $color-primary-light:rgba(253, 220, 196, 1);
       .hamburger:hover{
       cursor: pointer;
     }
-     
-    
+         
     #hamburger-1.is-active .line:nth-child(1){
       
       -webkit-transform: translateY(13px) rotate(90deg);
@@ -598,10 +598,24 @@ $color-primary-light:rgba(253, 220, 196, 1);
       margin-left: 0;
     }
 
-
+    .container {
+      width: 100%;
+      max-width:320px;
+      padding: 10px 10px;
+     
+   }
+   .header-container {
+      position: sticky; 
+      top: 0;
+      width: 100%;
+      
+      padding: 20px 10px;
+      margin: 40px auto 0px 0;
+      background-color: white;
+   }
     .nav{
       position: absolute;
-       overflow-x: hidden;
+      overflow-x: hidden;
       display: none;
       top: 0px;
       background: rgb(61, 161, 77);
@@ -626,6 +640,41 @@ $color-primary-light:rgba(253, 220, 196, 1);
         
        }
 
+       .text {
+         &.title-text{
+            text-align: center;
+            font-size: 25px;
+            letter-spacing: 0.06em;
+         }
+         
+         &.footer-cont{
+            font-size: 20px;
+            letter-spacing: 0.06em;
+         }
+         &.footer-title{
+            margin-bottom:0px ;
+            font-size: 25px;
+            text-align: center;
+            letter-spacing: 0.06em;
+         }
+         
+         &.pet-name{
+            margin-top: 10px;
+            margin-bottom: 30px;
+            font-size: 20px;
+         }
+        
+   
+        &.te{
+            margin: 22px 0px 0 13px;
+            font-size: 15px;
+            line-height: 110%;
+            letter-spacing: 0.0em;
+         }
+         
+       }
+
+
        .end-screen{
          @include flexColumn();
          height: 809px;
@@ -638,8 +687,7 @@ $color-primary-light:rgba(253, 220, 196, 1);
      
         .adres-general-div{
            margin-top: 30px;
-        flex-direction: column;
-        
+           flex-direction: column;
         }
            
         .footer-left{
