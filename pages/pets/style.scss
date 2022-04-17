@@ -54,6 +54,9 @@ $color-primary-light:rgba(253, 220, 196, 1);
    margin: 0 auto;
 }
 
+.three, .col{
+   display: none;
+}
 .heder-container {
    position: sticky; 
    top: 0;
@@ -92,14 +95,14 @@ $color-primary-light:rgba(253, 220, 196, 1);
       letter-spacing: 0.06em;
    }
    &.footer-cont{
-      
       color: $color-primary;
       font-size: 20px;
       line-height: 115%;
       letter-spacing: 0.06em;
    }
-   
+  
    &.footer-title{
+      max-width: 278px;
       margin-bottom:3px ;
       color: white;
       font-size: 35px;
@@ -374,6 +377,10 @@ $color-primary-light:rgba(253, 220, 196, 1);
    background-size: auto, auto, cover; 
    margin: 0 auto;
 }
+.adres-general-div{
+   display: flex;   
+}
+
 .email-gl{
    flex-wrap: wrap;
    height: 36px;
@@ -394,7 +401,7 @@ $color-primary-light:rgba(253, 220, 196, 1);
    margin-left: 10px;
 }
 .mar-r{
-   margin-left: 0px;
+   margin-left: -10px;
 }
 .footer-svg{
    width: 40px;
@@ -489,7 +496,26 @@ $color-primary-light:rgba(253, 220, 196, 1);
    margin: 0 0 40px 0;
 }
 
+.end-screen{
+   @include flexColumn();
+   height: 639px;
+   background: 
+   url(../../assets/images/footer-puppy.png) no-repeat 50% 100% , 
+   url(../../assets/images/noise.png) ,
+   url(../../assets/images/start-screen-background.jpg);
+  }
+     
+ 
 
+  .footer-left{    
+     margin:27px 0  0 8%;
+     width: 50%;
+  }
+
+  .footer-right{
+     width: 49%;
+     margin:27px 0  0 -6%;
+  }
    
 }
 
@@ -600,7 +626,44 @@ $color-primary-light:rgba(253, 220, 196, 1);
         
        }
 
-
+       .end-screen{
+         @include flexColumn();
+         height: 809px;
+         background: 
+         url(../../assets/images/footer-puppy320.png) no-repeat 50% 100% , 
+         url(../../assets/images/noise.png) ,
+         url(../../assets/images/start-screen-background.jpg);
+        
+        }
+     
+        .adres-general-div{
+           margin-top: 30px;
+        flex-direction: column;
+        
+        }
+           
+        .footer-left{
+           align-items: center;
+           margin:0 0 0 0;
+           width: 100%;
+        }
+     
+        .footer-right{
+           align-items: center;
+           margin:38px 0 0 0;
+           width: 100%;
+        }
+        .mar-l{
+           margin:-21px 0 0px 0;
+        }
+        .email-gl{
+           flex-wrap: wrap;
+           height: 36px;
+           display: flex;
+           align-items: center;
+           margin:37px 0 10px -11px;
+          
+        }
 }
 
 

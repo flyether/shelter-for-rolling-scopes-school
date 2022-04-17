@@ -23,6 +23,10 @@ img {
           align-items: center;
 }
 
+.three, .col {
+  display: none;
+}
+
 .start-screen {
   width: 100%;
   max-width: 1280px;
@@ -848,16 +852,6 @@ a {
   border-radius: 9px;
 }
 
-.adres-general-div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
 .credit-svg {
   width: 30px;
   height: 23px;
@@ -904,6 +898,12 @@ a {
   background: url(../../assets/images/footer-puppy.png) no-repeat 96% 100%, url(../../assets/images/noise.png), url(../../assets/images/start-screen-background.jpg);
   background-size: auto, auto, cover;
   margin: 0 auto;
+}
+
+.adres-general-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .email-gl {
@@ -972,15 +972,6 @@ a {
     width: 100%;
     max-width: 768px;
     padding: 30px 30px;
-  }
-  .nav {
-    margin: 0px 0 0 0px;
-  }
-  .nav-list {
-    margin: 15px 0px 0 9.2vh;
-  }
-  .nav-link {
-    margin: 0 2vh 0 3vh;
   }
   .start-screen {
     height: 1165px;

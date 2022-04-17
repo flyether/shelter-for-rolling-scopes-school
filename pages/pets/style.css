@@ -34,6 +34,10 @@ a {
   margin: 0 auto;
 }
 
+.three, .col {
+  display: none;
+}
+
 .heder-container {
   position: -webkit-sticky;
   position: sticky;
@@ -94,6 +98,7 @@ a {
 }
 
 .text.footer-title {
+  max-width: 278px;
   margin-bottom: 3px;
   color: white;
   font-size: 35px;
@@ -370,6 +375,12 @@ a {
   margin: 0 auto;
 }
 
+.adres-general-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .email-gl {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -410,7 +421,7 @@ a {
 }
 
 .mar-r {
-  margin-left: 0px;
+  margin-left: -10px;
 }
 
 .footer-svg {
@@ -473,6 +484,25 @@ a {
   }
   .slider {
     margin: 0 0 40px 0;
+  }
+  .end-screen {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 639px;
+    background: url(../../assets/images/footer-puppy.png) no-repeat 50% 100%, url(../../assets/images/noise.png), url(../../assets/images/start-screen-background.jpg);
+  }
+  .footer-left {
+    margin: 27px 0  0 8%;
+    width: 50%;
+  }
+  .footer-right {
+    width: 49%;
+    margin: 27px 0  0 -6%;
   }
 }
 
@@ -550,6 +580,53 @@ a {
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 20px 0 20px;
+  }
+  .end-screen {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 809px;
+    background: url(../../assets/images/footer-puppy320.png) no-repeat 50% 100%, url(../../assets/images/noise.png), url(../../assets/images/start-screen-background.jpg);
+  }
+  .adres-general-div {
+    margin-top: 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer-left {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 0 0 0;
+    width: 100%;
+  }
+  .footer-right {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 38px 0 0 0;
+    width: 100%;
+  }
+  .mar-l {
+    margin: -21px 0 0px 0;
+  }
+  .email-gl {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: 36px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 37px 0 10px -11px;
   }
 }
 
