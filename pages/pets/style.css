@@ -600,6 +600,9 @@ a {
     font-size: 32px;
     line-height: 160%;
   }
+  .logo {
+    z-index: 11;
+  }
   .container {
     width: 100%;
     max-width: 320px;
