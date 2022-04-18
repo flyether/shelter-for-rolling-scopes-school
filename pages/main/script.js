@@ -9,6 +9,10 @@ if(hamburgerUp){
   navUp.classList.toggle('_active');
 });}
 
+
+
+
+
 // вызов бургера и карусели
 
 $(document).ready(function(){
@@ -36,42 +40,10 @@ $(document).ready(function(){
              
             }
         }
-     
-     
      })
-  
-  });
-   // попап модальное окно
+   });
 
-  //  const modalResultWrapper = document.getElementById('modal-result-wrapper')
-  //  const btnClose = document.getElementById('btn-close')
-  //  const overlay = document.getElementById('overlay')
-  //  const contentWrapper = document.getElementById('content')
-
-  //  modalResultWrapper.style.display = 'none'  // прячем модальное окно
-
-
-let divCard = document.createElement('div');
-
-// document.body.appendChild(divCard);
-// document.getElementById("testCard").appendChild(divCard);
-// divCard.className = 'className';
-// divCard.id ='myDIV';
-
-// divCard.setAttribute("style", "height: 230px;")
-
-// divCard.style.background = 'hsl(0, 74%, 54%)';
-// divCard.style.width = "187px";
-// divCard.innerHTML = '<span>както всунуть данные из джейсона</span>';
-
-
-// for (i = 0; i <= json.pets.length; i++) {
-//   var n = "img" 
-//   $("testCard" + (i + 1)).append("<img src='" + json.pets[i][n] + "'>");
-// }
-
-
-
+// объект с данными 
 let jsonPets  = [
   {
     "name": "Jennifer",
@@ -162,19 +134,16 @@ let jsonPets  = [
     "parasites": ["lice", "fleas"]
   }
 ]
-console.log(jsonPets ); 
-function getDataForProductItemTemplate(pet) {
 
-  return {
-      img:pet.img,
-      name: pet.name,
-     }
-}
+// пробегаемся  по каждому элементу pets получаем html который по шаблонайзеру пределывется
 
-var templateProductItem = document.getElementById('template-pets-item').innerHTML,
-  compiled = _.template(templateProductItem),
-  html = jsonPets.map(function(pet) {
-      return compiled(getDataForProductItemTemplate(pet));
-  }).join('');
+let templatePetsItem = document.getElementById('template-pets-item').innerHTML,
+  compiled = _.template(templatePetsItem),
+  html = jsonPets.map(compiled).join('');
 
-$('#petsOwlGeneral').append(html);
+// прсиваиваем шаблон карусели и выводим карты
+
+  $('.owl-carousel').append(html);
+   
+
+
