@@ -10,6 +10,31 @@
    <title>shelter-main</title>
 </head>
 <body>
+
+   <!--  модальное окно-->
+<div id="modal-result-wrapper">
+   <div id="overlay"></div>
+     <div id="modal-window">
+       <div id="content">content </div>
+       <div id="btn-close">Start new game</div>
+      </div>
+</div>
+<!--  шаблонизатор для окна модального
+<script id="template-pets-item" type="text/template" >
+   <div class="card-modal">  
+      <img src="<%= img %>" alt="pet" class="pets__img">
+     <div class="card-modal-content">
+      <p class="pet-name-modal text-modal"><%= name %> </p>
+       <p class="pet-type-modal text-modal"><%= type %> - <%= breed %> </p>
+       <p class="data-pets text-modal"><%= description %> </p>
+       
+     </div>
+      
+    
+      
+    </div>
+</script>
+-->
    <div class="start-screen">
 <div class="container">
    <header class="header">
@@ -66,14 +91,7 @@
    <h3 class="our-friends-title text">
       Our friends who <br>are looking for a house
    </h3>
-<!--  модальное окно-->
-<div id="modal-result-wrapper">
-   <div id="overlay"></div>
-     <div id="modal-window">
-       <div id="content">content </div>
-       <div id="btn-close">Start new game</div>
-      </div>
-</div>
+
    <!--  шаблонизатор  лодаш карточки--> 
 
 <script id="template-pets-item" type="text/template" >

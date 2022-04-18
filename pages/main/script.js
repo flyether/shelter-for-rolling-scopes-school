@@ -1,86 +1,4 @@
-
-// константы модального окна
-const modalResultWrapper = document.getElementById('modal-result-wrapper')
-const btnClose = document.getElementById('btn-close')
-const overlay = document.getElementById('overlay')
-const contentWrapper = document.getElementById('content')
-const cardModal = document.querySelectorAll('.card');
-
- // модальное окно его константы вверху
-   
-  modalResultWrapper.style.display = 'none'  // прячем модальное окно
-
- cardModal.forEach(e=>{
-  e.addEventListener('click', () =>{
-	  modalResultWrapper.style.display = 'block'
-    })
-})
-  
-  
-const closeModal = () => {
-  modalResultWrapper.style.display = 'none'
-  location.reload()
-}
-
-  overlay.addEventListener('click', closeModal)
-  btnClose.addEventListener('click', closeModal)
-
-
-
-
-// бургер констана
-const hamburgerUp = document.querySelector('.hamburger');
-
-
-
-// бургер и карусель с параметрами
-// привязываю меню к бургеру
-
-if(hamburgerUp){
-  const navUp = document.querySelector('.nav');
-  hamburgerUp.addEventListener("click", function(e){
-    document.body.classList.toggle('_lock')
-    hamburgerUp.classList.toggle('_active');
-  navUp.classList.toggle('_active');
-});}
-
-
-
-
-
-// вызов бургера и карусели
-
-$(document).ready(function(){
-    $(".hamburger").click(function(){
-      $(this).toggleClass("is-active");
-    });
-    $('.owl-carousel').owlCarousel({
-        loop:true,
-        navText:['',''],
-        dots:false,
-        margin:10,
-        nav:true,
-        items:0,
-        autoWidth:true,
-        responsive:{
-            0:{
-                items:1,
-                margin:80,
-          },
-            768:{
-             margin:30,
-                items:2
-            },
-            1280:{
-                items:3,
-             
-            }
-        }
-     })
-   });
-
-// объект с данными 
-let jsonPets  = [
+var jsonPets  = [
   {
     "name": "Jennifer",
     "img": "../../assets/images/pets-jennifer.png",
@@ -170,6 +88,89 @@ let jsonPets  = [
     "parasites": ["lice", "fleas"]
   }
 ]
+window.onload = function () {
+// константы модального окна
+const modalResultWrapper = document.getElementById('modal-result-wrapper')
+const btnClose = document.getElementById('btn-close')
+const overlay = document.getElementById('overlay')
+const contentWrapper = document.getElementById('content')
+const cardModal = document.querySelectorAll('.card');
+
+ // модальное окно его константы вверху
+   console.log(cardModal)
+  modalResultWrapper.style.display = 'none'  // прячем модальное окно
+ 
+ cardModal.forEach(e=>{
+  e.addEventListener('click', () =>{
+	  modalResultWrapper.style.display = 'block'
+    })
+})
+console.log(cardModal)
+  
+const closeModal = () => {
+  modalResultWrapper.style.display = 'none'
+  location.reload()
+}
+
+  overlay.addEventListener('click', closeModal)
+  btnClose.addEventListener('click', closeModal)
+
+
+}
+
+// бургер констана
+const hamburgerUp = document.querySelector('.hamburger');
+
+
+
+// бургер и карусель с параметрами
+// привязываю меню к бургеру
+
+if(hamburgerUp){
+  const navUp = document.querySelector('.nav');
+  hamburgerUp.addEventListener("click", function(e){
+    document.body.classList.toggle('_lock')
+    hamburgerUp.classList.toggle('_active');
+  navUp.classList.toggle('_active');
+});}
+
+
+
+
+
+// вызов бургера и карусели
+
+$(document).ready(function(){
+    $(".hamburger").click(function(){
+      $(this).toggleClass("is-active");
+    });
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        navText:['',''],
+        dots:false,
+        margin:10,
+        nav:true,
+        items:0,
+        autoWidth:true,
+        responsive:{
+            0:{
+                items:1,
+                margin:80,
+          },
+            768:{
+             margin:30,
+                items:2
+            },
+            1280:{
+                items:3,
+             
+            }
+        }
+     })
+   });
+
+// объект с данными 
+
 
 // пробегаемся  по каждому элементу pets получаем html который по шаблонайзеру пределывется
 
