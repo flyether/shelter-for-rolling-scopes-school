@@ -51,7 +51,7 @@ $color-primary-light:rgba(253, 220, 196, 1);
    background: 
    url(../../assets/images/start-screen-puppy.png) no-repeat 93% 101% , 
    url(../../assets/images/noise.png) ,
-   url(../../assets/images/start-screen-background.jpg);
+   radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #211F20;
    background-size: auto, auto, cover; 
    margin: auto;
 }
@@ -180,7 +180,7 @@ $color-primary-light:rgba(253, 220, 196, 1);
   font-size: 15px;
   line-height: 160%;
   color: #CDCDCD;
-  margin: 0px  17px 0 20px ;
+  margin: 0px  0px 0 30px ;
   
    &:active
     {border-bottom: $color-primary solid 4px;
@@ -695,7 +695,7 @@ color: #B2B2B2;
       background: 
       url(../../assets/images/start-screen-puppy768.png) no-repeat 86% 100% , 
       url(../../assets/images/noise.png) ,
-      url(../../assets/images/start-screen-background.jpg);
+      radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #211F20;
    }
 
    .title{

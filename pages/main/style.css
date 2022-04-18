@@ -32,7 +32,7 @@ img {
   max-width: 1280px;
   border: #5B483A 2px solid;
   height: 908px;
-  background: url(../../assets/images/start-screen-puppy.png) no-repeat 93% 101%, url(../../assets/images/noise.png), url(../../assets/images/start-screen-background.jpg);
+  background: url(../../assets/images/start-screen-puppy.png) no-repeat 93% 101%, url(../../assets/images/noise.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
   background-size: auto, auto, cover;
   margin: auto;
 }
@@ -186,7 +186,7 @@ img {
   font-size: 15px;
   line-height: 160%;
   color: #CDCDCD;
-  margin: 0px  17px 0 20px;
+  margin: 0px  0px 0 30px;
   outline: none;
 }
 
@@ -975,7 +975,7 @@ a {
   }
   .start-screen {
     height: 1165px;
-    background: url(../../assets/images/start-screen-puppy768.png) no-repeat 86% 100%, url(../../assets/images/noise.png), url(../../assets/images/start-screen-background.jpg);
+    background: url(../../assets/images/start-screen-puppy768.png) no-repeat 86% 100%, url(../../assets/images/noise.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
   }
   .title {
     margin: 58px  17.5% 0;
