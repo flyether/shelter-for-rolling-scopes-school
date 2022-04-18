@@ -65,14 +65,15 @@ divCard.style.width = "187px";
 divCard.innerHTML = '<span>както всунуть данные из джейсона</span>';
 
 
-for (i = 0; i <= json.pets.length; i++) {
-  var n = "img" 
-  $("testCard" + (i + 1)).append("<img src='" + json.pets[i][n] + "'>");
-}
+// for (i = 0; i <= json.pets.length; i++) {
+//   var n = "img" 
+//   $("testCard" + (i + 1)).append("<img src='" + json.pets[i][n] + "'>");
+// }
 
 
 
-let json =  {
+let json = new Object()
+json = {
 pets:[
   {
     "name": "Jennifer",
