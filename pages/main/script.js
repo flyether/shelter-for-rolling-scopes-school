@@ -1,6 +1,41 @@
+
+// константы модального окна
+const modalResultWrapper = document.getElementById('modal-result-wrapper')
+const btnClose = document.getElementById('btn-close')
+const overlay = document.getElementById('overlay')
+const contentWrapper = document.getElementById('content')
+const cardModal = document.querySelectorAll('.card');
+
+ // модальное окно его константы вверху
+   
+  modalResultWrapper.style.display = 'none'  // прячем модальное окно
+
+ cardModal.forEach(e=>{
+  e.addEventListener('click', () =>{
+	  modalResultWrapper.style.display = 'block'
+    })
+})
+  
+  
+const closeModal = () => {
+  modalResultWrapper.style.display = 'none'
+  location.reload()
+}
+
+  overlay.addEventListener('click', closeModal)
+  btnClose.addEventListener('click', closeModal)
+
+
+
+
+// бургер констана
+const hamburgerUp = document.querySelector('.hamburger');
+
+
+
 // бургер и карусель с параметрами
 // привязываю меню к бургеру
-const hamburgerUp = document.querySelector('.hamburger');
+
 if(hamburgerUp){
   const navUp = document.querySelector('.nav');
   hamburgerUp.addEventListener("click", function(e){
@@ -145,6 +180,6 @@ let templatePetsItem = document.getElementById('template-pets-item').innerHTML,
 // прсиваиваем шаблон карусели и выводим карты
 
   $('.owl-carousel').append(html);
-   
 
 
+ 

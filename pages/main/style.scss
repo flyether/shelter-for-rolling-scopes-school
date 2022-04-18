@@ -43,6 +43,57 @@ $color-primary-light:rgba(253, 220, 196, 1);
 .three, .col{
    display: none;
 }
+
+
+
+
+
+   #overlay{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top:0 ;
+      left:0 ;
+      background-color: rgba(17, 100, 102, 0.8);
+      
+   }
+   #modal-window{
+      width: 400px;
+      height: 300px;
+      border:solid  #9b8069;
+      background-color: var(--green-stipe);
+      position: absolute;
+      top:30% ;
+      left:50% ;
+      transform: translate(-50%, 50%) ;
+      display:flex ;
+      flex-flow: column;
+      justify-content: space-between ;
+      align-items: center;
+      color: #116466;
+      font-weight:bold ;
+      font-size: 30px;
+      padding: 40px 10px;
+      text-align: center;
+   }
+      
+   
+      #btn-close{
+         width: 250px;
+         height: 50px;
+         border:solid #9b8069;
+         border-radius: 5px;
+         background-color: #d9b08c;
+         text-align: center;
+         line-height: 35px;
+         cursor: pointer;
+         
+      }
+
+
+
+
+
 .start-screen{
    width: 100%;
   max-width: 1280px;
