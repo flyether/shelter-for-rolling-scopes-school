@@ -165,7 +165,7 @@ pets:[
   }
 ]}
 
-let petObj = JSON.parse("../../assets/pets.json");
+let petObj = JSON.parse(json);
 products.forEach(function(petObj) {
   
 });
