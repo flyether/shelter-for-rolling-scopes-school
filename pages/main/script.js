@@ -26,11 +26,12 @@ $(document).ready(function(){
         margin:10,
         nav:true,
         items:0,
+        autoWidth:true,
         responsive:{
             0:{
                 items:1,
-              
-            },
+                margin:80,
+          },
             768:{
              margin:30,
                 items:2
