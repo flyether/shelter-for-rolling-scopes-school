@@ -66,64 +66,24 @@
    <h3 class="our-friends-title text">
       Our friends who <br>are looking for a house
    </h3>
-   
+
+
+   <!--  шаблонизатор  лодаш карточки--> 
+
+<script id="template-pets-item" type="text/template" >
+   <img src="<%= img %>" alt="pet" class="pets__img">
+
+<p class="pet-name text"><%= name %> </p>
+<button class="btn pets">Learn more</button>
+</script>
+  <!--  конец теста карт --> 
+
+
+
    <div class="card-space">
-
+      <div class="card" id="petsOwlGeneral"></div>
    <div class="owl-carousel">
-      <div>  <div class="card">
-         <img src="../../assets/images/pets-katrine.png" alt="cat">
-      <p class="pet-name text">Katrine</p>
-         <button class="btn pets">Learn more</button>
-         
-      </div> 
-   </div>
-
-      <div>   <div class="card block">
-         <img src="../../assets/images/pets-jennifer.png" alt="cat">
-      <p class="pet-name text">Jennifer</p>
-         <button class="btn pets">Learn more</button>
-         
-      </div> </div>
-      <div>    <div class="card">
-         <img src="../../assets/images/pets-woody.png" alt="dog">
-         
-      <p class="pet-name text">Woody</p>
-         <button class="btn pets">Learn more</button>
-         
-      </div> </div>
-      <div>  
-         <div class="card">
-            <img src="../../assets/images/pets-sofi.png" alt="dog">
-            <p class="pet-name text">Sophia</p>
-            <button class="btn text-button text">Learn more</button>
-          </div> </div>
-
-      <div>   <div class="card">
-         <img src="../../assets/images/pets-timmy.png" alt="cat">
-         <p class="pet-name text">Timmy</p>
-         <button class="btn text-button text">Learn more</button>
-       </div>
-    </div>
-      <div>   <div class="card">
-         <img src="../../assets/images/pets-charly.png" alt="dog">
-         <p class="pet-name text">Charly</p>
-         <button class="btn text-button text">Learn more</button>
-       </div></div>
-      <div>  <div class="card">
-         <img src="../../assets/images/pets-scarlet.png" alt="dog">
-         <p class="pet-name text">Scarlett</p>
-         <button class="btn text-button text">Learn more</button>
-       </div> </div>
-       <div>
-         <div class="card">
-            <img src="../../assets/images/pets-freddie.png" alt="cat">
-            <p class="pet-name text">Freddie</p>
-            <button class="btn text-button text">Learn more</button>
-          </div>  
-       </div>
-
-       <div > <div id="testCard"></div>
-      <div class="product" data-id="5"></div>
+    
 
        </div>
     </div>
