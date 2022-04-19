@@ -97,26 +97,47 @@ const contentWrapper = document.getElementById('content')
 const cardModal = document.querySelectorAll('.card');
 
  // модальное окно его константы вверху
-   console.log(cardModal)
+ 
   modalResultWrapper.style.display = 'none'  // прячем модальное окно
  
+
+  let modalPetsItem = document.getElementById('modal-pets-item').innerHTML,
+
+ compiledModal = _.template(modalPetsItem);
+
  cardModal.forEach(e=>{
-  e.addEventListener('click', () =>{
+  e.addEventListener('click', (event) =>{
 	  modalResultWrapper.style.display = 'block'
+  let i = event.currentTarget.dataset.pet
+  
+var  htmlModal = compiledModal(jsonPets[i])
+  $('#modal-window').append(htmlModal);
+
     })
 })
-console.log(cardModal)
+
   
 const closeModal = () => {
   modalResultWrapper.style.display = 'none'
-  location.reload()
 }
 
   overlay.addEventListener('click', closeModal)
   btnClose.addEventListener('click', closeModal)
 
 
+
+
+
+
+
+
+
+
+
+  
+
 }
+
 
 // бургер констана
 const hamburgerUp = document.querySelector('.hamburger');
@@ -174,13 +195,23 @@ $(document).ready(function(){
 
 // пробегаемся  по каждому элементу pets получаем html который по шаблонайзеру пределывется
 
+
+function getDataForProductItemTemplate(pet,index) {
+  return {
+       index:index,
+      img:pet.img,
+      name: pet.name,
+     }
+}
+// пробегаемся  по каждому элементу pets получаем html который по шаблонайзеру пределывется
+
 let templatePetsItem = document.getElementById('template-pets-item').innerHTML,
   compiled = _.template(templatePetsItem),
-  html = jsonPets.map(compiled).join('');
+  html = jsonPets.map((ele,index)=>compiled(getDataForProductItemTemplate(ele,index))).join('');
 
 // прсиваиваем шаблон карусели и выводим карты
 
   $('.owl-carousel').append(html);
 
 
- 
+
