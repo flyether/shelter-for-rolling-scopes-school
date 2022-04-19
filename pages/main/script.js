@@ -111,7 +111,8 @@ const cardModal = document.querySelectorAll('.card');
   let i = event.currentTarget.dataset.pet
   
 var  htmlModal = compiledModal(jsonPets[i])
-  $('#modal-window').append(htmlModal);
+event.innerHTML = htmlModal
+  // $('#modal-window').append(htmlModal);
 
     })
 })
