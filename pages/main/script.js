@@ -93,7 +93,7 @@ window.onload = function () {
 const modalResultWrapper = document.getElementById('modal-result-wrapper')
 const btnClose = document.getElementById('btn-close')
 const overlay = document.getElementById('overlay')
-const contentWrapper = document.getElementById('content')
+const modalWindow = document.getElementById('modal-window')
 const cardModal = document.querySelectorAll('.card');
 
  // модальное окно его константы вверху
@@ -107,12 +107,11 @@ const cardModal = document.querySelectorAll('.card');
 
  cardModal.forEach(e=>{
   e.addEventListener('click', (event) =>{
-	  modalResultWrapper.style.display = 'block'
+	modalResultWrapper.style.display = 'block'
   let i = event.currentTarget.dataset.pet
-  
-var  htmlModal = compiledModal(jsonPets[i])
-event.innerHTML = htmlModal
-  // $('#modal-window').append(htmlModal);
+  var htmlModal = compiledModal(jsonPets[i])
+  modalWindow .innerHTML = htmlModal
+ 
 
     })
 })
@@ -214,5 +213,5 @@ let templatePetsItem = document.getElementById('template-pets-item').innerHTML,
 
   $('.owl-carousel').append(html);
 
-
+  btnClose.addEventListener('click', closeModal)
 
