@@ -109,7 +109,6 @@ const body = document.querySelector('body');
  cardModal.forEach(e=>{
   e.addEventListener('click', (event) =>{
 	modalResultWrapper.style.display = 'block'
-  
   let i = event.currentTarget.dataset.pet
   var htmlModal = compiledModal(jsonPets[i])
   modalWindow .innerHTML = htmlModal
