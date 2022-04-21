@@ -9,13 +9,15 @@
    <link rel="icon" href="../../assets/icons/icon-pet-food.svg">
    <title>shelter-main</title>
 </head>
-<body>
+<body id="body">
 
 
    <!--  модальное окно-->
 <div id="modal-result-wrapper">
    <div id="overlay"></div>
-     <div id="modal-window"> 
+     <div id="modal-window">
+         <div id="content"></div>
+       <div id="btn-close"></div>
       </div>
 </div>
 <!--  шаблонизатор для окна модального -->
@@ -26,6 +28,13 @@
       <p class="pet-name-modal text-modal"><%= name %> </p>
        <p class="pet-type-modal text-modal"><%= type %> - <%= breed %> </p>
        <p class="data-pets text-modal"><%= description %> </p> 
+       <ul class="modal-ul">
+          <li class="modal-li"> <b> Age: </b> <%= age %> </li>
+          <li class="modal-li">
+            <b> Inoculations: </b>  <%= inoculations%>          </li>
+          <li class="modal-li"> <b> Diseases: </b><%= diseases %> </li>
+          <li class="modal-li"> <b> Parasites:</b> <%= parasites %> </li>
+       </ul>
        
        <div id="btn-close"></div>
      </div>

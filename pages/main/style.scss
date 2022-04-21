@@ -12,6 +12,7 @@ img {
    max-width:100%;
 }
 
+
 $background-color-start-screen:radial-gradient(100% 215.42% at 0% 0%, #5B483A, rgba(38, 36, 37, 1) 100%) rgba(33, 31, 32, 1); 
 $color-primary:rgba(241, 205, 179, 1);
 $color-dark-s:rgba(205, 205, 205, 1);
@@ -43,7 +44,7 @@ $color-primary-light:rgba(253, 220, 196, 1);
 .three, .col{
    display: none;
 }
-
+body.modal-open { overflow:hidden;}
 
 
 #modal-result-wrapper{
@@ -60,7 +61,11 @@ $color-primary-light:rgba(253, 220, 196, 1);
       top:0 ;
       left:0 ;
       background-color: rgba(229, 229, 229, 0.7);
-    
+      cursor: pointer;
+   }
+
+   #modal-window-content{
+      
    }
    #modal-window{
       width: 900px;
@@ -68,22 +73,40 @@ $color-primary-light:rgba(253, 220, 196, 1);
       box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
       background-color: white;
       position: absolute;
-      top: 0% ;
+      top:-12.3% ;
       left:50% ;
       transform: translate(-50%, 50%) ;
       display:flex ;
+      
       border-radius: 13px;
-      justify-content: space-between ;
+      justify-content: center;
       align-items: center;
       color: black;
-      padding: 40px 10px;
+      
       text-align: center;
      
    } 
+ .modal-li{
+   list-style-image: url(../../assets/icons/dot.svg);
    
+   font-size: 15px;
+   line-height: 110%;
+   padding-inline-start: 1ch;
+   line-height: 185%;
+   letter-spacing: 0.18em;
+ }
+   .modal-ul{
+     
+   }
+
+   #content{
+      width: 900px;
+      height: 500px;
+
+   }
       #btn-close{
          bottom:  100%;
-         left: 97.5%;
+         left: 98%;
          position: absolute;
          width: 52px;
          height: 52px;
@@ -100,32 +123,40 @@ $color-primary-light:rgba(253, 220, 196, 1);
       }   
       }
 .card-modal{
+   
    width: 100%;
    height: 100%;
    display: flex;
    flex-direction: row;
-   
+  
+   gap: 29px;
 }
 
 .card-modal-content{
    @include flexColumn();
+   width: 351px;
+   height: 362px;
+   text-align: justify;
 }
 .text-modal{
    font-family: 'Georgia';
    color: #000000;
    letter-spacing: 0.06em;
-  &.pet-name-modal{    
+  &.pet-name-modal{   
+      margin: 50px 0 10px;
       font-size: 35px;
       line-height: 130%;
       letter-spacing: 0.06em;
       }
-      &.pet-type-modal{    
+      &.pet-type-modal{   
+         margin-bottom: 40px; 
          font-size: 20px;
          line-height: 115%;
          }
        &.data-pets{
+         margin-bottom: 35px;
          font-size: 15px;
-         line-height: 110%;
+         line-height: 115%;
        }
 
 
@@ -509,10 +540,9 @@ height: 435px;
    background-color: white;
    cursor: pointer;
    box-shadow: 0px 2px 35px 14px rgba(13,13,13 ,0.05);
-}
-   
-
+ } 
 }  
+
 .btn{
    width: 187px;
    height: 52px;
@@ -772,6 +802,8 @@ color: #B2B2B2;
 
 
 
+
+
 @media  (max-width: 1279px) {
    .container {
       width: 100%;
@@ -780,6 +812,81 @@ color: #B2B2B2;
      
    }
    
+
+
+
+
+   #modal-window{
+      width: 630px;
+      height: 350px;  
+   } 
+ 
+
+   #content{
+      width: 630px;
+      height: 350px;
+
+   }
+      #btn-close{
+         left: 97%;
+      }
+
+.card-modal{
+
+   gap: 11px;
+}
+
+.card-modal-content{
+   width: 260px;
+   height: 303px;
+}
+
+.text-modal{
+   font-family: 'Georgia';
+   color: #000000;
+   letter-spacing: 0.06em;
+  &.pet-name-modal{   
+      margin: 10px 0 10px;
+     
+      }
+      &.pet-type-modal{   
+         margin-bottom: 20px; 
+         
+         }
+       &.data-pets{
+         font-size: 13px;
+         line-height: 110%;
+         margin-bottom: 0px;
+         
+       }
+
+      }
+
+      .modal-li{
+         
+         
+         font-size: 15px;
+         line-height: 110%;
+         padding-inline-start: 0px;
+         line-height: 150%;
+         letter-spacing: 0.1em;
+       }
+         .modal-ul{
+            padding-inline-start: 13px;
+         }
+
+
+
+
+
+
+
+
+
+
+
+
+
  
    .start-screen{
       height: 1165px;
@@ -910,6 +1017,90 @@ margin: 32px 0 28px -30px;
 
 
 @media  ( max-width: 767.98px) {
+
+
+   .container {
+      width: 100%;
+      max-width:768px;
+      padding: 30px 30px;
+     
+   }
+   
+   .pets__img{
+      display: none;
+   }
+
+
+
+   #modal-window{
+      width: 240px;
+      height: 341px;  
+   } 
+ 
+
+   #content{
+      width: 240px;
+      height: 341px;  
+      padding-left: 10px;
+   }
+      #btn-close{
+         left: 87%;
+      }
+
+     
+
+.card-modal-content{
+   width: 220px;
+   height: 321px;
+}
+
+.text-modal{
+   font-family: 'Georgia';
+   color: #000000;
+   letter-spacing: 0.06em;
+  &.pet-name-modal{   
+     text-align: center;
+      margin: 10px 0 10px;
+     
+      }
+      &.pet-type-modal{   
+         margin-bottom: 20px; 
+         text-align: center;
+         }
+       &.data-pets{
+         font-size: 13px;
+         line-height: 110%;
+         margin-bottom: 3px;
+         
+       }
+
+      }
+
+      .modal-li{
+         
+         
+         font-size: 15px;
+         line-height: 110%;
+         padding-inline-start: 0px;
+         line-height: 150%;
+         letter-spacing: 0.1em;
+       }
+         .modal-ul{
+            padding-inline-start: 13px;
+         }
+
+
+
+
+
+
+
+
+
+
+
+
+
    .container {
       width: 100%;
    
@@ -1280,7 +1471,7 @@ a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
-dl, dt, dd, ol, ul, li,
+dl, dt, dd, ol, 
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
@@ -1291,7 +1482,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */

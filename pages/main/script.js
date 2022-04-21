@@ -93,34 +93,37 @@ window.onload = function () {
 const modalResultWrapper = document.getElementById('modal-result-wrapper')
 const btnClose = document.getElementById('btn-close')
 const overlay = document.getElementById('overlay')
-const modalWindow = document.getElementById('modal-window')
+const modalWindow = document.getElementById('content')
 const cardModal = document.querySelectorAll('.card');
+const body = document.querySelector('body');
 
  // модальное окно его константы вверху
  
   modalResultWrapper.style.display = 'none'  // прячем модальное окно
- 
+ // вешаем шаблон на модальное окно
 
   let modalPetsItem = document.getElementById('modal-pets-item').innerHTML,
 
  compiledModal = _.template(modalPetsItem);
-
+  // открывае модальное окно при нажатии на карточку т вешаем ему шаблон
  cardModal.forEach(e=>{
   e.addEventListener('click', (event) =>{
 	modalResultWrapper.style.display = 'block'
+  
   let i = event.currentTarget.dataset.pet
   var htmlModal = compiledModal(jsonPets[i])
   modalWindow .innerHTML = htmlModal
- 
-
-    })
+  body.classList.add("modal-open")
+  
+     })
 })
 
-  
+  // функция закрыти я модалного окна
 const closeModal = () => {
   modalResultWrapper.style.display = 'none'
+  body.classList.remove("modal-open")
 }
-
+// закрываем модальное окно по клику на оверлей
   overlay.addEventListener('click', closeModal)
   btnClose.addEventListener('click', closeModal)
 
@@ -213,5 +216,5 @@ let templatePetsItem = document.getElementById('template-pets-item').innerHTML,
 
   $('.owl-carousel').append(html);
 
-  btnClose.addEventListener('click', closeModal)
+
 
