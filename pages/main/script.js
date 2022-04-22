@@ -192,12 +192,12 @@ $(document).ready(function(){
      })
    });
 
-// объект с данными 
 
 
-// пробегаемся  по каждому элементу pets получаем html который по шаблонайзеру пределывется
 
 
+
+// функция нужна  для получения индекса тыканой карточки
 function getDataForProductItemTemplate(pet,index) {
   return {
        index:index,

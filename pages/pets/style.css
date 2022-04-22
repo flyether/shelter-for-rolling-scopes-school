@@ -27,6 +27,136 @@ a {
           align-items: center;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
+#modal-result-wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 12;
+}
+
+#overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(229, 229, 229, 0.7);
+  cursor: pointer;
+}
+
+body.modal-open #modal-result-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#modal-window {
+  margin: auto;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#modal-window {
+  -webkit-box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+          box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+  background-color: white;
+  position: absolute;
+  top: 30%;
+  left: 23%;
+  border-radius: 13px;
+  color: black;
+  text-align: center;
+}
+
+.modal-li {
+  list-style-image: url(../../assets/icons/dot.svg);
+  font-size: 15px;
+  line-height: 110%;
+  -webkit-padding-start: 1ch;
+          padding-inline-start: 1ch;
+  line-height: 185%;
+  letter-spacing: 0.18em;
+}
+
+#content {
+  width: 900px;
+  height: 500px;
+}
+
+#btn-close {
+  bottom: 100%;
+  left: 98%;
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 23px 19px;
+  border: 2px solid #f1cdb3;
+  border-radius: 100px;
+  margin: 0 10px 0 10px;
+  cursor: pointer;
+  background: url(../../assets/icons/cross.svg) no-repeat center center;
+}
+
+#btn-close:hover {
+  background-color: #fddcc4;
+}
+
+.card-modal {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 29px;
+}
+
+.card-modal-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 351px;
+  height: 362px;
+  text-align: justify;
+}
+
+.text-modal {
+  font-family: 'Georgia';
+  color: #000000;
+  letter-spacing: 0.06em;
+}
+
+.text-modal.pet-name-modal {
+  margin: 50px 0 10px;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+
+.text-modal.pet-type-modal {
+  margin-bottom: 40px;
+  font-size: 20px;
+  line-height: 115%;
+}
+
+.text-modal.data-pets {
+  margin-bottom: 35px;
+  font-size: 15px;
+  line-height: 115%;
+}
+
 .container {
   max-width: 1280px;
   width: 100%;

@@ -11,6 +11,29 @@
 </head>
 <body>
    
+
+<!--  шаблонизатор для окна модального -->
+<script id="modal-pets-item" type="text/template" >
+  <div class="card-modal">  
+     <img src="<%= img %>" alt="pet" class="pets__img">
+    <div class="card-modal-content">
+     <p class="pet-name-modal text-modal"><%= name %> </p>
+      <p class="pet-type-modal text-modal"><%= type %> - <%= breed %> </p>
+      <p class="data-pets text-modal"><%= description %> </p> 
+      <ul class="modal-ul">
+         <li class="modal-li"> <b> Age: </b> <%= age %> </li>
+         <li class="modal-li">
+           <b> Inoculations: </b>  <%= inoculations%>          </li>
+         <li class="modal-li"> <b> Diseases: </b><%= diseases %> </li>
+         <li class="modal-li"> <b> Parasites:</b> <%= parasites %> </li>
+      </ul>
+      
+      <div id="btn-close"></div>
+    </div>
+   </div>
+</script>
+
+
    <div class="header-container">
    <header class="header">
       <a class="logo" href="https://rolling-scopes-school.github.io/flyether-JSFE2022Q1/shelter/pages/main/">
@@ -140,7 +163,7 @@
       
       </footer>
 
-
+      <script src="https://cdn.jsdelivr.net/lodash/4.10.0/lodash.js"></script>
       <script   src="https://code.jquery.com/jquery-3.6.0.min.js"   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="   crossorigin="anonymous"></script>
      <script type="module" src="./script.js"></script>   
 </body>
