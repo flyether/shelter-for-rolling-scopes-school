@@ -101,10 +101,7 @@ body.modal-open { overflow:hidden;}
    gap: 10px;
    }
 
-   .pets__img{
-      width: 55%;   
-   }
-
+  
    .card-modal-content{
       @include flexColumn();
       width: 351px;
@@ -236,7 +233,7 @@ body.modal-open { overflow:hidden;}
        line-height: 130%;
    }
    &.pet-name{
-      margin-top: 30px;
+      margin-top: 27px;
       margin-bottom: 30px;
       color:$color-dark-l;
       font-size: 20px;
@@ -847,16 +844,10 @@ color: #B2B2B2;
       }
 
 
-   .pets__img{
-      width: 55%;   
-      height:55%;
-   }
+  
 
 
-   .owl-stage-outer{
-      margin: 0 50px;
-
-     }
+   
 
 
  
@@ -989,10 +980,6 @@ margin: 32px 0 28px -30px;
 
 
 @media  ( max-width: 767.98px) {
-   .owl-stage-outer{
-      margin: 0 00px;
-
-     }
 
 
    .container {
@@ -1022,11 +1009,10 @@ margin: 32px 0 28px -30px;
          left: 87%;
       }
 
-   
+     
 
 .card-modal-content{
    width: 220px;
-   margin: 0 50px;
 
 }
 
@@ -1309,9 +1295,8 @@ margin: 32px 0 28px -30px;
       }
 
    .card{
-      margin: 0 50px 0 30px;
-      width: 270px;
-      
+      margin: auto;
+      max-width: 100%
    }
 
    .margin-button-friends {

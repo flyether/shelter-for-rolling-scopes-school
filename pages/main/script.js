@@ -185,10 +185,12 @@ $(document).ready(function(){
             768:{
              margin:30,
                 items:2,
+                margin :40,
                 // center:false,
             },
             1280:{
                 items:3,
+                margin : 0,
                 // center:false,
             }
         }
