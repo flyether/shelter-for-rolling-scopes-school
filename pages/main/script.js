@@ -179,10 +179,13 @@ $(document).ready(function(){
             0:{
                 items:1,
                 margin:80,
+                center:true,
+             
           },
             768:{
              margin:30,
-                items:2
+                items:2,
+                
             },
             1280:{
                 items:3,
