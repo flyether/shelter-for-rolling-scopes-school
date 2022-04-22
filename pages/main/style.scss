@@ -90,6 +90,7 @@ body.modal-open { overflow:hidden;}
       align-items: center;
       overflow: auto;
       height: 100%;
+      padding:0 10px 50px ;
       // width: 900px;
       // height: 500px;
     
@@ -997,7 +998,7 @@ margin: 32px 0 28px -30px;
    #content{
       width: 240px;
      
-      padding-left: 10px;
+      padding: 10px ;
    }
       #btn-close{
          left: 87%;

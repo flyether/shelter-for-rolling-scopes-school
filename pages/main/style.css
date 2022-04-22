@@ -94,6 +94,7 @@ body.modal-open #modal-result-wrapper {
           align-items: center;
   overflow: auto;
   height: 100%;
+  padding: 0 10px 50px;
 }
 
 #btn-close {
@@ -1262,7 +1263,7 @@ a {
   }
   #content {
     width: 240px;
-    padding-left: 10px;
+    padding: 10px;
   }
   #btn-close {
     left: 87%;
