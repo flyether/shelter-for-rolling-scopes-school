@@ -266,7 +266,7 @@ body.modal-open #modal-result-wrapper {
 }
 
 .text.pet-name {
-  margin-top: 37px;
+  margin-top: 30px;
   margin-bottom: 30px;
   color: #545454;
   font-size: 20px;
@@ -1152,6 +1152,9 @@ a {
     width: 55%;
     height: 55%;
   }
+  .owl-stage-outer {
+    margin: 0 50px;
+  }
   .start-screen {
     height: 1165px;
     background: url(../../assets/images/start-screen-puppy768.png) no-repeat 86% 100%, url(../../assets/images/noise.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
@@ -1262,6 +1265,9 @@ a {
 }
 
 @media (max-width: 767.98px) {
+  .owl-stage-outer {
+    margin: 0 00px;
+  }
   .container {
     width: 100%;
     max-width: 768px;
@@ -1282,6 +1288,7 @@ a {
   }
   .card-modal-content {
     width: 220px;
+    margin: 0 50px;
   }
   .text-modal {
     font-family: 'Georgia';
@@ -1416,7 +1423,7 @@ a {
   .col {
     display: block;
     float: left;
-    margin: 3% 7.2% 0% 0%;
+    margin: 9% 7.2% 0% 0%;
   }
   .three {
     width: 23.8%;
@@ -1531,8 +1538,8 @@ a {
     margin-top: 30px;
   }
   .card {
-    margin: auto;
-    max-width: 100%;
+    margin: 0 50px 0 30px;
+    width: 270px;
   }
   .margin-button-friends {
     margin-top: 125px;

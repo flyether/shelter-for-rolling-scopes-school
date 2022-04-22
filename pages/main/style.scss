@@ -236,7 +236,7 @@ body.modal-open { overflow:hidden;}
        line-height: 130%;
    }
    &.pet-name{
-      margin-top: 37px;
+      margin-top: 30px;
       margin-bottom: 30px;
       color:$color-dark-l;
       font-size: 20px;
@@ -853,7 +853,10 @@ color: #B2B2B2;
    }
 
 
+   .owl-stage-outer{
+      margin: 0 50px;
 
+     }
 
 
  
@@ -986,6 +989,10 @@ margin: 32px 0 28px -30px;
 
 
 @media  ( max-width: 767.98px) {
+   .owl-stage-outer{
+      margin: 0 00px;
+
+     }
 
 
    .container {
@@ -1015,10 +1022,11 @@ margin: 32px 0 28px -30px;
          left: 87%;
       }
 
-     
+   
 
 .card-modal-content{
    width: 220px;
+   margin: 0 50px;
 
 }
 
@@ -1173,7 +1181,7 @@ margin: 32px 0 28px -30px;
     .col {
       display: block;
       float:left;
-      margin: 3% 7.2% 0% 0%;
+      margin: 9% 7.2% 0% 0%;
   
     }
     .three { width: 23.8%; }
@@ -1233,7 +1241,8 @@ margin: 32px 0 28px -30px;
       margin: 19px  -2px 0 0;
       z-index: 11;
      } 
-
+   
+    
 
      .box{ 
       width: 100%;
@@ -1300,8 +1309,9 @@ margin: 32px 0 28px -30px;
       }
 
    .card{
-      margin: auto;
-      max-width: 100%
+      margin: 0 50px 0 30px;
+      width: 270px;
+      
    }
 
    .margin-button-friends {

@@ -175,21 +175,21 @@ $(document).ready(function(){
         nav:true,
         items:0,
         autoWidth:true,
+        slideBy:3,
         responsive:{
             0:{
                 items:1,
-                margin:80,
-                center:true,
-             
+               
+                // center:true,
           },
             768:{
              margin:30,
                 items:2,
-                
+                // center:false,
             },
             1280:{
                 items:3,
-             
+                // center:false,
             }
         }
      })
