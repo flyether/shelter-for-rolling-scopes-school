@@ -190,7 +190,7 @@ $(document).ready(function(){
             },
             1280:{
                 items:3,
-                margin : 0,
+              
                 // center:false,
             }
         }

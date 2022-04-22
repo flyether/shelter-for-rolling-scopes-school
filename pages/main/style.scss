@@ -892,11 +892,12 @@ color: #B2B2B2;
      
    }
    .card{
-      margin: auto;
+      margin: 0 0px;
+
    }
 
    .margin-button-friends {
-      margin-top: 120px  ;
+      margin-top: 60px  ;
     }
 
     .owl-prev{
@@ -1295,10 +1296,10 @@ margin: 32px 0 28px -30px;
       }
 
    .card{
-      margin: auto;
+      margin: 30px 0 0 0;
       max-width: 100%
    }
-
+  
    .margin-button-friends {
       margin-top: 125px  ;
     }
@@ -1396,6 +1397,9 @@ padding: 0 0 0px 0px;
       align-items: center;
       margin:37px 0 10px -11px;
    }
+   .owl-stage-outer{
+      margin: 0 20px;
+        }
 
 }
 
