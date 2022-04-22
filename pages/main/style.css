@@ -1127,15 +1127,18 @@ a {
   .card-modal-content {
     width: 260px;
   }
+  .text-modal.pet-name-modal {
+    margin: 12px 0 8px 3px;
+  }
   .text-modal.pet-type-modal {
-    margin: 0px 0 20px 28px;
+    margin: 0px 0 20px 3px;
     font-size: 20px;
     line-height: 115%;
   }
   .text-modal.data-pets {
     font-size: 13px;
     line-height: 110%;
-    margin-bottom: 0px;
+    margin: 0px 0 0px 3px;
   }
   .modal-li {
     line-height: 150%;
@@ -1146,7 +1149,8 @@ a {
             padding-inline-start: 13px;
   }
   .pets__img {
-    width: 45%;
+    width: 55%;
+    height: 55%;
   }
   .start-screen {
     height: 1165px;
@@ -1271,7 +1275,7 @@ a {
   }
   #content {
     width: 240px;
-    padding: 10px;
+    padding: 0 10px;
   }
   #btn-close {
     left: 87%;
@@ -1308,6 +1312,7 @@ a {
   .modal-ul {
     -webkit-padding-start: 13px;
             padding-inline-start: 13px;
+    margin-bottom: 10px;
   }
   .container {
     width: 100%;
