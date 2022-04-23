@@ -101,6 +101,10 @@ body.modal-open { overflow:hidden;}
    gap: 10px;
    }
 
+   .pets-img-modal{
+      width: 55%;
+    height: 55%;
+   }
   
    .card-modal-content{
       @include flexColumn();
@@ -808,6 +812,8 @@ color: #B2B2B2;
          left: 97%;
       }
 
+ 
+
 .card-modal{
    gap: 11px;
 }
@@ -990,7 +996,7 @@ margin: 32px 0 28px -30px;
      
    }
    
-   .pets__img{
+   .pets-img-modal{
       display: none;
    }
 

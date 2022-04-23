@@ -217,8 +217,9 @@ let templatePetsItem = document.getElementById('template-pets-item').innerHTML,
   html = jsonPets.map((ele,index)=>compiled(getDataForProductItemTemplate(ele,index))).join('');
 
 // прсиваиваем шаблон карусели и выводим карты
+document.querySelector('.owl-carousel').innerHTML=html;
+  // $('.owl-carousel').append(html);
 
-  $('.owl-carousel').append(html);
 
 
-
+  // $('.owl-carousel').html(html);

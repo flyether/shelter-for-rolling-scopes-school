@@ -489,6 +489,9 @@ body.modal-open #modal-result-wrapper {
 }
 
 .slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-align: center;
 }
 

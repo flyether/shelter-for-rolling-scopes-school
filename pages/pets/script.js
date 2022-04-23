@@ -151,7 +151,35 @@ $(document).ready(function(){
   }
 
 
-  // функция нужна  для получения индекса тыканой карточки
+
+  // Пагинация
+
+  let jsonPetsArr48 =  jsonPets.concat(jsonPets).concat(jsonPets ).concat(jsonPets ).concat(jsonPets).concat(jsonPets)
+
+ 
+  function shuffle(array) {
+    let currentIndex = array.length,  randomIndex;
+  
+    // Пока остаются элементы для перетасовки
+    while (currentIndex != 0) {
+  
+      // Выберите оставшийся элемент
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      // И замените его текущим элементом.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+    return array;
+  }
+
+
+  let jsonPetsShuffle = shuffle(jsonPetsArr48)
+  console.log(jsonPetsShuffle) 
+  
+
+
 function getDataForProductItemTemplate(pet,index) {
   return {
        index:index,
@@ -159,12 +187,42 @@ function getDataForProductItemTemplate(pet,index) {
       name: pet.name,
      }
 }
-// пробегаемся  по каждому элементу pets получаем html который по шаблонайзеру пределывется
+ 
+    
 
+let   cardOnPages = 8;
+let items =  document.querySelectorAll('#pagination li')
+let divCardSpace = document.querySelector('.card-space')
+
+for ( let item of items) {
+  item.addEventListener("click", function(){
+let pageNum = +this.innerHTML; // плюсик чтобы было число nen узанем номер страницы
+console.log(this.innerHTML)
+
+let start =(pageNum - 1) * cardOnPages;
+let end =  start + cardOnPages;
+console.log(end)
+
+let pets = jsonPetsShuffle.slice(start, end);
+console.log(pets)
+
+divCardSpace.innerHTML = "";
 let templatePetsItem = document.getElementById('template-pets-item').innerHTML,
   compiled = _.template(templatePetsItem),
-  html = jsonPets.map((ele,index)=>compiled(getDataForProductItemTemplate(ele,index))).join('');
+  html = pets.map((ele,index)=>compiled(getDataForProductItemTemplate(ele,index))).join('');
 
-// прсиваиваем шаблон карусели и выводим карты
+  let card = document.createElement('div');
+  divCardSpace.appendChild(card);
 
-  $('.owl-carousel').append(html);
+divCardSpace.innerHTML = html
+
+  let dataPet 
+  dataPet = document.createElement('div');
+  dataPet.innerHTML =  ""
+  dataPet.classList.add('card')
+   card.appendChild(dataPet)
+
+})
+}
+
+  
