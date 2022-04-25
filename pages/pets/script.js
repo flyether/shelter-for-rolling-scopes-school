@@ -1,5 +1,4 @@
 
-
 // бургер  с параметрами
 // привязываю меню к бургеру
 const hamburgerUp = document.querySelector('.hamburger');
@@ -17,8 +16,6 @@ $(document).ready(function(){
     $(".hamburger").click(function(){
       $(this).toggleClass("is-active");
     });
-   
-  
   });
   
   var jsonPets  = [
@@ -113,31 +110,30 @@ $(document).ready(function(){
   ]
 
   
-  // Модальное окно
+  // что начнем делать при загрузке страницы
 
 
 
   window.onload = function () {
-    // константы модального окна
+
+    //модальное окно  константы модального окна
     const modalResultWrapper = document.getElementById('modal-result-wrapper')
     const btnClose = document.getElementById('btn-close')
     const overlay = document.getElementById('overlay')
     const modalWindow = document.getElementById('content')
     const cardModal = document.querySelectorAll('.card');
     const body = document.querySelector('body');
-   
-   
-   
-     // модальное окно его константы вверху
+  
      
       modalResultWrapper.style.display = 'none'  // прячем модальное окно
-     // вешаем шаблон на модальное окно
-    
+     
+     
+      // вешаем шаблон на модальное окно
       let modalPetsItem = document.getElementById('modal-pets-item').innerHTML,
       compiledModal = _.template(modalPetsItem);
     
     
-      // функция закрыти я модалного окна
+      // функция закрытия модалного окна
       const closeModal = () => {
       modalResultWrapper.style.display = 'none'
       body.classList.remove("modal-open")
@@ -146,17 +142,18 @@ $(document).ready(function(){
       overlay.addEventListener('click', closeModal)
       btnClose.addEventListener('click', closeModal)
     
-
+// функция вызова модального окна дальше ее вызываем при  нужном клике
       function openModal(event) {
         modalResultWrapper.style.display = 'block'
         let i = event.currentTarget.dataset.pet
         var htmlModal = compiledModal(jsonPets[i])
         modalWindow .innerHTML = htmlModal
         body.classList.add("modal-open")
-      
       }
     
-
+// сфквЩтЗфпуы число указыввающее сколько карточек откроеться на странице
+// медиазапрос поменяте но только после перезагрузки страницы на нужно количество
+// живого растягивания не будет
       let  cardOnPages = 3;
       console.log(cardOnPages)
     
@@ -172,33 +169,11 @@ $(document).ready(function(){
        }
      
 
-      // console.log(cardOnPages)
-      // const mQuery320 = window.matchMedia('(min-width: 320px)')
-      // const mQuery768 = window.matchMedia('(min-width: 768px)')
-      // const mQuery1280 = window.matchMedia('(min-width: 1280px)')
-        
-      // if (mQuery1280.matches) { 
-      //   cardOnPages = 8; 
-      // }
-
-      //   console.log(cardOnPages)
-      // if (mQuery320.matches) { 
-      //   cardOnPages = 3; 
-      // }
-      // console.log(cardOnPages)
-
-      // if (mQuery768.matches) { 
-      //   cardOnPages = 6; }
-
-      //  console.log(cardOnPages)
-          
-
 
 
   // Пагинация
     
   // премешиваем зверей используем потом
-
   function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
       // Пока остаются элементы для перетасовки
@@ -214,7 +189,8 @@ $(document).ready(function(){
   }
 
    
-// функция присваивает индекс карточкам
+// функция присваивает индекс карточкам чтобы модпльное окно 
+// понимало какую карточку открыть
 function getDataForProductItemTemplate(pet,index) {
   return {
       index:index,
@@ -225,6 +201,7 @@ function getDataForProductItemTemplate(pet,index) {
 
 
 
+// кнопки пагинации
 
 let items =  document.querySelectorAll('#pagination li')
 let divCardSpace = document.querySelector('.card-space')
@@ -234,13 +211,6 @@ let right1 = document.querySelector('.next')
 let right2 = document.querySelector('.last')
 let center = document.querySelector('.current')
 
-// функция для выбора случайного питомца, пригодиться 
-// потом добовлять в массив чтобы уникальных петсов лепитьъ
-
-// function arrayRandElement(arr) {
-//   var rand = Math.floor(Math.random() * arr.length);
-//   return arr[rand];
-// }
 
 // натягивание шаблона на карточки
 let templatePetsItem = document.getElementById('template-pets-item').innerHTML,
@@ -277,7 +247,6 @@ showPage(pageCurrent)
 
 
 // функция для загрузки первого окна и вызов модального
-
 function showPage(pageNum) {
 
   let mypets =pagedPets[pageNum]; //берем текущую страницу и номера зверьков
@@ -286,11 +255,8 @@ function showPage(pageNum) {
   document.querySelectorAll('.card-space .card').forEach(e=>{
         e.addEventListener('click', openModal)}
     )
-  
   } 
   showPage(1)
-
-
 
 
 
