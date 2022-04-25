@@ -442,26 +442,13 @@ body.modal-open { overflow:hidden;}
  
 
    #pagination li.disabled{
-  color: rgb(131, 125, 125);
-  @include arrow-patern();
+   color: rgb(131, 125, 125);
    border: 2px solid $color-dark-s;
    cursor: default;
+   &:hover{
+      background-color: transparent ;
+   }
 }
-
-
-
-// .arrow-left-active {
-//    color: #000000;
-//    @include arrow-patern();
-//    border: 2px solid $color-primary;
-//    cursor: pointer;
-//       &:hover{
-//  background-color: $color-primary-light;  
-//       }
-//       &:active{
-//    background-color: $color-primary; 
-//       }     
-//  }
 
 
 .slider{
@@ -469,17 +456,9 @@ body.modal-open { overflow:hidden;}
    text-align: center;
    margin:0 0  0 35% ;
    }
-   
-   
-   
-  
-
-
-
 
 .end-screen{
    display: flex;
- 
    width: 100%;
    max-width: 1280px;
    border: #5B483A 2px solid;

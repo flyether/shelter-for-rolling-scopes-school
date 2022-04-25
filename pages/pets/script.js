@@ -159,9 +159,7 @@ $(document).ready(function(){
 
       let  cardOnPages = 3;
       console.log(cardOnPages)
-      if (window.matchMedia('(min-width: 1280px)').matches) { 
-        cardOnPages = 8; 
-     }
+    
      console.log(cardOnPages)
 
       if (window.matchMedia('(min-width: 768px)').matches) { 
@@ -169,7 +167,9 @@ $(document).ready(function(){
          }
          console.log(cardOnPages)
 
-      
+         if (window.matchMedia('(min-width: 1280px)').matches) { 
+          cardOnPages = 8; 
+       }
      
 
       // console.log(cardOnPages)
@@ -269,7 +269,7 @@ left1.classList.toggle('disabled',pageCurrent==0)
 left2.classList.toggle('disabled',pageCurrent==0)
 right1.classList.toggle('disabled',pageCurrent==pagesTotal-1)
 right2.classList.toggle('disabled',pageCurrent==pagesTotal-1)
-center.html= pageCurrent+1
+center.innerHTML= pageCurrent+1
 showPage(pageCurrent)
 
 })
