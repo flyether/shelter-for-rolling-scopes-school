@@ -417,8 +417,10 @@ body.modal-open { overflow:hidden;}
  }
 
 
+ 
+
  .arrow{
-   color: #000000;   
+    font-weight: bold;
    width: 52px;
    height: 52px;
    align-items: center;
@@ -430,80 +432,56 @@ body.modal-open { overflow:hidden;}
       &:hover{
          background-color: $color-primary-light;
       }
-      &:active{     
-      background-color: $color-primary;
-   }
-  }
-  
-
-
-
-
-.arrow-left-active{
-   color: #000000;
-   width: 52px;
-   height: 52px;
-   text-align: center;
-   align-items: center;
-   padding: 19px 19px;
-   border: 2px solid $color-primary;
-   border-radius: 100px;
-   margin: 0 10px 0 10px;
-   cursor: pointer;
-   &.left1{
-   
-      
-      &:hover{
-          
-         background-color: $color-primary-light;  
-      }
       &:active{
+         background-color: $color-primary;    
+   }
+   }
+    
   
-         background-color: $color-primary; 
-      }     
-   }
-
-   &.left2{  
-   &:hover{
-      background-color: $color-primary-light;
-     
-   }
-   &:active{
-      
-}
-   }
-
-
-
-}
-
-
-
-
 
 
 .arrow-grey{
+  color: rgb(131, 125, 125);
+  font-weight: bold;
    width: 52px;
    height: 52px;
    align-items: center;
-   padding: 23px 19px;
+   padding: 18px 17px;
    border: 2px solid $color-dark-s;
    border-radius: 100px;
    margin: 0 10px 0 10px;
    cursor: default;
-   &.left1{
-      background:url(../../assets/icons/button_paginatorl1.svg) no-repeat center center; 
-   }
-   &.left2{  
-   background:url(../../assets/icons/button_paginatorl2.svg) no-repeat center center; 
-   }
 }
+
+
+
+
+.arrow-left-active {
+   color: #000000;
+   font-weight: bold;
+   width: 52px;
+   height: 52px;
+   text-align: center;
+   align-items: center;
+   padding: 19px 17px;
+   border: 2px solid $color-primary;
+   border-radius: 100px;
+   margin: 0 10px 0 10px;
+   cursor: pointer;
+      &:hover{
+ background-color: $color-primary-light;  
+      }
+      &:active{
+   background-color: $color-primary; 
+      }     
+ }
+
 
 
 .slider{
    display: flex;
    text-align: center;
-   color: rgba(252, 249, 249, 0);
+   
    }
    
    

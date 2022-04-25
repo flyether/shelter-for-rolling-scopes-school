@@ -219,42 +219,49 @@ function getDataForProductItemTemplate(pet,index) {
 
 let items =  document.querySelectorAll('#pagination li')
 let divCardSpace = document.querySelector('.card-space')
-let left1 = document.querySelector('.left1')
-let left2 = document.querySelector('.left2')
-let right1 = document.querySelector('.right1')
-let right2 = document.querySelector('.right2')
-let center = document.querySelector('.center')
+let left1 = document.querySelector('.first')
+let left2 = document.querySelector('.prev')
+let right1 = document.querySelector('.next')
+let right2 = document.querySelector('.last')
+let center = document.querySelector('.current')
 
 // функция для выбора случайного питомца, пригодиться 
 // потом добовлять в массив чтобы уникальных петсов лепитьъ
 
-function arrayRandElement(arr) {
-  var rand = Math.floor(Math.random() * arr.length);
-  return arr[rand];
-}
+// function arrayRandElement(arr) {
+//   var rand = Math.floor(Math.random() * arr.length);
+//   return arr[rand];
+// }
 
 // натягивание шаблона на карточки
 let templatePetsItem = document.getElementById('template-pets-item').innerHTML,
  compiled = _.template(templatePetsItem);
 
+let pagedPets=[];
+let indexes=[0,1,2,3,4,5,6,7];
+let pageCurrent = 0 
+let pagesTotal = Math.floor(48/cardOnPages)
+
+for (let i=0;i<pagesTotal;i++) {
+pagedPets[i]=shuffle(indexes).slice(0,cardOnPages)
+}
+
 for ( let item of items) {
-item.addEventListener("click", function(){
-let pageNum = +this.innerHTML; // плюсик чтобы было число nen узанем номер страницы
-showPage(pageNum)
-if (pageNum == 1) {
-  left1.setAttribute('disabled', true);
-  left2.setAttribute('disabled', true);
-
-}
-if (pageNum != 1) {
-  left1.classList.toggle("arrow-left-active");
-  left1.classList.remove("arrow-grey");
-  left2.classList.toggle("arrow-left-active");
-  left2.classList.remove("arrow-grey");
-  center.innerHTML = pageNum;
-}
-
-console.log(pageNum)
+  item.addEventListener("click", function(event){
+    
+    if (event.currentTarget.classList.contains('disabled')) return; //не обрабатываем
+    if (event.currentTarget.classList.contains('current')) return; //не обрабатываем
+    if (event.currentTarget.classList.contains('first')) pageCurrent=0; //нумеруем от 0
+    if (event.currentTarget.classList.contains('prev')) pageCurrent--;
+    if (event.currentTarget.classList.contains('next')) pageCurrent++;
+    if (event.currentTarget.classList.contains('last')) pageCurrent=pagesTotal-1;
+     
+left1.classList.toggle('disabled',pageCurrent==0)
+left2.classList.toggle('disabled',pageCurrent==0)
+right1.classList.toggle('disabled',pageCurrent==pagesTotal-1)
+right2.classList.toggle('disabled',pageCurrent==pagesTotal-1)
+center.html= pageCurrent+1
+showPage(pageCurrent)
 
 })
 }
@@ -263,39 +270,16 @@ console.log(pageNum)
 // функция для загрузки первого окна и вызов модального
 
 function showPage(pageNum) {
-  let start =(pageNum - 1) * cardOnPages;
-  let end =  start + cardOnPages;
-  let pets = jsonPetsShuffle.slice(start, end);
 
-  // убираем дубли из обрезаного массива
-  pets = Array.from(new Set(pets.map(item => JSON.stringify(item)))).map(item => JSON.parse(item));
-
-  // начало цикл а набивания
-
-  while (pets.length != cardOnPages) {
-  
-  pets.push(arrayRandElement(jsonPets) )
-  pets = Array.from(new Set(pets.map(item => JSON.stringify(item)))).map(item => JSON.parse(item));
-  }
-
- console.log(pageNum)
-
-
-
-
-// конец цикла набивания
-
-
-  let  htmlFistPages = pets.map((ele,index)=>compiled(getDataForProductItemTemplate(ele,index))).join('');
+  let mypets =pagedPets[pageNum]; //берем текущую страницу и номера зверьков
+  let  htmlFistPages = mypets.map((i)=>compiled(getDataForProductItemTemplate(jsonPets[i],i))).join('');
   divCardSpace.innerHTML = htmlFistPages
-
-  document.querySelectorAll('.card-space .card').forEach(
-    e=>{
-      e.addEventListener('click', openModal)}
-  )
-
-} 
-showPage(1)
+  document.querySelectorAll('.card-space .card').forEach(e=>{
+        e.addEventListener('click', openModal)}
+    )
+  
+  } 
+  showPage(1)
 
 
 
@@ -304,4 +288,4 @@ showPage(1)
 }  // конец window.onload
 
 
-// стрелочки
+
