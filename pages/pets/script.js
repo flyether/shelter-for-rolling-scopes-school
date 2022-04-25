@@ -1,3 +1,7 @@
+const mQuery320 = window.matchMedia('(max-width: 768px)')
+const mQuery768 = window.matchMedia('(min-width: 1280px)')
+
+
 // бургер  с параметрами
 // привязываю меню к бургеру
 const hamburgerUp = document.querySelector('.hamburger');
@@ -161,7 +165,8 @@ $(document).ready(function(){
   // Пагинация
 
   let jsonPetsArr48 =  jsonPets.concat(jsonPets).concat(jsonPets ).concat(jsonPets ).concat(jsonPets).concat(jsonPets)
- 
+  // премешиваем зверей
+
   function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
   
@@ -181,10 +186,8 @@ $(document).ready(function(){
 
 
   let jsonPetsShuffle = shuffle(jsonPetsArr48)
-  console.log(jsonPetsShuffle) 
-  
-
-
+    
+// функция присваивает индекс карточкам
 function getDataForProductItemTemplate(pet,index) {
   return {
       index:index,
@@ -193,31 +196,43 @@ function getDataForProductItemTemplate(pet,index) {
      }
 }
  
-    
+// bзменяем количество карточек под медиазапрос
 
 let   cardOnPages = 8;
+if (mQuery320.matches) { 
+  cardOnPages = 3; 
+}
+if (mQuery768.matches) { 
+  cardOnPages = 6; 
+}
+
 let items =  document.querySelectorAll('#pagination li')
 let divCardSpace = document.querySelector('.card-space')
+let left1 = document.querySelector('.left1')
+let left2 = document.querySelector('.left2')
+let right1 = document.querySelector('.right1')
+let right2 = document.querySelector('.right2')
+let center = document.querySelector('.center')
 
 for ( let item of items) {
 item.addEventListener("click", function(){
 let pageNum = +this.innerHTML; // плюсик чтобы было число nen узанем номер страницы
-console.log(this.innerHTML)
+
 
 let start =(pageNum - 1) * cardOnPages;
 let end =  start + cardOnPages;
-console.log(end)
+
 
 let pets = jsonPetsShuffle.slice(start, end);
-console.log(pets)
+
 
 divCardSpace.innerHTML = "";
 let templatePetsItem = document.getElementById('template-pets-item').innerHTML,
   compiled = _.template(templatePetsItem),
   html = pets.map((ele,index)=>compiled(getDataForProductItemTemplate(ele,index))).join('');
 
-  let card = document.createElement('div');
-  divCardSpace.appendChild(card);
+  let cardQ = document.createElement('div');
+  divCardSpace.appendChild(cardQ);
 
 divCardSpace.innerHTML = html
 
@@ -225,9 +240,25 @@ divCardSpace.innerHTML = html
   dataPet = document.createElement('div');
   dataPet.innerHTML =  ""
   dataPet.classList.add('card')
-   card.appendChild(dataPet)
+  cardQ.appendChild(dataPet)
 
 })
 }
 
-  
+
+
+// left1.onclick = slide.bind( this, -1 );
+// right1.onclick = slide.bind( this, 1 );
+
+// var indexArrow = 0, total = 5;
+
+// function slide(offset) {
+//   indexArrow  = Math.min( Math.max( indexArrow  + offset, 0 ), total - 1 );
+
+//   document.querySelector( '.slider' ).innerHTML = (indexArrow  + 1 ) + ' / ' + total;
+
+//   left1.setAttribute( 'data-state', indexArrow  === 0 ? 'disabled' : '' );
+//   right1.setAttribute( 'data-state', indexArrow  === total - 1 ? 'disabled' : '' );
+// }
+
+// slide(0);

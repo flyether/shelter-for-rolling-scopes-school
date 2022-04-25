@@ -88,6 +88,8 @@ var jsonPets  = [
     "parasites": ["lice", "fleas"]
   }
 ]
+
+
 window.onload = function () {
 // константы модального окна
 const modalResultWrapper = document.getElementById('modal-result-wrapper')
@@ -100,7 +102,9 @@ const body = document.querySelector('body');
  // модальное окно его константы вверху
  
   modalResultWrapper.style.display = 'none'  // прячем модальное окно
- // вешаем шаблон на модальное окно
+
+
+  // вешаем шаблон на модальное окно
 
   let modalPetsItem = document.getElementById('modal-pets-item').innerHTML,
 

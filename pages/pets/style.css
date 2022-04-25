@@ -515,6 +515,7 @@ body.modal-open #modal-result-wrapper {
   display: -ms-flexbox;
   display: flex;
   text-align: center;
+  color: rgba(252, 249, 249, 0);
 }
 
 .end-screen {
