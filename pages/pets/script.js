@@ -1,8 +1,8 @@
 
-const mQuery320 = window.matchMedia('(min-width: 768px)')
-const mQuery768 = window.matchMedia('(min-width: 1280px)')
+const mQuery320 = window.matchMedia('(min-width: 320px)')
+const mQuery768 = window.matchMedia('(min-width: 768px)')
+const mQuery1280 = window.matchMedia('(min-width: 1280px)')
 
-let   cardOnPages = 8;
 // if (mQuery320.matches) { 
 //   cardOnPages = 6; 
 // }
@@ -186,7 +186,13 @@ $(document).ready(function(){
       }
     
 
-
+      let  cardOnPages = 3;
+      if (window.matchMedia('(min-width: 768px)')) { 
+         cardOnPages = 6; 
+      }
+      if (window.matchMedia('(min-width: 1280px)')) { 
+         cardOnPages = 8; 
+      }
 
   // Пагинация
 
@@ -245,32 +251,32 @@ item.addEventListener("click", function(){
 let pageNum = +this.innerHTML; // плюсик чтобы было число nen узанем номер страницы
 
 showPage(pageNum)
-let start =(pageNum - 1) * cardOnPages;
-let end =  start + cardOnPages;
+// let start =(pageNum - 1) * cardOnPages;
+// let end =  start + cardOnPages;
 
 
-let pets = jsonPetsShuffle.slice(start, end);
+// let pets = jsonPetsShuffle.slice(start, end);
 
-center = start
-divCardSpace.innerHTML = "";
+// center = start
+// divCardSpace.innerHTML = "";
 
-let  html = pets.map((ele,index)=>compiled(getDataForProductItemTemplate(ele,index))).join('');
+// let  html = pets.map((ele,index)=>compiled(getDataForProductItemTemplate(ele,index))).join('');
 
-  let cardQ = document.createElement('div');
-  divCardSpace.appendChild(cardQ);
+//   let cardQ = document.createElement('div');
+//   divCardSpace.appendChild(cardQ);
 
-divCardSpace.innerHTML = html
+// divCardSpace.innerHTML = html
 
-  let dataPet 
-  dataPet = document.createElement('div');
-  dataPet.innerHTML =  ""
-  dataPet.classList.add('card')
-  cardQ.appendChild(dataPet)
+//   let dataPet 
+//   dataPet = document.createElement('div');
+//   dataPet.innerHTML =  ""
+//   dataPet.classList.add('card')
+//   cardQ.appendChild(dataPet)
  
 })
 }
 
-// функция для загрузки первого окна
+// функция для загрузки первого окна и вызов модального
 
 function showPage(pageNum) {
   let start =(pageNum - 1) * cardOnPages;
@@ -284,18 +290,22 @@ function showPage(pageNum) {
       e.addEventListener('click', openModal)}
   )
 
-
-} (showPage(1))
-
-
-
+} 
+showPage(1)
 
 // if (mQuery320.matches) { 
 //   cardOnPages = 3; 
 // }
-// if (mQuery768.matches) { 
+
+// else if  (mQuery768.matches) { 
+//   cardOnPages = 8; }
+
+// else if   (mQuery768.matches) { 
 //   cardOnPages = 6; }
   
+
+
+
 
 
 }
