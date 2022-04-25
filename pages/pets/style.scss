@@ -65,7 +65,7 @@ body.modal-open { overflow:hidden;}
    #overlay{
       width: 100%;
       height: 100%;
-      position: absolute;
+      position: fixed;
       background-color: rgba(229, 229, 229, 0.7);
       cursor: pointer;
    }
@@ -89,79 +89,81 @@ body.modal-open { overflow:hidden;}
 
 
   
- .modal-li{
-   list-style-image: url(../../assets/icons/dot.svg);
-   font-size: 15px;
-   line-height: 110%;
-   padding-inline-start: 1ch;
-   line-height: 185%;
-   letter-spacing: 0.18em;
- }
-  
-   #content{
-      width: 900px;
-      height: 500px;
-
-   }
-      #btn-close{
-         bottom:  100%;
-         left: 98%;
-         position: fixed;
-         width: 52px;
-         height: 52px;
-         align-items: center;
-         padding: 23px 19px;
-         border: 2px solid $color-primary;
-         border-radius: 100px;
-         margin: 0 10px 0 10px;
-         cursor: pointer;
+   .modal-li{
+      list-style-image: url(../../assets/icons/dot.svg);
+      
+      font-size: 15px;
+      line-height: 110%;
+      padding-inline-start: 1ch;
+      line-height: 185%;
+      letter-spacing: 0.18em;
+    }
      
-         background:url(../../assets/icons/cross.svg) no-repeat center center; 
-      &:hover{         
-         background-color: $color-primary-light;
-      }   
+      #content{ 
+         overflow: auto;
+         height: 100%;
       }
-.card-modal{
    
-   width: 100%;
-   height: 100%;
-   display: flex;
-   flex-direction: row;
-   gap: 29px;
-}
-
-.card-modal-content{
-   @include flexColumn();
-   width: 351px;
-   height: 362px;
-   text-align: justify;
-}
-.text-modal{
-   font-family: 'Georgia';
-   color: #000000;
-   letter-spacing: 0.06em;
-  &.pet-name-modal{   
-      margin: 50px 0 10px;
-      font-size: 35px;
-      line-height: 130%;
-      letter-spacing: 0.06em;
+      .card-modal{
+         width: 100%;
+         height: 100%;
+         display: flex;
+         flex-direction: row;
+      gap: 10px;
       }
-      &.pet-type-modal{   
-         margin-bottom: 40px; 
-         font-size: 20px;
-         line-height: 115%;
+   
+      .pets-img-modal{
+         width: 55%;
+       height: 55%;
+      }
+     
+      .card-modal-content{
+         @include flexColumn();
+         width: 351px;
+         text-align: justify;
+      }
+   
+         #btn-close{
+            bottom:  100%;
+            left: 98%;
+            position: absolute;
+            width: 52px;
+            height: 52px;
+            align-items: center;
+            padding: 23px 19px;
+            border: 2px solid $color-primary;
+            border-radius: 100px;
+            margin: 0 10px 0 10px;
+            cursor: pointer;
+        
+            background:url(../../assets/icons/cross.svg) no-repeat center center; 
+         &:hover{         
+            background-color: $color-primary-light;
+         }   
          }
-       &.data-pets{
-         margin-bottom: 35px;
-         font-size: 15px;
-         line-height: 115%;
-       }
-
-
-
-}
-
-
+   
+   .text-modal{
+      font-family: 'Georgia';
+      color: #000000;
+      letter-spacing: 0.06em;
+     &.pet-name-modal{   
+         margin: 50px 0 10px 28px;
+         font-size: 35px;
+         line-height: 130%;
+         letter-spacing: 0.06em;
+         }
+         &.pet-type-modal{   
+            margin: 0px 0 40px 28px;
+            font-size: 20px;
+            line-height: 115%;
+            }
+          &.data-pets{
+            margin: 0px 0 20px 28px;
+            font-size: 15px;
+            line-height: 115%;
+          }
+   }
+   
 
 
 

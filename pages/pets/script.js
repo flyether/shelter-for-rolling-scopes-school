@@ -170,24 +170,24 @@ $(document).ready(function(){
       overlay.addEventListener('click', closeModal)
       btnClose.addEventListener('click', closeModal)
     
-  }
+
+      function openModal(event) {
+          
+        modalResultWrapper.style.display = 'block'
+        let i = event.currentTarget.dataset.pet
+        var htmlModal = compiledModal(jsonPets[i])
+        modalWindow .innerHTML = htmlModal
+        body.classList.add("modal-open")
+        
   
-
-  function openModal(event) {
-      
-    modalResultWrapper.style.display = 'block'
-    let i = event.currentTarget.dataset.pet
-    var htmlModal = compiledModal(jsonPets[i])
-    modalWindow .innerHTML = htmlModal
-    body.classList.add("modal-open")
-    
-  }    
-  
+ 
 
 
 
+      }
     
 
+}
   // Пагинация
 
   let jsonPetsArr48 =  jsonPets.concat(jsonPets).concat(jsonPets ).concat(jsonPets ).concat(jsonPets).concat(jsonPets)
@@ -212,7 +212,7 @@ $(document).ready(function(){
 
 
   let jsonPetsShuffle = shuffle(jsonPetsArr48)
-    
+ 
 // функция присваивает индекс карточкам
 function getDataForProductItemTemplate(pet,index) {
   return {
@@ -295,39 +295,3 @@ function showPage(pageNum) {
 
 
 
-
-// left1.onclick = slide.bind( this, -1 );
-// right1.onclick = slide.bind( this, 1 );
-
-// var indexArrow = 0, total = 5;
-
-// function slide(offset) {
-//   indexArrow  = Math.min( Math.max( indexArrow  + offset, 0 ), total - 1 );
-
-//   document.querySelector( '.slider' ).innerHTML = (indexArrow  + 1 ) + ' / ' + total;
-
-//   left1.setAttribute( 'data-state', indexArrow  === 0 ? 'disabled' : '' );
-//   right1.setAttribute( 'data-state', indexArrow  === total - 1 ? 'disabled' : '' );
-// }
-
-// slide(0);
-
-
-
-// Стрелки пагинации
-
-
-;(function() {
-	'use strict';
- 
-
-
-
-
-
-
-
-
-
-})();  // самозапускающаяся функция ограничивающая код
- 
