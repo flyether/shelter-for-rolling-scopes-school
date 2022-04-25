@@ -240,10 +240,22 @@ let templatePetsItem = document.getElementById('template-pets-item').innerHTML,
 for ( let item of items) {
 item.addEventListener("click", function(){
 let pageNum = +this.innerHTML; // плюсик чтобы было число nen узанем номер страницы
-
 showPage(pageNum)
+if (pageNum == 1) {
+  left1.setAttribute('disabled', true);
+  left2.setAttribute('disabled', true);
 
- 
+}
+if (pageNum != 1) {
+  left1.classList.toggle("arrow-left-active");
+  left1.classList.remove("arrow-grey");
+  left2.classList.toggle("arrow-left-active");
+  left2.classList.remove("arrow-grey");
+  center.innerHTML = pageNum;
+}
+
+console.log(pageNum)
+
 })
 }
 
@@ -258,16 +270,15 @@ function showPage(pageNum) {
   // убираем дубли из обрезаного массива
   pets = Array.from(new Set(pets.map(item => JSON.stringify(item)))).map(item => JSON.parse(item));
 
-  console.log(arrayRandElement(pets))
   // начало цикл а набивания
 
-  while (pets.length != 8) {
+  while (pets.length != cardOnPages) {
   
   pets.push(arrayRandElement(jsonPets) )
   pets = Array.from(new Set(pets.map(item => JSON.stringify(item)))).map(item => JSON.parse(item));
   }
 
- 
+ console.log(pageNum)
 
 
 

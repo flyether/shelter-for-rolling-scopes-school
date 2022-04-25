@@ -418,65 +418,69 @@ body.modal-open { overflow:hidden;}
 
 
  .arrow{
-       
+   color: #000000;   
    width: 52px;
    height: 52px;
    align-items: center;
-   padding: 23px 19px;
+   padding: 19px 19px;
    border: 2px solid $color-primary;
    border-radius: 100px;
    margin: 0 10px 0 10px;
    cursor: pointer;
-   &.right1{
-      
-      background:url(../../assets/icons/button_paginatorR1.svg) no-repeat center center; 
       &:hover{
-         background: 
-         url(../../assets/icons/button_paginatorR1.svg) no-repeat center center; 
          background-color: $color-primary-light;
-        
       }
-      &:active{
-         background: 
-         url(../../assets/icons/button_paginatorR1.svg) no-repeat center center;
-   }
-   }
-   &.right2{
-     
-      background:url(../../assets/icons/button_paginatorR2.svg) no-repeat center center; 
-      &:hover{
-         background: 
-         url(../../assets/icons/button_paginatorR2.svg) no-repeat center center; 
-         background-color: $color-primary-light;
-        
-      }
-      &:active{
-         background: 
-         url(../../assets/icons/button_paginatorR2.svg) no-repeat center center; 
-         background-color: $color-primary;
-        
-      }
-   }
-  &.center{
-   background:url(../../assets/icons/button_paginatorC.svg) no-repeat center center; 
-   &:hover{
-      background: 
-      url(../../assets/icons/button_paginatorC.svg) no-repeat center center; 
-      background-color: $color-primary-light;
-     
-   }
-   &:active{
-      background: 
-      url(../../assets/icons/button_paginatorC.svg) no-repeat center center; 
+      &:active{     
       background-color: $color-primary;
-     
    }
-
   }
   
 
 
+
+
+.arrow-left-active{
+   color: #000000;
+   width: 52px;
+   height: 52px;
+   text-align: center;
+   align-items: center;
+   padding: 19px 19px;
+   border: 2px solid $color-primary;
+   border-radius: 100px;
+   margin: 0 10px 0 10px;
+   cursor: pointer;
+   &.left1{
+   
+      
+      &:hover{
+          
+         background-color: $color-primary-light;  
+      }
+      &:active{
+  
+         background-color: $color-primary; 
+      }     
+   }
+
+   &.left2{  
+   &:hover{
+      background-color: $color-primary-light;
+     
+   }
+   &:active{
+      
 }
+   }
+
+
+
+}
+
+
+
+
+
 
 .arrow-grey{
    width: 52px;
@@ -504,7 +508,7 @@ body.modal-open { overflow:hidden;}
    
    
    
-   
+  
 
 
 
