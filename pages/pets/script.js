@@ -1,21 +1,13 @@
-// const mQuery320 = window.matchMedia('(min-width: 768px)')
-// const mQuery768 = window.matchMedia('(min-width: 1280px)')
 
-// let   cardOnPages = 3;
+const mQuery320 = window.matchMedia('(min-width: 768px)')
+const mQuery768 = window.matchMedia('(min-width: 1280px)')
+
+let   cardOnPages = 8;
 // if (mQuery320.matches) { 
 //   cardOnPages = 6; 
 // }
 // if (mQuery768.matches) { 
 //   cardOnPages = 8; }
-const mQuery320 = window.matchMedia('(min-width: 768px)')
-const mQuery768 = window.matchMedia('(min-width: 1280px)')
-
-let   cardOnPages = 3;
-if (mQuery320.matches) { 
-  cardOnPages = 6; 
-}
-if (mQuery768.matches) { 
-  cardOnPages = 8; }
   
 
  
@@ -146,7 +138,19 @@ $(document).ready(function(){
     const modalWindow = document.getElementById('content')
     const cardModal = document.querySelectorAll('.card');
     const body = document.querySelector('body');
-    
+   
+   
+   
+    function openModal(event) {
+      
+        modalResultWrapper.style.display = 'block'
+        let i = event.currentTarget.dataset.pet
+        var htmlModal = compiledModal(jsonPets[i])
+        modalWindow .innerHTML = htmlModal
+        body.classList.add("modal-open")
+        
+      }    
+      
      // модальное окно его константы вверху
      
       modalResultWrapper.style.display = 'none'  // прячем модальное окно
@@ -161,14 +165,14 @@ $(document).ready(function(){
       modalResultWrapper.style.display = 'block'
       let i = event.currentTarget.dataset.pet
       var htmlModal = compiledModal(jsonPets[i])
-      modalWindow .innerHTML = htmlModal
+      modalWindow.innerHTML = htmlModal
       body.classList.add("modal-open")
       
          })
     })
     
       // функция закрыти я модалного окна
-    const closeModal = () => {
+      const closeModal = () => {
       modalResultWrapper.style.display = 'none'
       body.classList.remove("modal-open")
     }
@@ -177,8 +181,11 @@ $(document).ready(function(){
       btnClose.addEventListener('click', closeModal)
     
   }
-    
-    
+  
+
+
+
+
     
 
   // Пагинация
@@ -260,11 +267,11 @@ divCardSpace.innerHTML = html
   dataPet.innerHTML =  ""
   dataPet.classList.add('card')
   cardQ.appendChild(dataPet)
-
+ 
 })
 }
 
-
+// функция для загрузки первого окна
 
 function showPage(pageNum) {
   let start =(pageNum - 1) * cardOnPages;
@@ -272,7 +279,14 @@ function showPage(pageNum) {
   let pets = jsonPetsShuffle.slice(start, end);
   let  htmlFistPages = pets.map((ele,index)=>compiled(getDataForProductItemTemplate(ele,index))).join('');
   divCardSpace.innerHTML = htmlFistPages
-}
+
+  document.querySelectorAll('.card-space .card').forEach(
+    e=>{
+      e.addEventListener('click', openModal)}
+  )
+
+
+} (showPage(1))
 
 
 
