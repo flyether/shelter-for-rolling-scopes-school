@@ -427,7 +427,7 @@ body.modal-open { overflow:hidden;}
 }
  
 
- .arrow{
+#pagination li{
     @include arrow-patern();
    border: 2px solid $color-primary;
    cursor: pointer;
@@ -439,10 +439,9 @@ body.modal-open { overflow:hidden;}
    }
    }
     
-  
+ 
 
-
-.arrow-grey{
+   #pagination li.disabled{
   color: rgb(131, 125, 125);
   @include arrow-patern();
    border: 2px solid $color-dark-s;
@@ -451,19 +450,18 @@ body.modal-open { overflow:hidden;}
 
 
 
-
-.arrow-left-active {
-   color: #000000;
-   @include arrow-patern();
-   border: 2px solid $color-primary;
-   cursor: pointer;
-      &:hover{
- background-color: $color-primary-light;  
-      }
-      &:active{
-   background-color: $color-primary; 
-      }     
- }
+// .arrow-left-active {
+//    color: #000000;
+//    @include arrow-patern();
+//    border: 2px solid $color-primary;
+//    cursor: pointer;
+//       &:hover{
+//  background-color: $color-primary-light;  
+//       }
+//       &:active{
+//    background-color: $color-primary; 
+//       }     
+//  }
 
 
 .slider{

@@ -439,7 +439,7 @@ body.modal-open #modal-result-wrapper {
   margin: 0 auto;
 }
 
-.arrow {
+#pagination li {
   font-weight: bold;
   width: 52px;
   height: 52px;
@@ -453,15 +453,15 @@ body.modal-open #modal-result-wrapper {
   cursor: pointer;
 }
 
-.arrow:hover {
+#pagination li:hover {
   background-color: #fddcc4;
 }
 
-.arrow:active {
+#pagination li:active {
   background-color: #f1cdb3;
 }
 
-.arrow-grey {
+#pagination li.disabled {
   color: #837d7d;
   font-weight: bold;
   width: 52px;
@@ -474,29 +474,6 @@ body.modal-open #modal-result-wrapper {
   margin: 0 10px 0 10px;
   border: 2px solid #cdcdcd;
   cursor: default;
-}
-
-.arrow-left-active {
-  color: #000000;
-  font-weight: bold;
-  width: 52px;
-  height: 52px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 18px 17px;
-  border-radius: 100px;
-  margin: 0 10px 0 10px;
-  border: 2px solid #f1cdb3;
-  cursor: pointer;
-}
-
-.arrow-left-active:hover {
-  background-color: #fddcc4;
-}
-
-.arrow-left-active:active {
-  background-color: #f1cdb3;
 }
 
 .slider {

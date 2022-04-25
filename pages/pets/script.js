@@ -1,17 +1,4 @@
 
-const mQuery320 = window.matchMedia('(min-width: 320px)')
-const mQuery768 = window.matchMedia('(min-width: 768px)')
-const mQuery1280 = window.matchMedia('(min-width: 1280px)')
-
-// if (mQuery320.matches) { 
-//   cardOnPages = 6; 
-// }
-// if (mQuery768.matches) { 
-//   cardOnPages = 8; }
-  
-
- 
-
 
 // бургер  с параметрами
 // привязываю меню к бургеру
@@ -171,40 +158,62 @@ $(document).ready(function(){
     
 
       let  cardOnPages = 3;
+      console.log(cardOnPages)
+      if (window.matchMedia('(min-width: 1280px)').matches) { 
+        cardOnPages = 8; 
+     }
+     console.log(cardOnPages)
+
       if (window.matchMedia('(min-width: 768px)').matches) { 
          cardOnPages = 6; 
-      }
-      if (window.matchMedia('(min-width: 1280px)').matches) { 
-         cardOnPages = 8; 
-      }
+         }
+         console.log(cardOnPages)
+
+      
+     
+
+      // console.log(cardOnPages)
+      // const mQuery320 = window.matchMedia('(min-width: 320px)')
+      // const mQuery768 = window.matchMedia('(min-width: 768px)')
+      // const mQuery1280 = window.matchMedia('(min-width: 1280px)')
+        
+      // if (mQuery1280.matches) { 
+      //   cardOnPages = 8; 
+      // }
+
+      //   console.log(cardOnPages)
+      // if (mQuery320.matches) { 
+      //   cardOnPages = 3; 
+      // }
+      // console.log(cardOnPages)
+
+      // if (mQuery768.matches) { 
+      //   cardOnPages = 6; }
+
+      //  console.log(cardOnPages)
+          
+
+
 
   // Пагинация
-
-  let jsonPetsArr48 =  jsonPets.concat(jsonPets).concat(jsonPets ).concat(jsonPets ).concat(jsonPets).concat(jsonPets)
-  
-  
-  // премешиваем зверей
+    
+  // премешиваем зверей используем потом
 
   function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
-  
-    // Пока остаются элементы для перетасовки
+      // Пока остаются элементы для перетасовки
     while (currentIndex != 0) {
-  
-      // Выберите оставшийся элемент
+        // Выберите оставшийся элемент
       randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex--;
-  
-      // И замените его текущим элементом.
+        // И замените его текущим элементом.
       [array[currentIndex], array[randomIndex]] = [
         array[randomIndex], array[currentIndex]];
     }
     return array;
   }
 
-
-  // let jsonPetsShuffle = shuffle(jsonPetsArr48)
- 
+   
 // функция присваивает индекс карточкам
 function getDataForProductItemTemplate(pet,index) {
   return {
