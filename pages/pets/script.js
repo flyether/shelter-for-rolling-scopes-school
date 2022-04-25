@@ -244,7 +244,7 @@ for ( let item of items) {
 item.addEventListener("click", function(){
 let pageNum = +this.innerHTML; // плюсик чтобы было число nen узанем номер страницы
 
-
+showPage(pageNum)
 let start =(pageNum - 1) * cardOnPages;
 let end =  start + cardOnPages;
 
@@ -253,8 +253,7 @@ let pets = jsonPetsShuffle.slice(start, end);
 
 center = start
 divCardSpace.innerHTML = "";
-// let templatePetsItem = document.getElementById('template-pets-item').innerHTML,
-//   compiled = _.template(templatePetsItem),
+
 let  html = pets.map((ele,index)=>compiled(getDataForProductItemTemplate(ele,index))).join('');
 
   let cardQ = document.createElement('div');
@@ -289,6 +288,14 @@ function showPage(pageNum) {
 } (showPage(1))
 
 
+
+
+// if (mQuery320.matches) { 
+//   cardOnPages = 3; 
+// }
+// if (mQuery768.matches) { 
+//   cardOnPages = 6; }
+  
 
 
 }

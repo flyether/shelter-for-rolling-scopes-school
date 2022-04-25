@@ -706,6 +706,9 @@ body.modal-open #modal-result-wrapper {
   .pets-img-modal {
     display: none;
   }
+  .pets-img-modal {
+    display: none;
+  }
   #modal-window {
     width: 240px;
   }
