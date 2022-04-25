@@ -123,24 +123,26 @@ body.modal-open { overflow:hidden;}
          text-align: justify;
       }
    
-         #btn-close{
-            bottom:  100%;
-            left: 98%;
-            position: absolute;
-            width: 52px;
-            height: 52px;
-            align-items: center;
-            padding: 23px 19px;
-            border: 2px solid $color-primary;
-            border-radius: 100px;
-            margin: 0 10px 0 10px;
-            cursor: pointer;
-        
-            background:url(../../assets/icons/cross.svg) no-repeat center center; 
-         &:hover{         
-            background-color: $color-primary-light;
-         }   
-         }
+       
+      #btn-close{
+         bottom:  100%;
+         left: 98%;
+         position: absolute;
+         width: 52px;
+         height: 52px;
+         align-items: center;
+         padding: 23px 19px;
+         border: 2px solid $color-primary;
+         border-radius: 100px;
+         margin: 0 10px 0 10px;
+         cursor: pointer;
+     
+         background:url(../../assets/icons/cross.svg) no-repeat center center; 
+      &:hover{         
+         background-color: $color-primary-light;
+      }   
+      }
+
    
    .text-modal{
       font-family: 'Georgia';

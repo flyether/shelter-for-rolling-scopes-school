@@ -187,10 +187,10 @@ $(document).ready(function(){
     
 
       let  cardOnPages = 3;
-      if (window.matchMedia('(min-width: 768px)')) { 
+      if (window.matchMedia('(min-width: 768px)').matches) { 
          cardOnPages = 6; 
       }
-      if (window.matchMedia('(min-width: 1280px)')) { 
+      if (window.matchMedia('(min-width: 1280px)').matches) { 
          cardOnPages = 8; 
       }
 
@@ -240,8 +240,14 @@ let right1 = document.querySelector('.right1')
 let right2 = document.querySelector('.right2')
 let center = document.querySelector('.center')
 
+// функция для выбора случайного питомца, пригодиться 
+// потом добовлять в массив чтобы уникальных петсов лепитьъ
 
-
+function arrayRandElement(arr) {
+  var rand = Math.floor(Math.random() * arr.length);
+  return arr[rand];
+}
+console.log(arrayRandElement(jsonPets))
 
 let templatePetsItem = document.getElementById('template-pets-item').innerHTML,
   compiled = _.template(templatePetsItem);
@@ -251,30 +257,11 @@ item.addEventListener("click", function(){
 let pageNum = +this.innerHTML; // плюсик чтобы было число nen узанем номер страницы
 
 showPage(pageNum)
-// let start =(pageNum - 1) * cardOnPages;
-// let end =  start + cardOnPages;
 
-
-// let pets = jsonPetsShuffle.slice(start, end);
-
-// center = start
-// divCardSpace.innerHTML = "";
-
-// let  html = pets.map((ele,index)=>compiled(getDataForProductItemTemplate(ele,index))).join('');
-
-//   let cardQ = document.createElement('div');
-//   divCardSpace.appendChild(cardQ);
-
-// divCardSpace.innerHTML = html
-
-//   let dataPet 
-//   dataPet = document.createElement('div');
-//   dataPet.innerHTML =  ""
-//   dataPet.classList.add('card')
-//   cardQ.appendChild(dataPet)
  
 })
 }
+
 
 // функция для загрузки первого окна и вызов модального
 
@@ -282,6 +269,27 @@ function showPage(pageNum) {
   let start =(pageNum - 1) * cardOnPages;
   let end =  start + cardOnPages;
   let pets = jsonPetsShuffle.slice(start, end);
+
+  // убираем дубли из обрезаного массива
+  pets = Array.from(new Set(pets.map(item => JSON.stringify(item)))).map(item => JSON.parse(item));
+
+  console.log(arrayRandElement(pets))
+  // начало цикл а набивания
+
+  while (pets.length != 8) {
+  
+  pets.push(arrayRandElement(jsonPets) )
+  pets = Array.from(new Set(pets.map(item => JSON.stringify(item)))).map(item => JSON.parse(item));
+  }
+
+ 
+
+
+
+
+// конец цикла набивания
+
+
   let  htmlFistPages = pets.map((ele,index)=>compiled(getDataForProductItemTemplate(ele,index))).join('');
   divCardSpace.innerHTML = htmlFistPages
 
