@@ -141,16 +141,6 @@ $(document).ready(function(){
    
    
    
-    function openModal(event) {
-      
-        modalResultWrapper.style.display = 'block'
-        let i = event.currentTarget.dataset.pet
-        var htmlModal = compiledModal(jsonPets[i])
-        modalWindow .innerHTML = htmlModal
-        body.classList.add("modal-open")
-        
-      }    
-      
      // модальное окно его константы вверху
      
       modalResultWrapper.style.display = 'none'  // прячем модальное окно
@@ -183,6 +173,16 @@ $(document).ready(function(){
   }
   
 
+  function openModal(event) {
+      
+    modalResultWrapper.style.display = 'block'
+    let i = event.currentTarget.dataset.pet
+    var htmlModal = compiledModal(jsonPets[i])
+    modalWindow .innerHTML = htmlModal
+    body.classList.add("modal-open")
+    
+  }    
+  
 
 
 
