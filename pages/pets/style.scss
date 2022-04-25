@@ -416,18 +416,20 @@ body.modal-open { overflow:hidden;}
     margin: 0 auto;
  }
 
-
- 
-
- .arrow{
-    font-weight: bold;
+@mixin arrow-patern() {
+   font-weight: bold;
    width: 52px;
    height: 52px;
    align-items: center;
-   padding: 19px 19px;
-   border: 2px solid $color-primary;
+   padding: 18px 17px; 
    border-radius: 100px;
    margin: 0 10px 0 10px;
+}
+ 
+
+ .arrow{
+    @include arrow-patern();
+   border: 2px solid $color-primary;
    cursor: pointer;
       &:hover{
          background-color: $color-primary-light;
@@ -442,14 +444,8 @@ body.modal-open { overflow:hidden;}
 
 .arrow-grey{
   color: rgb(131, 125, 125);
-  font-weight: bold;
-   width: 52px;
-   height: 52px;
-   align-items: center;
-   padding: 18px 17px;
+  @include arrow-patern();
    border: 2px solid $color-dark-s;
-   border-radius: 100px;
-   margin: 0 10px 0 10px;
    cursor: default;
 }
 
@@ -458,15 +454,8 @@ body.modal-open { overflow:hidden;}
 
 .arrow-left-active {
    color: #000000;
-   font-weight: bold;
-   width: 52px;
-   height: 52px;
-   text-align: center;
-   align-items: center;
-   padding: 19px 17px;
+   @include arrow-patern();
    border: 2px solid $color-primary;
-   border-radius: 100px;
-   margin: 0 10px 0 10px;
    cursor: pointer;
       &:hover{
  background-color: $color-primary-light;  

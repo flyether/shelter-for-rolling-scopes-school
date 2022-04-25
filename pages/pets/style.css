@@ -446,10 +446,10 @@ body.modal-open #modal-result-wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 19px 19px;
-  border: 2px solid #f1cdb3;
+  padding: 18px 17px;
   border-radius: 100px;
   margin: 0 10px 0 10px;
+  border: 2px solid #f1cdb3;
   cursor: pointer;
 }
 
@@ -470,9 +470,9 @@ body.modal-open #modal-result-wrapper {
       -ms-flex-align: center;
           align-items: center;
   padding: 18px 17px;
-  border: 2px solid #cdcdcd;
   border-radius: 100px;
   margin: 0 10px 0 10px;
+  border: 2px solid #cdcdcd;
   cursor: default;
 }
 
@@ -481,14 +481,13 @@ body.modal-open #modal-result-wrapper {
   font-weight: bold;
   width: 52px;
   height: 52px;
-  text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 19px 17px;
-  border: 2px solid #f1cdb3;
+  padding: 18px 17px;
   border-radius: 100px;
   margin: 0 10px 0 10px;
+  border: 2px solid #f1cdb3;
   cursor: pointer;
 }
 
