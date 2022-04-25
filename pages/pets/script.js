@@ -227,6 +227,12 @@ let right1 = document.querySelector('.right1')
 let right2 = document.querySelector('.right2')
 let center = document.querySelector('.center')
 
+
+
+
+let templatePetsItem = document.getElementById('template-pets-item').innerHTML,
+  compiled = _.template(templatePetsItem);
+
 for ( let item of items) {
 item.addEventListener("click", function(){
 let pageNum = +this.innerHTML; // плюсик чтобы было число nen узанем номер страницы
@@ -240,9 +246,9 @@ let pets = jsonPetsShuffle.slice(start, end);
 
 center = start
 divCardSpace.innerHTML = "";
-let templatePetsItem = document.getElementById('template-pets-item').innerHTML,
-  compiled = _.template(templatePetsItem),
-  html = pets.map((ele,index)=>compiled(getDataForProductItemTemplate(ele,index))).join('');
+// let templatePetsItem = document.getElementById('template-pets-item').innerHTML,
+//   compiled = _.template(templatePetsItem),
+let  html = pets.map((ele,index)=>compiled(getDataForProductItemTemplate(ele,index))).join('');
 
   let cardQ = document.createElement('div');
   divCardSpace.appendChild(cardQ);
@@ -258,8 +264,14 @@ divCardSpace.innerHTML = html
 })
 }
 
+
+
 function showPage(pageNum) {
-  
+  let start =(pageNum - 1) * cardOnPages;
+  let end =  start + cardOnPages;
+  let pets = jsonPetsShuffle.slice(start, end);
+  let  htmlFistPages = pets.map((ele,index)=>compiled(getDataForProductItemTemplate(ele,index))).join('');
+  divCardSpace.innerHTML = htmlFistPages
 }
 
 
