@@ -505,6 +505,7 @@ body.modal-open #modal-result-wrapper {
   display: -ms-flexbox;
   display: flex;
   text-align: center;
+  margin: 0 0  0 35%;
 }
 
 .end-screen {

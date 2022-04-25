@@ -203,7 +203,7 @@ $(document).ready(function(){
   }
 
 
-  let jsonPetsShuffle = shuffle(jsonPetsArr48)
+  // let jsonPetsShuffle = shuffle(jsonPetsArr48)
  
 // функция присваивает индекс карточкам
 function getDataForProductItemTemplate(pet,index) {
