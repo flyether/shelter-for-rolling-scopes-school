@@ -147,19 +147,8 @@ $(document).ready(function(){
      // вешаем шаблон на модальное окно
     
       let modalPetsItem = document.getElementById('modal-pets-item').innerHTML,
+      compiledModal = _.template(modalPetsItem);
     
-     compiledModal = _.template(modalPetsItem);
-      // открывае модальное окно при нажатии на карточку т вешаем ему шаблон
-     cardModal.forEach(e=>{
-      e.addEventListener('click', (event) =>{
-      modalResultWrapper.style.display = 'block'
-      let i = event.currentTarget.dataset.pet
-      var htmlModal = compiledModal(jsonPets[i])
-      modalWindow.innerHTML = htmlModal
-      body.classList.add("modal-open")
-      
-         })
-    })
     
       // функция закрыти я модалного окна
       const closeModal = () => {
@@ -172,17 +161,12 @@ $(document).ready(function(){
     
 
       function openModal(event) {
-          
         modalResultWrapper.style.display = 'block'
         let i = event.currentTarget.dataset.pet
         var htmlModal = compiledModal(jsonPets[i])
         modalWindow .innerHTML = htmlModal
         body.classList.add("modal-open")
-        
-  
-
-
-
+      
       }
     
 
@@ -197,6 +181,8 @@ $(document).ready(function(){
   // Пагинация
 
   let jsonPetsArr48 =  jsonPets.concat(jsonPets).concat(jsonPets ).concat(jsonPets ).concat(jsonPets).concat(jsonPets)
+  
+  
   // премешиваем зверей
 
   function shuffle(array) {
@@ -229,7 +215,6 @@ function getDataForProductItemTemplate(pet,index) {
 }
 
 
-// bзменяем количество карточек под медиазапрос
 
 
 let items =  document.querySelectorAll('#pagination li')
@@ -247,10 +232,10 @@ function arrayRandElement(arr) {
   var rand = Math.floor(Math.random() * arr.length);
   return arr[rand];
 }
-console.log(arrayRandElement(jsonPets))
 
+// натягивание шаблона на карточки
 let templatePetsItem = document.getElementById('template-pets-item').innerHTML,
-  compiled = _.template(templatePetsItem);
+ compiled = _.template(templatePetsItem);
 
 for ( let item of items) {
 item.addEventListener("click", function(){
@@ -301,22 +286,11 @@ function showPage(pageNum) {
 } 
 showPage(1)
 
-// if (mQuery320.matches) { 
-//   cardOnPages = 3; 
-// }
-
-// else if  (mQuery768.matches) { 
-//   cardOnPages = 8; }
-
-// else if   (mQuery768.matches) { 
-//   cardOnPages = 6; }
-  
 
 
 
 
-
-}
-
+}  // конец window.onload
 
 
+// стрелочки
