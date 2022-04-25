@@ -1,5 +1,24 @@
-const mQuery320 = window.matchMedia('(max-width: 768px)')
+// const mQuery320 = window.matchMedia('(min-width: 768px)')
+// const mQuery768 = window.matchMedia('(min-width: 1280px)')
+
+// let   cardOnPages = 3;
+// if (mQuery320.matches) { 
+//   cardOnPages = 6; 
+// }
+// if (mQuery768.matches) { 
+//   cardOnPages = 8; }
+const mQuery320 = window.matchMedia('(min-width: 768px)')
 const mQuery768 = window.matchMedia('(min-width: 1280px)')
+
+let   cardOnPages = 3;
+if (mQuery320.matches) { 
+  cardOnPages = 6; 
+}
+if (mQuery768.matches) { 
+  cardOnPages = 8; }
+  
+
+ 
 
 
 // бургер  с параметрами
@@ -195,16 +214,10 @@ function getDataForProductItemTemplate(pet,index) {
       name: pet.name,
      }
 }
- 
+
+
 // bзменяем количество карточек под медиазапрос
 
-let   cardOnPages = 8;
-if (mQuery320.matches) { 
-  cardOnPages = 3; 
-}
-if (mQuery768.matches) { 
-  cardOnPages = 6; 
-}
 
 let items =  document.querySelectorAll('#pagination li')
 let divCardSpace = document.querySelector('.card-space')
@@ -225,7 +238,7 @@ let end =  start + cardOnPages;
 
 let pets = jsonPetsShuffle.slice(start, end);
 
-
+center = start
 divCardSpace.innerHTML = "";
 let templatePetsItem = document.getElementById('template-pets-item').innerHTML,
   compiled = _.template(templatePetsItem),
@@ -245,6 +258,16 @@ divCardSpace.innerHTML = html
 })
 }
 
+function showPage(pageNum) {
+  
+}
+
+
+
+
+
+
+
 
 
 // left1.onclick = slide.bind( this, -1 );
@@ -262,3 +285,23 @@ divCardSpace.innerHTML = html
 // }
 
 // slide(0);
+
+
+
+// Стрелки пагинации
+
+
+;(function() {
+	'use strict';
+ 
+
+
+
+
+
+
+
+
+
+})();  // самозапускающаяся функция ограничивающая код
+ 
