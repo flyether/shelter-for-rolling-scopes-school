@@ -180,14 +180,14 @@ $(document).ready(function(){
         body.classList.add("modal-open")
         
   
- 
 
 
 
       }
     
 
-}
+
+
   // Пагинация
 
   let jsonPetsArr48 =  jsonPets.concat(jsonPets).concat(jsonPets ).concat(jsonPets ).concat(jsonPets).concat(jsonPets)
@@ -291,7 +291,7 @@ function showPage(pageNum) {
 
 
 
-
+}
 
 
 
